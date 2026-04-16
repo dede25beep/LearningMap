@@ -1,3 +1,8 @@
 * {
     font-family: "Comic Sans MS", Comic Sans, cursive, sans-serif;
 }
+
+.login {
+  width: 200px;
+  margin: 0 auto;
+}
