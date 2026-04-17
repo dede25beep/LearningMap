@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title> Login </title>
     <link rel="stylesheet" href="style.css">
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
-<body>
+<body id="login_page">
     <script src="script.js"></script>
-    <div id="Login" >
-        <h1>Login</h1>
-        <input type="text" placeholder="Nome" >
-        <br><br>
-        <input type="password" placeholder="Senha" >
-        <br></br>
-    <div id="g_id_onload"
-            data-client_id="SEU_CLIENT_ID.apps.googleusercontent.com"
-            data-callback="handleCredentialResponse">
-        </div>
-    <div class="g_id_signin" data-type="standard"></div>
-        <br></br>
-        <button type="button" > Enviar </button>
+    <div>
+        <form id="login" >
+            <h1> Entrar </h1>
+            <input type="text" id="nome_login" placeholder="Nome" >
+            <br><br>
+            <input type="password" id="senha_login" placeholder="Senha" >
+            <br></br>
+            <p> Não tem conta? <a href="Cadastre-se"> Cadastre-se </a></p>
     
+            <div id="g_id_onload"
+                data-client_id="SEU_CLIENT_ID.apps.googleusercontent.com"
+                data-callback="handleCredentialResponse">
+            </div>
+            <div class="g_id_signin" data-type="standard"></div>
+            <br></br>
+            <input type="button" id="button_enviar" value="Enviar" ></input>
+    </form>
     </div>
 
 
