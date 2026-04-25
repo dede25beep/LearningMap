@@ -1,11 +1,24 @@
 * {
     font-family: "Comic Sans MS", Comic Sans, cursive, sans-serif;
-
-
 }
 
 #login {
     width: 300px;
     margin: auto;
-    
+    display: block;
 }
+#register {
+    width: 300px;
+    margin: auto;
+    display: none;
+}
+
+section[id] {
+  display: none;
+}  
+
+#Início {
+    display: block
+
+}
+
