@@ -18,7 +18,15 @@ section[id] {
 }  
 
 #Início {
-    display: block
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}   
 
+header {
+    background-color: blueviolet;
 }
 
