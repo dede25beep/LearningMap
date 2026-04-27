@@ -13,6 +13,10 @@
     display: none;
 }
 
+#register:target {
+    display: block;
+}
+
 section[id] {
   display: none;
 }  
