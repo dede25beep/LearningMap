@@ -17,7 +17,7 @@ section[id] {
   display: none;
 }  
 
-#Início {
+#inicio {
     display: block;
     text-align: center;
     font-size: 16px;
@@ -25,8 +25,3 @@ section[id] {
     flex-direction: column;
     gap: 15px;
 }   
-
-header {
-    background-color: blueviolet;
-}
-

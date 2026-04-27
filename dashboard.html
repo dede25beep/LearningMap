@@ -12,20 +12,20 @@
             <img src="/img/logotipo.jpg" alt="Lotipo do Site" height="100" width="200" ></img>
             <nav class="topics-nav" aria-label="Categoria de Ferramentas">
                 <ul>
-                    <li><a href="#Início"> Início </a></li>
-                    <li><a href="#Ferramentas"> Ferramentas </a></li>
-                    <li><a href="#Contato"> Contato </a></li>
+                    <li><a href="#inicio"> Início </a></li>
+                    <li><a href="#ferramentas"> Ferramentas </a></li>
+                    <li><a href="#contato"> Contato </a></li>
                    
                 </ul>
             </nav>
 
-            <input type="search" id="search-box" placeholder="Busque uma Ferramenta">
+            <form role="search" id="search-box" aria-label="Busque uma Ferramenta">
             <button type="submit"> 
                 <img src="./img/lupa-icon.png" alt="Pesquisar" width="20" height="20">
             </button> 
         </header>
         
-        <section id="Início" >
+        <section id="inicio" class="section" >
 
             <h1> Todas as ferramentas em apenas um lugar </h1>
             <p> LearninMap reúne ferramentas, IAs e softwares voltados para educação e programação, ajudando você a aprender mais, trabalhar melhor e economizar tempo. </p>
@@ -44,7 +44,7 @@
         </section>
 
 
-        <section id="Ferramentas">
+        <section id="ferramentas" class="section">
 
             <h1> Acesso rápido para Ferramentas IAs </h1>
             <p> recursos educacionais e softwares que podem transformar sua rotina de estudos e programação. </p>
@@ -52,7 +52,7 @@
             <span> Filtro </span>
             <input type="button" id="filtro-btn"></input>
 
-            <details id="ChatGPT" >
+            <details id="chatgpt-card" class="cards" >
                 <summary> 
                     <img src="/img/ChatGPT_logo.svg.png" height="25" width="25">
                     <span> ChatGPT </span>
@@ -68,12 +68,11 @@
             </details>
 
 
-            <details id="Gemini" >
+            <details id="gemini" class="cards">
                 <summary> 
                     <img src="/img/gemini-logo.png" height="25" width="25">
                     <span> Gemini </span>
                 </summary>
-                <div id="Gemini-box" >
                     <p>
                         O Gemini é a inteligência artificial mais avançada e capaz desenvolvida pelo Google. 
                         Ele não é apenas um "chatbot", mas sim um ecossistema de modelos de IA projetados para serem nativamente multimodais.
@@ -84,12 +83,11 @@
             </details>
             
             
-            <details id="WIX" >
+            <details id="wix" class="cards" >
                 <summary> 
                     <img src="/img/wix-logo.png" height="25" width="25">
                     <span> WIX </span>
                 </summary>
-                <div id="WIX-box" >
                     <p>
                         O Wix é uma plataforma online baseada em nuvem, popularmente conhecida como um criador de sites do tipo "arrastar e soltar". 
                         Ele permite que pessoas sem nenhum conhecimento prévio em programação ou design criem sites, blogs e lojas virtuais profissionais. 
@@ -100,12 +98,11 @@
             </details>
             
 
-             <details id="Hostinger" >
+             <details id="hostinger" class="cards">
                 <summary> 
                     <img src="/img/Hostinger-logo.png" height="25" width="25">
                     <span> Hostinger </span>
                 </summary>
-                <div id="Hostinger-box" >
                     <p> 
                         A Hostinger AI é um conjunto de ferramentas baseadas em inteligência artificial integrado aos serviços da Hostinger, projetado para simplificar e acelerar a criação, gerenciamento e otimização de sites, mesmo para quem não tem conhecimentos técnicos.  
                     </p>
@@ -116,12 +113,11 @@
             </details>
 
 
-            <details id="PromakeAI" >
+            <details id="promake" class="cards" >
                 <summary> 
                     <img src="/img/Promake-logo.png" height="25" width="25">
                     <span> PromakeAI </span>
                 </summary>
-                <div id="PromakeAI-box" >
                     <p> 
                         PromakeAIé uma inteligência artificial que ajuda você a organizar e resumir conteúdos de forma rápida e detalhada, usando prompts bem estruturados.
                     </p>
@@ -131,12 +127,11 @@
             </div>
             </details>
 
-                    <details id="ReaddyAI" >
+                    <details id="readdy" class="cards">
                 <summary> 
                     <img src="/img/Readdy AI.png" height="25" width="25">
                     <span> Readdy AI </span>
                 </summary>
-                <div id="ReaddyAI-box" >
                     <p> 
                        Readdy AI é uma plataforma de construção de sites baseada em inteligência artificial que cria páginas web profissionais, landing pages e e-commerce em minutos através de conversas (prompts) em linguagem natural.
                     </p>
@@ -146,12 +141,11 @@
             </details>
 
 
-             <details id="ManusAI" >
+             <details id="manus" class="cards">
                 <summary> 
                     <img src="/img/Manus AI.png" height="25" width="25">
                     <span> Manus AI </span>
                 </summary>
-                <div id="ManusAI-box" >
                     <p> 
                        Manus é um agente de inteligência artificial artificial, desenvolvido na China, que vai além de um chatbot tradicional (como ChatGPT) para executar tarefas de ponta a ponta. 
                        Ele pesquisa, analisa dados, cria sites completos, produz relatórios e organiza informações de forma automática, ágil como um assistente proativo
@@ -170,8 +164,16 @@
 
         </section>
 
-        <section id="Contato">
+        <section id="contato" class="section">
 
+            <div>
+                <input type="text" id="nome_login" aria-label="Nome de usuário">
+                <input type="email" id="email" aria-label="Email">
+                <input type="submit" id="faq-btn" aria-label="Enviar"></input>
+
+            </div>
+
+           
 
 
         <script src="script.js"></script>

@@ -13,18 +13,26 @@
         <div>
             <form>
                 <h1> Entrar </h1>
-                <input type="text" id="nome_login" placeholder="Nome" >
-                <br><br>
-                <input type="password" id="senha_login" placeholder="Senha" >
-                <br>
-                <p> Não tem conta? <a href="Cadastre-se"> Cadastre-se </a></p>
+                <input type="text" id="name_login" placeholder="Nome" >
+                <input type="password" id="password-login" placeholder="Senha" >
+                <p> Não tem conta? <a href="#register"> Cadastre-se </a></p>
         
-                <div id="g_id_onload"
-                    data-client_id="SEU_CLIENT_ID.apps.googleusercontent.com"
-                    data-callback="handleCredentialResponse">
+                <div class="google-login">
+                    <div id="g_id_onload"
+                        data-client_id="SEU_CLIENT_ID"
+                        data-context="signin"
+                        data-ux_mode="popup"
+                        data-callback="handleCredentialResponse">
+                    </div>
+
+                    <div class="g_id_signin"
+                        data-type="standard"
+                        data-shape="pill"
+                        data-theme="outline"
+                        data-text="signin_with"
+                        data-size="large">
+                    </div>
                 </div>
-                <div class="g_id_signin" data-type="standard"></div>
-                <br></br>
                 <input type="button" id="button_enviar" value="Enviar" ></input>
             </form>
         </div>
@@ -36,11 +44,11 @@
         <div>
             <form>
                 <h1> Cadastre-se </h1> 
-                <input type="text" id="nome_register" placeholder="Novo usuário" >
+                <input type="text" id="name_register" placeholder="Novo usuário" >
                 <br><br>
-                <input type="password" id="senha_register" placeholder="Nova senha" >
+                <input type="password" id="password-register" placeholder="Nova senha" >
                 <br></br>
-                <p> Já tem conta? <a href="voltar"> Voltar </a></p>
+                <p> Já tem conta? <a href="#login"> Voltar </a></p>
             </form>
         </div>
     </section>
