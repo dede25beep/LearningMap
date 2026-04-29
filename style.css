@@ -30,3 +30,9 @@ section[id] {
     gap: 15px;
 }   
 
+#cards {
+    border: 5px solid purple;
+    border-radius: 15px;
+    display: flex;
+}
+
