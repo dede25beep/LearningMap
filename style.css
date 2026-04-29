@@ -28,11 +28,7 @@ section[id] {
     display: flex;
     flex-direction: column;
     gap: 15px;
-}   
-
-#cards {
-    border: 5px solid purple;
-    border-radius: 15px;
-    display: flex;
 }
+
+
 
