@@ -20,10 +20,7 @@
                         </ul>
                 </nav>
 
-                <form role="search" id="search-box" aria-label="Busque uma Ferramenta">
-                        <button type="submit">
-                                <img src="/img/lupa-icon.png" alt="Pesquisar" width="20" height="20">
-                        </button>
+               
         </header>
 
         <section id="inicio" class="section">
@@ -50,6 +47,15 @@
 
 
         <section id="ferramentas" class="section">
+
+                <form>
+                        <form action="/search" method="get" class="search-box">
+                        <input type="search" placeholder="buscar ferramenta" aria-label="buscar ferramenta">
+                        <button type="submit">
+                                <img src="/img/lupa-icon.png" aria-label="Pesquisar" width="20" height="20">
+                        </button>
+                </form>
+
 
                 <h1> Acesso rápido para Ferramentas IAs </h1>
                 <p> recursos educacionais e softwares que podem transformar sua rotina de estudos e programação. </p>
@@ -769,18 +775,134 @@
                                 </details>
 
 
-                                <details id="asana" class="produtividade freemium">
+                                <details id="airtable" class="produtividade freemium">
                                         <summary>
-                                                <img src="/img/Asana.png" height="25" width="25">
-                                                <span> Asana AI </span>
+                                                <img src="/img/airtable.png" height="25" width="25">
+                                                <span> Airtable AI </span>
                                         </summary>
                                         <p>
-                                                Asana AI é a suíte de inteligência artificial nativa da Asana que usa o Work Graph para fornecer contexto completo de projetos e automatizar fluxos de trabalho sem código.
-                                                Serve para equipes com AI Studio (agentes que criam briefs, traduzem conteúdo, integram ferramentas, alertam riscos), Smart Assists (resumos de progresso, insights de metas, próximos passos), conectores que transformam conversas em tarefas e automação de relatórios para stakeholders.
+                                                Airtable AI é o conjunto de funcionalidades de IA generativa integrado ao Airtable que permite automatizar tarefas em bases de dados, extrair insights e gerar conteúdo diretamente de registros e campos.
+                                                Serve para equipes com resumos automáticos de texto/conversas, categorização inteligente de dados, geração de conteúdo (e-mails, descrições), análise em linguagem natural (perguntas sobre dados), campos de IA configuráveis e templates pré-prontos para fluxos comuns como feedback e planejamento.
                                         </p>
-                                        <a href="https://asana.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                        <a href="https://airtable.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
                                         </a>
                                 </details>
+
+
+                                <details id="trello" class="produtividade freemium">
+                                        <summary>
+                                                <img src="/img/Trello.png" height="25" width="25">
+                                                <span> Trello AI </span>
+                                        </summary>
+                                        <p>
+                                                Trello AI (Atlassian Intelligence) é a IA nativa integrada ao Trello para usuários Premium/Enterprise que automatiza escrita e organização diretamente nos cartões e quadros.
+                                                Serve para equipes com drafting/resumos de descrições/comentários, brainstorm de ideias, extração de tarefas de notas/reuniões/emails (Quick Capture), análise de performance via power-ups e automações avançadas com Butler que movem cartões e integram Slack/Jira.
+                                        </p>
+                                        <a href="https://trello.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                        </a>
+                                </details>
+
+
+                                <details id="taskade" class="produtividade freemium">
+                                        <summary>
+                                                <img src="/img/tasked.png" height="25" width="25">
+                                                <span> Taskade </span>
+                                        </summary>
+                                        <p>
+                                                Taskade AI é uma plataforma colaborativa de gerenciamento de tarefas e projetos que integra IA generativa para criar fluxos de trabalho, agentes autônomos e automações diretamente de prompts naturais.
+                                                Serve para equipes com AI Agents (Research, SEO, Roundtable para insights múltiplos), comandos slash (/summarize, /subtask, /brainstorm, /prioritize), geração instantânea de projetos completos a partir de sites/vídeos e automações que criam tarefas/respostas baseadas em gatilhos.
+                                        </p>
+                                        <a href="https://trello.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                        </a>
+                                </details>
+
+
+                                <details id="mem-ai" class="produtividade freemium">
+                                        <summary>
+                                                <img src="/img/mem-ai.png" height="25" width="25">
+                                                <span> Mem AI </span>
+                                        </summary>
+                                        <p>
+                                                Mem.ai é um aplicativo de notas impulsionado por IA que funciona como um "segundo cérebro digital", capturando, organizando automaticamente e conectando ideias, reuniões e pesquisas sem pastas manuais.
+                                                Serve para profissionais com organização automática por IA (categoriza temas/conexões), busca semântica (encontra por descrição natural), Mem Chat (perguntas/resumos/drafts baseados nas suas notas), captura via voz/extensão Chrome/SMS e agentes proativos que resumem semanas ou sugerem ações.
+                                        <a href="https://mem.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                        </a>
+                                </details>
+
+
+                                <details id="lovable" class="nocode freemium">
+                                        <summary>
+                                                <img src="/img/lovable.png" height="25" width="25">
+                                                <span> Lovable </span>
+                                        </summary>
+                                        <p>
+                                                Lovable é uma plataforma de desenvolvimento full-stack com IA generativa que permite criar aplicativos web completos (frontend React/Tailwind, backend Node.js, banco Supabase) usando apenas prompts em linguagem natural.
+                                                Serve para não-desenvolvedores e PMs prototiparem MVPs em horas (agendamento, SaaS, dashboards), com código real exportável para GitHub, autenticação nativa, integração de chatbots/análise de sentimentos e documentação README automática gerada por IA.
+                                        </p>
+                                        <a href="https://lovable.dev/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                        </a>
+                                </details>
+
+
+                                <details id="base44" class="nocode freemium">
+                                        <summary>
+                                                <img src="/img/base44.png" height="25" width="25">
+                                                <span> Base44 </span>
+                                        </summary>
+                                        <p>
+                                                Base44 é uma plataforma no-code com IA generativa que transforma descrições em linguagem natural em aplicativos web completos, incluindo frontend, backend, banco de dados, autenticação e hospedagem automática.
+                                                Serve para não-desenvolvedores criarem MVPs funcionais em minutos (reservas, cadastros, dashboards) com editor visual ao vivo, chat conversacional para ajustes, deploy instantâneo com domínio próprio, integrações nativas (e-mails, analytics) e exportação para GitHub.
+                                        </p>        
+                                        <a href="https://base44.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                        </a>        
+                                </details>
+
+
+                                <details id="otter-ai" class="audio-reunioes freemium">
+                                        <summary>
+                                                <img src="/img/Otter.png" height="25" width="25">
+                                                <span> Otter AI </span>
+                                        </summary>
+                                        <p>
+                                                Otter.ai é um assistente de reuniões com IA que grava, transcreve em tempo real e resume automaticamente conversas, aulas e entrevistas, identificando falantes e integrando-se nativamente com Zoom, Teams e Meet.
+                                                Serve para profissionais com resumos inteligentes (pontos-chave, decisões, ações), chat com IA para perguntas/respostas baseadas nas transcrições, busca por palavras-chave, exportação em DOC/PDF e automação via Zapier que cria tarefas em Asana/Slack a partir de insights.
+                                        </p>        
+                                        <a href="https://otter.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                        </a>                
+                                </details>
+
+
+                                <details id="tldv-io" class="audio-reunioes freemium">
+                                        <summary>
+                                                <img src="/img/tldv.png" height="25" width="25">
+                                                <span> tl;dv  </span>
+                                        </summary>
+                                        <p>
+                                                Fireflies.ai é um assistente de reuniões com IA que grava, transcreve em tempo real e analisa conversas automaticamente em plataformas como Zoom, Teams e Google Meet, identificando falantes e criando uma biblioteca pesquisável.
+                                                Serve para equipes com resumos automáticos (destaques, decisões, próximos passos, palavras-chave), análise de sentimento, extração de itens de ação, busca semântica por toda biblioteca de reuniões e +200 "mini apps" de IA para insights específicos de vendas/suporte/marketing.
+                                        </p>        
+                                        <a href="https://fireflies.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                        </a>                
+                                </details>
+
+
+                                <details id="fireflies-ai" class="audio-reunioes freemium">
+                                        <summary>
+                                                <img src="/img/fireflies.png" height="25" width="25">
+                                                <span> Fireflies AI </span>
+                                        </summary>
+                                        <p>
+                                                tl;dv.io é um notetaker com IA para Zoom, Google Meet e MS Teams que grava, transcreve em tempo real e gera atas automáticas de reuniões em +30 idiomas, incluindo português brasileiro.
+                                                Serve para equipes com resumos inteligentes (destaques, itens de ação, tópicos, objeções), tradução instantânea, automação de follow-ups/CRM (HubSpot, Salesforce), clipes editáveis para compartilhamento e integração com +6000 ferramentas que atualiza Notion/Slack e treina vendas com insights agregados.
+                                        </p>     
+                                        <a href="https://tldv.io/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                        </a>                
+                                </details>
+
+
+
+
+
 
 
 
