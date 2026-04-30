@@ -30,5 +30,10 @@ section[id] {
     gap: 15px;
 }
 
+.cards img{
+    border: 2px solid rgb(82, 33, 128);
+    border-radius: 8px;
+}
+
 
 
