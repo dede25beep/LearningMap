@@ -25,3 +25,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+const container = document.getElementById('ias');
+
+container.addEventListener('toggle', (e) => {
+  if (!e.target.open) return; // ignora eventos de fechar
+
+  container.querySelectorAll('details[open]').forEach(d => {
+    if (d !== e.target) d.removeAttribute('open');
+  });
+}, true);
