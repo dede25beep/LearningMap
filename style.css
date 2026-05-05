@@ -231,3 +231,20 @@ header img {
     }
 }
 
+.fast-cards {
+    border: 2px solid purple;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px rgb(153, 6, 146);
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.search-icon{
+    width: 20px;
+    height: 20px;
+    color: #000000;
+}
+
