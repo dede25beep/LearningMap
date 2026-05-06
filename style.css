@@ -1,21 +1,46 @@
 /* Corpo da página */
-* {
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+/*Variaveis de cores*/
+:root {
+ --principal: #312e81;
+ --secundaria: #5b21b6;
+ --accent: #6d28d9;
+ --luz: #ffffff;
+ --sombra: rgba(109, 40, 217, 0.2);
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+/* Corpo da página */
+body {
+    margin: 0;
+    padding: 0;
     font-family: 'Times New Roman', Times, serif;
-    
+    color: var(--primary);
+    background-color: whitesmoke;
 }
 
 /* Formulário de login */
-#login {
-    width: 300px;
-    margin: auto;
-    display: block;
+#login,
+#register {
+width: 300px;
+margin: 0 auto;
 }
 
 /* Formulário de cadastro (inicialmente oculto) */
 #register {
-    width: 300px;
-    margin: auto;
-    display: none;
+display: none;
+}
+
+#register {
+display: block;
 }
 
 /* Exibe o register quando e alvo de ancora */
@@ -31,7 +56,6 @@ section[id] {
 
 /* Secao inicial visivel */
 #inicio {
-    display: block;
     text-align: center;
     font-size: 16px;
 
@@ -80,21 +104,12 @@ section[id] {
    
 }
 
-/* Corpo da página */
-body {
-    margin: 0;
-    padding: 0;
-    color: #312e81;
-    background-color: whitesmoke;
-}
-
-
 /*Header = Barra superior*/
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10px;
+    padding: 20px;
     background-color: #f5f5f5;
     position: sticky;
     top: 0;
@@ -104,7 +119,8 @@ header {
 
 /*Icone de pesquisa*/
 header .search-icon {
-    height: 20px;
+width: 20px;
+height: 20px;
 }
 
 
@@ -122,28 +138,27 @@ header .search-icon {
 
 /*Links do menu*/
 .sidebar a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 1rem;
-
+    display: inline-block;
     padding: 12px 24px;
     border-radius: 12px;
 
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+
     background-color: whitesmoke;
-    color: rgba(82, 6, 182, 0.801);
+    color: var(--secundaria);
 
-    box-shadow: 0 2px 6px rgba(116, 12, 252, 0.24);
+    box-shadow: 0 2px 6px var(--sombra);
     transition: all 0.3s ease;
-
-    display: inline-block;
     
 }
 
 /* Efeito hover nos links*/
-.sidebar a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(154, 76, 255, 0.849);
+.sidebar a,
+.sidebar a {
+transform: translateY(-3px);
+box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
 }
 
 
@@ -279,7 +294,7 @@ header .search-icon {
         padding: 20px;
     }
 
-    .siderbar ul {
+    .sidebar ul {
         flex-wrap: wrap;
         justify-content: center;
     }
