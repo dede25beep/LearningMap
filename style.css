@@ -18,7 +18,7 @@ html {
 scroll-behavior: smooth;
 }
 
-/* Corpo da página */
+/* Corpo da página (de novo)*/
 body {
     margin: 0;
     padding: 0;
@@ -93,17 +93,6 @@ section[id] {
     padding-right: 900px;
 }    
 
-.flash-cards{
-    border: 2px solid purple;
-    border-radius: 8px;
-    width: 200px;
-    height: 120px;
-    position: relative;
-    perspective: 1000px;
-    cursor: pointer;
-   
-}
-
 /*Header = Barra superior*/
 header {
     display: flex;
@@ -166,27 +155,31 @@ box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
 .cards {
     display: grid;
 
-    /*Tres colunas*/
+    /*Adiciona 3 colunas de largura igual*/
     grid-template-columns: repeat(3, 1fr);
-
     gap: 25px;
-    padding: 30px;
 
+    /*Centraliza o container e adiciona padding*/
+    padding: 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 /*Estilo geral dos cards*/
-.cards details,
-.cards .card,
 .cards > * {
     background: linear-gradient(180deg, #ffffff, #0004ff16);
     border-radius: 18px;
     padding: 22px;
-    border: none;
     overflow: hidden;
-    box-shadow: 0 6px 18px rgba(113, 41, 228, 0.103);
+
+    box-shadow: 0 6px 18px rgba(113, 41, 228, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.cards > * {
+transform: translateY(-10px);
+box-shadow: 0 12px 28px var(--sombra);
 }
 
 /*Efeito dos cards*/
@@ -215,22 +208,22 @@ box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
 /*Titulos*/
 .cards h3 {
     margin: 0 0 10px;
-    color: #312e81;
+    color: var(--principal);
 }
 
 
 /*Paragrafos*/
 .cards p {
-    color: #5b21b6;
+    color: var(--secundaria);
     line-height: 1.6;
 }
 
 /*Imagens*/
 .cards img {
-    border: 2px solid #ddd6fe;
+    border: 2px solid var(--accent);
     border-radius: 10px;
     padding: 6px;
-    background: #fff;
+    background: linear-gradient(180deg, #ffffff, #0004ff16);
 }
 
 /*Conteudo oculto inicialmente*/
@@ -240,12 +233,11 @@ box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease;
-    display: block;
 }
 
 /*Exibe conteudo quando o mouse passa por cima*/
-.cards details:hover p,
-.cards details:hover a,
+.cards details p,
+.cards details a,
 .cards details[open] p,
 .cards details[open] a {
     opacity: 1;
@@ -266,12 +258,37 @@ box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
 
     background: linear-gradient(135deg, #0116ff, #41057d);
     transition: all 0.3s ease;
+
 }
 
 /*Hover do botao*/
-.cards a:hover {
+.cards a {
     transform: scale(1.05);
-    box-shadow: 0 8px 18px rgba(124, 58, 237, 0.35);
+    box-shadow: 0 8px 18px var(--shadow);
+}
+
+
+.flash-cards {
+    border: 2px solid purple;
+    border-radius: 8px;
+    width: 200px;
+    height: 120px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.fast-cards {
+    border: 2px solid purple;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px rgb(153, 6, 146);
+
+    width: 160px;
+    height: 160px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 
@@ -304,23 +321,6 @@ box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
         padding: 20px;
     }
 }
-
-.fast-cards {
-    border: 2px solid purple;
-    border-radius: 10px;
-
-    box-shadow: 0px 1px 2px rgb(153, 6, 146);
-
-    width: 160px;
-    height: 160px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;   
-}
-
 
 /*icone de busca*/
 .search-icon{
