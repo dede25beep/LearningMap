@@ -1314,6 +1314,21 @@
 
 
         <script src="script.js"></script>
+
+  <script>
+    const details = document.querySelectorAll(".cards details");
+
+    details.forEach((target) => {
+      target.addEventListener("click", () => {
+        details.forEach((item) => {
+          if (item !== target) {
+            item.removeAttribute("open");
+          }
+        });
+      });
+    });
+  </script>
+
 </body>
 
 </html>
