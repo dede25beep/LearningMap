@@ -186,7 +186,7 @@ box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
 
 }
 
-.cards > *:hover {
+.cards > details:hover {
 transform: translateY(-10px);
 box-shadow: 0 12px 28px var(--sombra);
 }
