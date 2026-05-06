@@ -194,7 +194,7 @@ box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cards > *:hover {
+.cards a:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 28px rgba(109, 40, 217, 0.28);
 }
@@ -268,7 +268,7 @@ box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
     border-radius: 10px;
 
     text-decoration: none;
-    color: #fff;
+    color: var(--luz);
     font-weight: 600;
 
     background: linear-gradient(135deg, #0116ff, #41057d);
@@ -280,6 +280,13 @@ box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
     transform: scale(1.05);
     box-shadow: 0 8px 18px var(--sombra);
 }
+
+
+/*=========================================================================
+             ALGUÉM ARRUMA ESSA MERDA LOGO!
+===========================================================================*/
+
+
 
 /* Cartões de exibição ao todo*/
 .flashcards-container {
