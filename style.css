@@ -32,15 +32,17 @@ body {
 }
 
 /* Formulário de login */
-#login,
-#register {
-width: 300px;
-margin: 0 auto;
+#login {
+    display: block;
+    width: 300px;   
+    margin: auto;
+    padding: 0;
+
 }
 
 /* Formulário de cadastro (inicialmente oculto) */
 #register {
-display: none;
+    display: none;
 }
 
 /* Exibe o register quando e alvo de ancora */
@@ -49,7 +51,7 @@ display: none;
 }
 
 section[id] {
-  display: none;
+    display: none;
   
 
 }  
@@ -179,10 +181,18 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* Efeito hover nos links*/
 .sidebar a:hover {
-transform: translateY(-3px);
-box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
 }
 
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+
+
+}
 
 /* Estilo base dos cards */
 .cards > * {
@@ -191,15 +201,14 @@ box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
     gap: 20px;
     background: linear-gradient(180deg, #ffffff, #0004ff16);
     border-radius: 18px;
-    padding: 22px;
+    padding: 25px;
     width: 350px;
     height: 350px;
-    margin: auto;
-    
+    margin-top: 20px;
 
 
     box-shadow: 0 6px 18px rgba(113, 41, 228, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 .cards a:hover {
@@ -288,13 +297,6 @@ box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
     transform: scale(1.05);
     box-shadow: 0 8px 18px var(--sombra);
 }
-
-
-/*=========================================================================
-             ALGUÉM ARRUMA ESSA MERDA LOGO!
-===========================================================================*/
-
-
 
 /* Cartões de exibição ao todo*/
 .flashcards-container {
