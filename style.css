@@ -1,19 +1,24 @@
+/* Corpo da página */
 * {
     font-family: 'Times New Roman', Times, serif;
     
 }
 
+/* Formulário de login */
 #login {
     width: 300px;
     margin: auto;
     display: block;
 }
+
+/* Formulário de cadastro (inicialmente oculto) */
 #register {
     width: 300px;
     margin: auto;
     display: none;
 }
 
+/* Exibe o register quando e alvo de ancora */
 #register:target {
     display: block;
 }
@@ -24,12 +29,13 @@ section[id] {
 
 }  
 
-
-
+/* Secao inicial visivel */
 #inicio {
     display: block;
     text-align: center;
     font-size: 16px;
+
+    /* Layout flexível */
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -38,6 +44,8 @@ section[id] {
  
 }
 
+
+/* Container do titulo principal*/
 #container-title{
     background: linear-gradient(to right, rgb(51, 0, 71), rgb(191, 0, 255));
     color: rgba(245, 245, 245, 0.959);
@@ -45,6 +53,7 @@ section[id] {
     
 }
 
+/* Paragrafo dentro do titulo*/
 #container-title p{
     padding-left: 350px;
     padding-right: 350px;
@@ -71,6 +80,7 @@ section[id] {
    
 }
 
+/* Corpo da página */
 body {
     margin: 0;
     padding: 0;
@@ -79,6 +89,7 @@ body {
 }
 
 
+/*Header = Barra superior*/
 header {
     display: flex;
     justify-content: space-between;
@@ -91,12 +102,13 @@ header {
 
 }
 
+/*Icone de pesquisa*/
 header .search-icon {
     height: 20px;
 }
 
 
-
+/* Lista de navegacao */
 .sidebar ul {
     display: flex;
     align-items: center;
@@ -108,21 +120,27 @@ header .search-icon {
 }
 
 
+/*Links do menu*/
 .sidebar a {
     text-decoration: none;
     color: #ffffff;
     font-weight: 600;
     font-size: 1rem;
+
     padding: 12px 24px;
     border-radius: 12px;
+
     background-color: whitesmoke;
     color: rgba(82, 6, 182, 0.801);
+
     box-shadow: 0 2px 6px rgba(116, 12, 252, 0.24);
     transition: all 0.3s ease;
+
     display: inline-block;
     
 }
 
+/* Efeito hover nos links*/
 .sidebar a:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 18px rgba(154, 76, 255, 0.849);
@@ -132,13 +150,18 @@ header .search-icon {
 
 .cards {
     display: grid;
+
+    /*Tres colunas*/
     grid-template-columns: repeat(3, 1fr);
+
     gap: 25px;
     padding: 30px;
+
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/*Estilo geral dos cards*/
 .cards details,
 .cards .card,
 .cards > * {
@@ -151,6 +174,7 @@ header .search-icon {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/*Efeito dos cards*/
 .cards details:hover,
 .cards .card:hover,
 .cards > *:hover {
@@ -158,6 +182,7 @@ header .search-icon {
     box-shadow: 0 12px 28px rgba(109, 40, 217, 0.28);
 }
 
+/*Cabecalho*/
 .cards summary {
     list-style: none;
     cursor: pointer;
@@ -166,21 +191,26 @@ header .search-icon {
     gap: 12px;
 }
 
+/*Remover marcador padrao*/
 .cards summary::-webkit-details-marker,
 .cards summary::marker {
     display: none;
 }
 
+/*Titulos*/
 .cards h3 {
     margin: 0 0 10px;
     color: #312e81;
 }
 
+
+/*Paragrafos*/
 .cards p {
     color: #5b21b6;
     line-height: 1.6;
 }
 
+/*Imagens*/
 .cards img {
     border: 2px solid #ddd6fe;
     border-radius: 10px;
@@ -188,6 +218,7 @@ header .search-icon {
     background: #fff;
 }
 
+/*Conteudo oculto inicialmente*/
 .cards details p,
 .cards details a {
     opacity: 0;
@@ -197,6 +228,7 @@ header .search-icon {
     display: block;
 }
 
+/*Exibe conteudo quando o mouse passa por cima*/
 .cards details:hover p,
 .cards details:hover a,
 .cards details[open] p,
@@ -206,24 +238,29 @@ header .search-icon {
     margin-top: 15px;
 }
 
+/*Botoes/Links dentro dos cards*/
 .cards a {
     display: inline-block;
     margin-top: 15px;
     padding: 12px 20px;
     border-radius: 10px;
+
     text-decoration: none;
     color: #fff;
     font-weight: 600;
+
     background: linear-gradient(135deg, #0116ff, #41057d);
     transition: all 0.3s ease;
 }
 
+/*Hover do botao*/
 .cards a:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 18px rgba(124, 58, 237, 0.35);
 }
 
 
+/*Tablets*/
 @media (max-width: 900px) {
     .cards {
         grid-template-columns: repeat(2, 1fr);
@@ -234,6 +271,7 @@ header .search-icon {
     }
 }
 
+/*Mobile*/
 @media (max-width: 600px) {
     header {
         flex-direction: column;
@@ -255,14 +293,21 @@ header .search-icon {
 .fast-cards {
     border: 2px solid purple;
     border-radius: 10px;
+
     box-shadow: 0px 1px 2px rgb(153, 6, 146);
+
     width: 160px;
     height: 160px;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;   
 }
 
+
+/*icone de busca*/
 .search-icon{
     width: 20px;
     height: 20px;
