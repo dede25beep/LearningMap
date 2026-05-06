@@ -1,32 +1,350 @@
-* {
-    font-family: "Comic Sans MS", Comic Sans, cursive, sans-serif;
+/* Corpo da página */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-#login {
-    width: 300px;
-    margin: auto;
-    display: block;
+/*Variaveis de cores*/
+:root {
+    --principal: #312e81;
+    --secundaria: #5b21b6;
+    --accent: #6d28d9;
+    --luz: #ffffff;
+    --bg: #f5f5f5;
+    --texto: #000;
+    --sombra: rgba(109, 40, 217, 0.2);
 }
-#register {
-    width: 300px;
+
+html {
+scroll-behavior: smooth;
+}
+
+/* Corpo da página (de novo)*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--principal);
+    background-color: whitesmoke;
+}
+
+/* Formulário de login */
+#login {
+    display: block;
+    width: 300px;   
     margin: auto;
+    padding: 0;
+
+}
+
+/* Formulário de cadastro (inicialmente oculto) */
+#register {
     display: none;
 }
 
+/* Exibe o register quando e alvo de ancora */
 #register:target {
     display: block;
 }
 
 section[id] {
-  display: none;
+    display: none;
+  
+
 }  
 
+/* Secao inicial visivel */
 #inicio {
-    display: block;
-    text-align: center;
-    font-size: 16px;
     display: flex;
     flex-direction: column;
+    
     gap: 15px;
-}   
+    text-align: center;
+    font-size: 16px;
+}
 
+
+/* Container do titulo principal*/
+#container-title {
+    background: linear-gradient(to right, rgb(51, 0, 71), rgb(191, 0, 255));
+    color: var(--luz);
+    padding: 70px 20px;
+}
+
+#container-title h1 {
+    margin: 0px 0px 10px;
+}
+
+/* Paragrafo dentro do titulo*/
+#container-title p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+#introducao {
+    display: block;
+    position: relative;
+    max-width: 800px;
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-right: 300px;
+    text-align: left;
+}
+
+#introducao p{
+    padding-top: 20px;
+}
+
+/*Header = Barra superior*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/*Icone de pesquisa*/
+header .search-icon {
+    position: absolute;
+    pointer-events: none;
+    margin-right: 40px;
+    width: 15px;
+    height: 15px;
+    color: var(--accent);
+    outline: none;
+
+    
+
+    
+}
+
+/*Caixa de pesquisa*/
+input[type="search"] {
+    position: relative;
+    padding: 8px 80px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    text-align: center; 
+    outline: none;
+    
+}
+
+/* Remove o X e elementos de busca no WebKit (Chrome, Safari, etc.) */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* Lista de navegacao */
+.sidebar ul {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+/*Links do menu*/
+.sidebar a {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 12px;
+
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+
+    background-color: whitesmoke;
+    color: var(--secundaria);
+
+    box-shadow: 0 2px 6px var(--sombra);
+    transition: all 0.3s ease;
+    
+}
+
+/* Efeito hover nos links*/
+.sidebar a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+
+
+}
+
+/* Estilo base dos cards */
+.cards > * {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: linear-gradient(180deg, #ffffff, #0004ff16);
+    border-radius: 18px;
+    padding: 25px;
+    width: 350px;
+    height: 350px;
+    margin-top: 20px;
+
+
+    box-shadow: 0 6px 18px rgba(113, 41, 228, 0.1);
+
+}
+
+.cards a:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 28px rgba(109, 40, 217, 0.28);
+}
+
+/*Efeito dos cards*/
+.cards details:hover,
+.cards .card:hover,
+.cards > *:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 28px rgba(109, 40, 217, 0.28);
+}
+
+/*Cabecalho*/
+.cards summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Remove marcador padrão */
+.cards summary::-webkit-details-marker,
+.cards summary::marker {
+    display: none;
+}
+
+/*Texto*/
+.cards h3 {
+    margin-bottom: 10px;
+    color: var(--principal);
+}
+
+
+/*Paragrafos*/
+.cards p {
+    color: var(--secundaria);
+    line-height: 1.6;
+}
+
+/*Imagens*/
+.cards img {
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    padding: 6px;
+    background: linear-gradient(180deg, #ffffff, #0004ff16);
+}
+
+/* Conteúdo oculto inicialmente */
+.cards details p,
+.cards details a {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Conteúdo visível quando aberto */
+.cards details[open] p,
+.cards details[open] a {
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 15px;
+}
+
+/*Botoes/Links dentro dos cards*/
+.cards a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 10px;
+
+    text-decoration: none;
+    color: var(--luz);
+    font-weight: 600;
+
+    background: linear-gradient(135deg, #0116ff, #41057d);
+    transition: all 0.3s ease;
+}
+
+/*Hover do botao*/
+.cards a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px var(--sombra);
+}
+
+/* Cartões de exibição ao todo*/
+.flashcards-container {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: flex-end;
+    justify-content: flex-start;
+}
+
+/* Cartões de exibição*/
+.flash-cards {
+    border: 2px solid purple;
+    border-radius: 8px;
+    width: 160px;
+    height: 160px;
+    flex: 40px 40px;
+    text-align: center;
+}
+
+
+/*Tablets*/
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        padding: 20px 30px;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .sidebar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
