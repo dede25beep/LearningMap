@@ -186,7 +186,7 @@ box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
 
 }
 
-.cards > * {
+.cards > *:hover {
 transform: translateY(-10px);
 box-shadow: 0 12px 28px var(--sombra);
 }
@@ -244,15 +244,23 @@ box-shadow: 0 12px 28px var(--sombra);
     transition: all 0.3s ease;
 }
 
-/*Exibe conteudo quando o mouse passa por cima*/
+/*Conteudo oculto inicialmente*/
 .cards details p,
-.cards details a,
+.cards details a {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/*Mostra apenas quando estiver aberto*/
 .cards details[open] p,
 .cards details[open] a {
     opacity: 1;
     max-height: 500px;
     margin-top: 15px;
 }
+
 
 /*Botoes/Links dentro dos cards*/
 .cards a {
@@ -337,5 +345,3 @@ box-shadow: 0 12px 28px var(--sombra);
     height: 20px;
     color: var(--accent);
 }
-
-/*Oi Mumu*/
