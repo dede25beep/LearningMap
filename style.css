@@ -186,9 +186,17 @@ box-shadow: 0 8px 18px rgba(154, 76, 255, 0.4);
 
 /* Estilo base dos cards */
 .cards > * {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     background: linear-gradient(180deg, #ffffff, #0004ff16);
     border-radius: 18px;
     padding: 22px;
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    
+
 
     box-shadow: 0 6px 18px rgba(113, 41, 228, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
