@@ -96,7 +96,7 @@ body {
     border-radius: 10px;
     margin: auto;
     background: linear-gradient(to right, #b700ff, rgb(206, 76, 233), rgb(236, 143, 255));
-    color: whitesmoke;
+    color: var(--bg);
     margin-top: 30px;
 }
 
