@@ -32,37 +32,93 @@ body {
 
 }
 
+#pagina-login {
+    background: linear-gradient(to left, rgb(255, 215, 255), rgb(255, 246, 255), rgb(255, 255, 255));
+}
+
 /* Formulário de login */
 #login {
     display: block;
-    background: linear-gradient(to right, #ead3ff, #eee4ff, #fffffffa);
-  
+    padding-left: 200px;
+    padding-top: 120px;
 }
 
-#googlelogin-container {
+.login-container {
     display: block;
-    margin-left: 200px;
-    margin-top: 200px;
-    border-radius: 6px;
-    width: 400px;
-    height: 500px;
-    background-color: #181818;
-    box-shadow: 0px 2px 4px  #202020;
-    transition: all 0.2s ease;
-}
-
-.google-login h1{
-    display: block;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    width: 350px;
+    height: 550px;
     text-align: center;
-    margin-top: 30;
+    background: rgb(24, 24, 24);
+    justify-items: center;
+
+}
+
+.login-container h1 {
     color: var(--luz);
+    margin: 30px;
+
 }
 
-.google-login #g_id_onload{
+.login-container input {
+    display: block;
+    width: 300px;
+    height: 50px;
+    background: #000;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    margin: 20px;
+    text-align: center;
+    color: white;
+}    
+
+#login-email::placeholder {
     display: flex;
-    padding-top: 350px;
+    color: rgba(157, 157, 157, 0.700);
+    text-align: left;
+    padding-left: 20px; 
+}
+
+#login-password::placeholder {
+    display: flex;
+    color: rgba(157, 157, 157, 0.700);
+    text-align: left;
+    padding-left: 20px;
+}
+
+.btn-login {
+    display: block;
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    background: linear-gradient(to right, #b700ff, rgb(206, 76, 233), rgb(236, 143, 255));
+    color: whitesmoke;
+    margin-top: 30px;
+}
+
+.login-container a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.login-container a:hover {
+    text-decoration: none;
+    color: violet;
+    padding-top: 30px;
+   
 
 }
+    
+    
+.login-container p {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
 
 section[id] {
     display: none;

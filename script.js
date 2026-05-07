@@ -34,7 +34,7 @@ function configurarNavegacaoSidebar() {
         targetSection.style.display = 'block'
         targetSection.scrollIntoView({
           behavior: 'smooth',
-          block: 'start'
+          block: 'start'  
         })
       }
     })
