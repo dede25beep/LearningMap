@@ -89,28 +89,32 @@
 
         <section id="ferramentas" class="section">
 
-                <form>
-                        <form action="/search" method="get" class="search-box">
-                        <input type="search" placeholder="buscar ferramenta" aria-label="buscar ferramenta">
-                        <button type="submit">
-                                <img src="/img/lupa-icon.png" aria-label="Pesquisar" width="20" height="20">
-                        </button>
-                </form>
-
-
                 <h1> Acesso rápido para Ferramentas IAs </h1>
                 <p> recursos educacionais e softwares que podem transformar sua rotina de estudos e programação. </p>
 
                 <div id="filtro">       
-
-                      
-
+                        <input type="checkbox" class="filtro-btn" data-categoria="todas"> Todas </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="raciocinio"> Raciocínio </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="escrita-academica"> Escrita Acadêmica </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="pesquisa-academica"> Pesquisa Acadêmica </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="nocode"> No-code </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="educacao"> Educação </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="desenvolvimento"> Desenvolvimento </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="produtividade"> Produtividade </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="audio-reunioes"> Áudio & Reuniões </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="design-visual"> Design & Visual </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="automacao"> Automação </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="notetaking"> Notetaking </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="softwares"> Softwares </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="gratuito"> Gratuito </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="limitado"> Limitado </button>
+                
                 </div>
                 
                         <div id="ias" class="cards">
                         
 
-                                <div id="chatgpt" class="raciocinio freemium">
+                                <div id="chatgpt" class="raciocinio limitado">
                                         <h3>
                                                 <img src="/img/ChatGPT_logo.svg.png" height="30" width="30"></img></img>
                                                 <span> ChatGPT </span>
@@ -126,7 +130,7 @@
                                 </div>
 
 
-                                <div id="gemini" class="raciocinio freemium">
+                                <div id="gemini" class="raciocinio limitado">
                                         <h3>
                                                 <img src="/img/gemini-logo.png" height="30" width="30"></img>
                                                 <span> Gemini </span>
@@ -142,7 +146,7 @@
                                 </div>
 
 
-                                <div id="claude" class="raciocinio freemium">
+                                <div id="claude" class="raciocinio limitado">
                                         <h3>
                                                 <img src="/img/Claude-ai-logo.png" height="30" width="30"></img>
                                                 <span> Claude </span>
@@ -157,7 +161,7 @@
                                 </div>
 
 
-                                <div id="grok-3" class="raciocinio freemium">
+                                <div id="grok-3" class="raciocinio limitado">
                                         <h3>
                                                 <img src="/img/grok-logo.png" height="30" width="30"></img>
                                                 <span> Grok </span>
@@ -172,7 +176,7 @@
                                 </div>
 
 
-                                <div id="perplexity" class="raciocinio freemium">
+                                <div id="perplexity" class="raciocinio limitado">
                                         <h3>
                                                 <img src="/img/perplexity.png" height="30" width="30"></img>
                                                 <span> Perplexity </span>
@@ -187,7 +191,7 @@
                                 </div>
 
 
-                                <div id="elicit" class="pesquisa-academica freemium">
+                                <div id="elicit" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/elicit.png" height="30" width="30"></img>
                                                 <span> Elicit </span>
@@ -200,7 +204,7 @@
                                 </div>
 
 
-                                <div id="jenni-ai" class="escrita-academica freemium">
+                                <div id="jenni-ai" class="escrita-academica limitado">
                                         <h3>
                                                 <img src="/img/Jenni-ai.png" height="30" width="30"></img>
                                                 <span> Jenni AI </span>
@@ -222,7 +226,7 @@
                         <div id="sites-ias" class="cards">
 
 
-                                <div id="wix" class="nocode freemium">
+                                <div id="wix" class="nocode limitado">
                                         <h3>
                                                 <img src="/img/wix-logo.png" height="30" width="30"></img>
                                                 <span> WIX </span>
@@ -238,7 +242,7 @@
                                 </div>
 
 
-                                <div id="hostinger" class="nocode freemium">
+                                <div id="hostinger" class="nocode limitado">
                                         <h3>
                                                 <img src="/img/Hostinger-logl.png" height="30" width="30"></img>
                                                 <span> Hostinger </span>
@@ -254,7 +258,7 @@
                                 </div>
 
 
-                                <div id="promakeia" class="nocode freemium">
+                                <div id="promakeia" class="nocode limitado">
                                         <h3>
                                                 <img src="/img/Promake-logo.png" height="30" width="30"></img>
                                                 <span> PromakeAI </span>
@@ -267,7 +271,7 @@
                                         </a>
                                 </div>
 
-                                <div id="readdy" class="nocode freemium">
+                                <div id="readdy" class="nocode limitado">
                                         <h3>
                                                 <img src="/img/Readdy AI.png" height="30" width="30"></img>
                                                 <span> Readdy AI </span>
@@ -282,7 +286,7 @@
                                 </div>
 
 
-                                <div id="manus" class="nocode freemium">
+                                <div id="manus" class="nocode limitado">
                                         <h3>
                                                 <img src="/img/manus.png" height="30" width="30"></img>
                                                 <span> Manus AI </span>
@@ -299,7 +303,7 @@
                                 </div>
 
 
-                                <div id="researchrabbit" class="pesquisa-academica gratis">
+                                <div id="researchrabbit" class="pesquisa-academica gratuito">
                                         <h3>
                                                 <img src="/img/ResearchRabbit.png" height="30" width="30"></img>
                                                 <span> ResearchRabbit </span>
@@ -313,7 +317,7 @@
                                 </div>
 
 
-                                <div id="rayyan" class="pesquisa-academica freemium">
+                                <div id="rayyan" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/Rayyan.png" height="30" width="30"></img>
                                                 <span> Rayyan </span>
@@ -327,7 +331,7 @@
                                 </div>
 
 
-                                <div id="open-knowledge-maps" class="pesquisa-academica gratis">
+                                <div id="open-knowledge-maps" class="pesquisa-academica gratuito">
                                         <h3>
                                                 <img src="/img/Logo-Open-Knowledge-Maps-.png" height="30" width="30"></img>
                                                 <span> Open Knowledge Maps </span>
@@ -341,7 +345,7 @@
                                 </div>
 
 
-                                <div id="scholarcy" class="pesquisa-academica freemium">
+                                <div id="scholarcy" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/Scholarcy-logo.svg" height="30" width="30"></img>
                                                 <span> Scholarcy </span>
@@ -355,7 +359,7 @@
                                 </div>
 
 
-                                <div id="anara" class="pesquisa-academica freemium">
+                                <div id="anara" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/anara.png" height="30" width="30"></img>
                                                 <span> Anara </span>
@@ -369,7 +373,7 @@
                                 </div>
 
 
-                                <div id="r-discovery" class="pesquisa-academica freemium">
+                                <div id="r-discovery" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/r-discovery.png" height="30" width="30"></img>
                                                 <span> R Discovery </span>
@@ -383,7 +387,7 @@
                                 </div>
 
 
-                                <div id="keenious" class="pesquisa-academica freemium">
+                                <div id="keenious" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/keenious.png" height="30" width="30"></img>
                                                 <span> Keenious </span>
@@ -397,7 +401,7 @@
                                 </div>
 
 
-                                <div id="asreview" class="pesquisa-academica gratis">
+                                <div id="asreview" class="pesquisa-academica gratuito">
                                         <h3>
                                                 <img src="/img/asreview.png" height="30" width="30"></img>
                                                 <span> ASReview </span>
@@ -411,7 +415,7 @@
                                 </div>
 
 
-                                <div id="atlas" class="pesquisa-academica freemium">
+                                <div id="atlas" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/atlas-workspace.png" height="30" width="30"></img>
                                                 <span> Atlas </span>
@@ -425,7 +429,7 @@
                                 </div>
 
 
-                                <div id="okara-ai" class="pesquisa-academica freemium">
+                                <div id="okara-ai" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/okara-ai.png" height="30" width="30"></img>
                                                 <span> Okara AI </span>
@@ -439,7 +443,7 @@
                                 </div>
 
 
-                                <div id="avidnote" class="pesquisa-academica freemium">
+                                <div id="avidnote" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/avidnote.png" height="30" width="30"></img>
                                                 <span> Avidnote </span>
@@ -453,7 +457,7 @@
                                 </div>
 
 
-                                <div id="paper-digest" class="pesquisa-academica freemium">
+                                <div id="paper-digest" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/Paper-Digest.png" height="30" width="30"></img>
                                                 <span> Paper Digest </span>
@@ -467,7 +471,7 @@
                                 </div>
 
 
-                                <div id="covidence" class="pesquisa-academica freemium">
+                                <div id="covidence" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/covidence.png" height="30" width="30"></img>
                                                 <span> Covidence </span>
@@ -481,7 +485,7 @@
                                 </div>
 
 
-                                <div id="consensus" class="pesquisa-academica freemium">
+                                <div id="consensus" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/Consensus.png" height="30" width="30"></img>
                                                 <span> Consensus </span>
@@ -495,7 +499,7 @@
                                 </div>
 
 
-                                <div id="scite-ai" class="pesquisa-academica freemium">
+                                <div id="scite-ai" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/scite-ai.png" height="30" width="30"></img>
                                                 <span> Scite AI </span>
@@ -509,7 +513,7 @@
                                 </div>
 
 
-                                <div id="scispace" class="pesquisa-academica freemium">
+                                <div id="scispace" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/scispace.png" height="30" width="30"></img>
                                                 <span> SciSpace </span>
@@ -523,7 +527,7 @@
                                 </div>
 
 
-                                <div id="connected-papers" class="pesquisa-academica freemium">
+                                <div id="connected-papers" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/connected-papers.png" height="30" width="30"></img>
                                                 <span> Connected Papers </span>
@@ -537,7 +541,7 @@
                                 </div>
 
 
-                                <div id="undermind" class="pesquisa-academica freemium">
+                                <div id="undermind" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/undermind.png" height="30" width="30"></img>
                                                 <span> Undermind </span>
@@ -551,7 +555,7 @@
                                 </div>
 
 
-                                <div id="papersflow" class="pesquisa-academica freemium">
+                                <div id="papersflow" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/papersflow.png" height="30" width="30"></img>
                                                 <span> PapersFlow </span>
@@ -565,7 +569,7 @@
                                 </div>
 
 
-                                <div id="paperguide" class="pesquisa-academica freemium">
+                                <div id="paperguide" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/paperguide.png" height="30" width="30"></img>
                                                 <span> Paperguide </span>
@@ -579,7 +583,7 @@
                                 </div>
 
 
-                                <div id="litmaps" class="pesquisa-academica freemium">
+                                <div id="litmaps" class="pesquisa-academica limitado">
                                         <h3>
                                                 <img src="/img/litmaps.png" height="30" width="30"></img>
                                                 <span> Litmaps </span>
@@ -593,7 +597,7 @@
                                 </div>
 
 
-                                <div id="notebooklm" class="pesquisa-academica gratis">
+                                <div id="notebooklm" class="pesquisa-academica gratuito">
                                         <h3>
                                                 <img src="/img/notebooklm.png" height="30" width="30"></img>
                                                 <span> NotebookLM </span>
@@ -607,7 +611,7 @@
                                 </div>
 
 
-                                <div id="quizlet" class="educacao freemium">
+                                <div id="quizlet" class="educacao limitado">
                                         <h3>
                                                 <img src="/img/quizlet.png" height="30" width="30"></img>
                                                 <span> Quizlet </span>
@@ -621,7 +625,7 @@
                                 </div>
 
 
-                                <div id="laxu-ai" class="educacao freemium">
+                                <div id="laxu-ai" class="educacao limitado">
                                         <h3>
                                                 <img src="/img/laxu-ai.png" height="30" width="30"></img>
                                                 <span> Laxi AI </span>
@@ -635,7 +639,7 @@
                                 </div>
 
 
-                                <div id="knowt" class="educacao freemium">
+                                <div id="knowt" class="educacao limitado">
                                         <h3>
                                                 <img src="/img/knowt.png" height="30" width="30"></img>
                                                 <span> Knowt </span>
@@ -649,7 +653,7 @@
                                 </div>
 
 
-                                <div id="studyfetch" class="educacao freemium">
+                                <div id="studyfetch" class="educacao limitado">
                                         <h3>
                                                 <img src="/img/studyfetch.png" height="30" width="30"></img>
                                                 <span> StudyFetch </span>
@@ -663,7 +667,7 @@
                                 </div>
 
 
-                                <div id="studysmarter" class="educacao freemium">
+                                <div id="studysmarter" class="educacao limitado">
                                         <h3>
                                                 <img src="/img/studysmarter.png" height="30" width="30"></img>
                                                 <span> StudySmarter </span>
@@ -677,7 +681,7 @@
                                 </div>
 
 
-                                <div id="keepmind" class="educacao freemium">
+                                <div id="keepmind" class="educacao limitado">
                                         <h3>
                                                 <img src="/img/keepmind.png" height="30" width="30"></img>
                                                 <span> Keepmind </span>
@@ -691,7 +695,7 @@
                                 </div>
 
 
-                                <div id="studley-ai" class="educacao freemium">
+                                <div id="studley-ai" class="educacao limitado">
                                         <h3>
                                                 <img src="/img/studley.png" height="30" width="30"></img>
                                                 <span> Studley AI </span>
@@ -705,7 +709,7 @@
                                 </div>
 
 
-                                <div id="thesify" class="educacao freemium">
+                                <div id="thesify" class="educacao limitado">
                                         <h3>
                                                 <img src="/img/thesify.png" height="30" width="30"></img>
                                                 <span> Thesify </span>
@@ -719,7 +723,7 @@
                                 </div>
 
 
-                                <div id="sana-labs" class="educacao freemium">
+                                <div id="sana-labs" class="educacao limitado">
                                         <h3>
                                                 <img src="/img/sana-labs.png" height="30" width="30"></img>
                                                 <span> Sana Labs </span>
@@ -733,7 +737,7 @@
                                 </div>
 
 
-                                <div id="khanmigo" class="educacao freemium">
+                                <div id="khanmigo" class="educacao limitado">
                                         <h3>
                                                 <img src="/img/Khanmigo.png" height="30" width="30"></img>
                                                 <span> Khanmigo </span>
@@ -747,7 +751,7 @@
                                 </div>
 
 
-                                <div id="github-copilot" class="desenvolvimento freemium">
+                                <div id="github-copilot" class="desenvolvimento limitado">
                                         <h3>
                                                 <img src="/img/github-copilot.png" height="30" width="30"></img>
                                                 <span> GitHub Copilot </span>
@@ -761,7 +765,7 @@
                                 </div>
 
 
-                                <div id="cursor" class="desenvolvimento freemium">
+                                <div id="cursor" class="desenvolvimento limitado">
                                         <h3>
                                                 <img src="/img/cursor-app.png" height="30" width="30"></img>
                                                 <span> Cursor </span>
@@ -775,7 +779,7 @@
                                 </div>
 
 
-                                <div id="amazon-codewhiperer" class="desenvolvimento freemium">
+                                <div id="amazon-codewhiperer" class="desenvolvimento limitado">
                                         <h3>
                                                 <img src="/img/amazon-codewhisperer.png" height="30" width="30"></img>
                                                 <span> Amazon CodeWhisperer </span>
@@ -789,7 +793,7 @@
                                 </div>
 
 
-                                <div id="clickup-brain" class="produtividade freemium">
+                                <div id="clickup-brain" class="produtividade limitado">
                                         <h3>
                                                 <img src="/img/clickup-brain.png" height="30" width="30"></img>
                                                 <span> ClickUp Brain </span>
@@ -803,7 +807,7 @@
                                 </div>
 
 
-                                <div id="monday" class="produtividade freemium">
+                                <div id="monday" class="produtividade limitado">
                                         <h3>
                                                 <img src="/img/monday.png" height="30" width="30"></img>
                                                 <span> Monday </span>
@@ -817,7 +821,7 @@
                                 </div>
 
 
-                                <div id="notion" class="produtividade freemium">
+                                <div id="notion" class="produtividade limitado">
                                         <h3>
                                                 <img src="/img/Notion.png" height="30" width="30"></img>
                                                 <span> Notion AI </span>
@@ -831,7 +835,7 @@
                                 </div>
 
 
-                                <div id="airtable" class="produtividade freemium">
+                                <div id="airtable" class="produtividade limitado">
                                         <h3>
                                                 <img src="/img/airtable.png" height="30" width="30"></img>
                                                 <span> Airtable AI </span>
@@ -845,7 +849,7 @@
                                 </div>
 
 
-                                <div id="trello" class="produtividade freemium">
+                                <div id="trello" class="produtividade limitado">
                                         <h3>
                                                 <img src="/img/Trello.png" height="30" width="30"></img>
                                                 <span> Trello AI </span>
@@ -859,7 +863,7 @@
                                 </div>
 
 
-                                <div id="taskade" class="produtividade freemium">
+                                <div id="taskade" class="produtividade limitado">
                                         <h3>
                                                 <img src="/img/tasked.png" height="30" width="30"></img>
                                                 <span> Taskade </span>
@@ -873,7 +877,7 @@
                                 </div>
 
 
-                                <div id="mem-ai" class="produtividade freemium">
+                                <div id="mem-ai" class="produtividade limitado">
                                         <h3>
                                                 <img src="/img/mem-ai.png" height="30" width="30"></img>
                                                 <span> Mem AI </span>
@@ -886,7 +890,7 @@
                                 </div>
 
 
-                                <div id="lovable" class="nocode freemium">
+                                <div id="lovable" class="nocode limitado">
                                         <h3>
                                                 <img src="/img/lovable.png" height="30" width="30"></img>
                                                 <span> Lovable </span>
@@ -900,7 +904,7 @@
                                 </div>
 
 
-                                <div id="base44" class="nocode freemium">
+                                <div id="base44" class="nocode limitado">
                                         <h3>
                                                 <img src="/img/base44.png" height="30" width="30"></img>
                                                 <span> Base44 </span>
@@ -914,7 +918,7 @@
                                 </div>
 
 
-                                <div id="otter-ai" class="audio-reunioes freemium">
+                                <div id="otter-ai" class="audio-reunioes limitado">
                                         <h3>
                                                 <img src="/img/Otter.png" height="30" width="30"></img>
                                                 <span> Otter AI </span>
@@ -928,7 +932,7 @@
                                 </div>
 
 
-                                <div id="tldv-io" class="audio-reunioes freemium">
+                                <div id="tldv-io" class="audio-reunioes limitado">
                                         <h3>
                                                 <img src="/img/tldv.png" height="30" width="30"></img>
                                                 <span> tl;dv  </span>
@@ -942,7 +946,7 @@
                                 </div>
 
 
-                                <div id="fireflies-ai" class="audio-reunioes freemium">
+                                <div id="fireflies-ai" class="audio-reunioes limitado">
                                         <h3>
                                                 <img src="/img/fireflies.png" height="30" width="30"></img>
                                                 <span> Fireflies AI </span>
@@ -956,7 +960,7 @@
                                 </div>
 
 
-                                <div id="writefull" class="escrita-academica freemium">
+                                <div id="writefull" class="escrita-academica limitado">
                                         <h3>
                                                 <img src="/img/Writefull.png" height="30" width="30"></img>
                                                 <span> Writefull AI </span>
@@ -970,7 +974,7 @@
                                 </div>
 
 
-                                <div id="paperpal" class="escrita-academica freemium">
+                                <div id="paperpal" class="escrita-academica limitado">
                                         <h3>
                                                 <img src="/img/paperpal.png" height="30" width="30"></img>
                                                 <span> Paperpal </span>
@@ -984,7 +988,7 @@
                                 </div>
 
 
-                                <div id="napkin-ai" class="design-visual freemium">
+                                <div id="napkin-ai" class="design-visual limitado">
                                         <h3>
                                                 <img src="/img/napkin-ai.png" height="30" width="30"></img>
                                                 <span> Napkin AI </span>
@@ -998,7 +1002,7 @@
                                 </div>
 
 
-                                <div id="beautiful-ai" class="design-visual freemium">
+                                <div id="beautiful-ai" class="design-visual limitado">
                                         <h3>
                                                 <img src="/img/beautiful-ai.png" height="30" width="30"></img>
                                                 <span> Beautiful AI </span>
@@ -1013,7 +1017,7 @@
                                 </div>
 
 
-                                <div id="gamma-app" class="design-visual freemium">
+                                <div id="gamma-app" class="design-visual limitado">
                                         <h3>
                                                 <img src="/img/gamma-app.png" height="30" width="30"></img>
                                                 <span> Gamma App </span>
@@ -1027,7 +1031,7 @@
                                 </div>
 
 
-                                <div id="venngage" class="design-visual freemium">
+                                <div id="venngage" class="design-visual limitado">
                                         <h3>
                                                 <img src="/img/venngage.png" height="30" width="30"></img>
                                                 <span> Venngage </span>
@@ -1041,7 +1045,7 @@
                                 </div>
 
 
-                                <div id="canva" class="design-visual freemium">
+                                <div id="canva" class="design-visual limitado">
                                         <h3>
                                                 <img src="/img/canva.png" height="30" width="30"></img>
                                                 <span> Canva </span>
@@ -1055,7 +1059,7 @@
                                 </div>
 
 
-                                <div id="zapier-agents" class="automacao no-code freemium">
+                                <div id="zapier-agents" class="automacao no-code limitado">
                                         <h3>
                                                 <img src="/img/Zapier.png" height="30" width="30"></img>
                                                 <span> Zapier Agents </span>
@@ -1069,7 +1073,7 @@
                                 </div>
 
 
-                                <div id="n8n" class="automacao no-code gratis">
+                                <div id="n8n" class="automacao no-code gratuito">
                                         <h3>
                                                 <img src="/img/n8n.png" height="30" width="30"></img>
                                                 <span> n8n </span>
@@ -1083,7 +1087,7 @@
                                 </div>
 
 
-                                <div id="make" class="automacao no-code freemium">
+                                <div id="make" class="automacao no-code limitado">
                                         <h3>
                                                 <img src="/img/make-ai.png" height="30" width="30"></img>
                                                 <span> Make </span>
@@ -1097,7 +1101,7 @@
                                 </div>
 
 
-                                <div id="pipedream" class="automacao no-code freemium">
+                                <div id="pipedream" class="automacao no-code limitado">
                                         <h3>
                                                 <img src="/img/pipedream.png" height="30" width="30"></img>
                                                 <span> Pipedream </span>
@@ -1111,7 +1115,7 @@
                                 </div>
 
 
-                                <div id="parabola" class="automacao no-code freemium">
+                                <div id="parabola" class="automacao no-code limitado">
                                         <h3>
                                                 <img src="/img/parabola-ai.png" height="30" width="30"></img>
                                                 <span> Parabola </span>
@@ -1125,7 +1129,7 @@
                                 </div>
 
 
-                                <div id="kuse" class="automacao no-code freemium">
+                                <div id="kuse" class="automacao no-code limitado">
                                         <h3>
                                                 <img src="/img/kuse-ai.png" height="30" width="30"></img>
                                                 <span> Kuse </span>
@@ -1139,7 +1143,7 @@
                                 </div>
 
 
-                                <div id="gumloop" class="automacao no-code freemium">
+                                <div id="gumloop" class="automacao no-code limitado">
                                         <h3>
                                                 <img src="/img/gumloop.png" height="30" width="30"></img>
                                                 <span> Gumloop </span>
@@ -1154,7 +1158,7 @@
                                 </div>
 
 
-                                <div id="remnote" class="notetaking freemium">
+                                <div id="remnote" class="notetaking limitado">
                                         <h3>
                                                 <img src="/img/remnote.png" height="30" width="30"></img>
                                                 <span> RemNote </span>
@@ -1168,7 +1172,7 @@
                                 </div>
 
 
-                                <div id="ninite" class="softwares gratis">
+                                <div id="ninite" class="softwares gratuito">
                                         <h3>
                                                 <img src="/img/ninite.png" height="30" width="30"></img>
                                                 <span> Ninite </span>
@@ -1182,7 +1186,7 @@
                                 </div>
                                 
 
-                                <div id="lindy" class="automacao freemium">
+                                <div id="lindy" class="automacao limitado">
                                         <h3>
                                                 <img src="/img/Lindy.png" height="30" width="30"></img>
                                                 <span> Lindy AI </span>
@@ -1201,7 +1205,7 @@
 
                         <div id="apps-ias" class="cards">
 
-                                <div id="photomath" class="educacao freemium">
+                                <div id="photomath" class="educacao limitado">
                                         <h3>
                                                 <img src="/img/photomath.png" height="30" width="30"></img>
                                                 <span> Photomath </span>
@@ -1222,7 +1226,7 @@
                                 </div>
 
 
-                                <div id="obsidian" class="educacao gratis">
+                                <div id="obsidian" class="educacao gratuito">
                                         <h3>
                                                 <img src="/img/obsidian.png" height="30" width="30"></img>
                                                 <span> Obsidian </span>

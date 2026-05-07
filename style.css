@@ -18,10 +18,6 @@
     --sombra: rgba(109, 40, 217, 0.2);
 }
 
-html {
-scroll-behavior: smooth;
-}
-
 /* Corpo da página (de novo)*/
 body {
     margin: 0;
@@ -39,6 +35,7 @@ body {
   
 }
 
+/* Container do login */
 #googlelogin-container {
     display: block;
     margin-left: 200px;
@@ -51,6 +48,7 @@ body {
     transition: all 0.2s ease;
 }
 
+/* Título do login */
 .google-login h1{
     display: block;
     text-align: center;
@@ -58,12 +56,14 @@ body {
     color: var(--luz);
 }
 
+/* Container do botão de login */
 .google-login #g_id_onload{
     display: flex;
     padding-top: 350px;
 
 }
 
+/* Seções ocultas inicialmente */
 section[id] {
     display: none;
     scroll-behavior: smooth;
