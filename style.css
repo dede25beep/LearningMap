@@ -95,13 +95,14 @@ header .search-icon {
 /*Caixa de pesquisa*/
 input[type="search"] {
     position: relative;
-    padding: 8px 80px;
     border-radius: 15px;
     border: 1px solid #ccc;
     text-align: center; 
     outline: none;
-    
-}
+    width: 400px;
+    height: 35px;
+    margin: auto;
+}    
 
 /* Remove o X e elementos de busca no WebKit (Chrome, Safari, etc.) */
 input[type="search"]::-webkit-search-cancel-button,
@@ -110,6 +111,41 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
   -webkit-appearance: none;
+}
+
+/* Centraliza e junta o ícone de pesquisa com a caixa de pesquisa */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Ajusta o preenchimento para dar espaço ao ícone de pesquisa */
+.search-box input[type="search"] {
+    padding-right: 30px;
+    flex: 1;
+   
+}
+
+/* Posiciona o botão de pesquisa dentro da caixa de pesquisa */
+.search-box button {
+    position: absolute;
+    right: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo do placeholder */
+.search-box input::placeholder {
+    display: flex;
+    text-align: center;
+    opacity: 80%;
+   
 }
 
 /* Lista de navegacao */
@@ -282,11 +318,12 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /*Imagens*/
 .cards img {
-    border: 2px solid var(--accent);
+    border: 2px solid white;
     border-radius: 10px;
     padding: 6px;
-    background: linear-gradient(180deg, #ffffff, #0004ff16);
+    box-shadow: 4px 1px 8px rgba(0, 0, 0, 0.568);
 }
+
 
 /* Conteúdo oculto inicialmente */
 .cards details p,
