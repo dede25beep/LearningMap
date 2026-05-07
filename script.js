@@ -1,3 +1,10 @@
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
+
+const supabaseUrl = 'https://zzxignsbakvesqbgcqhu.supabase.co'
+const supabaseKey = 'SUA_PUBLISHABLE_KEY_AQUI'
+
+const supabase = createClient(supabaseUrl, supabaseKey)
+
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".sidebar a");
 
