@@ -1,59 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Logar </title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body id="login">
-   
-    <section id="login">
-        <div>
-            <form action="/login" method="post"></form>
-                
-                <div id="googlelogin-container" class="google-login">
-                    <h1> Entrar </h1>
-                   
-                    <div id="g_id_onload"
-                        data-client_id="SEU_CLIENT_ID"
-                        data-context="signin"
-                        data-ux_mode="popup"
-                        data-callback="handleCredentialResponse">
-                    </div>
 
-                    <div class="g_id_signin"
-                        data-type="standard"
-                        data-shape="pill"
-                        data-theme="outline"
-                        data-text="signin_with"
-                        data-size="large">
-                    </div>
-                </div>  
-            </form>
-        </div>
-        
-    </section>
+<body id="pagina-login">
 
+  <section id="login">
+    <div>
+      <form id="login-form">
+        <h1>Entrar</h1>
 
-    <section id="register">
-        <div>
-            <form action="/register" method="post"></form>
-                <h1> Cadastre-se </h1> 
-                <input type="text" id="name_register" placeholder="Novo usuário" >
-                <input type="password" id="password-register" placeholder="Nova senha" >
-                <p> Já tem conta? <a href="#login"> Voltar </a></p>
-            </form>
-        </div>
-    </section>
-    
-    <div class="overlay-blur"></div>
+        <input 
+          type="email" 
+          id="login-email" 
+          placeholder="Seu email" 
+          required
+        >
 
+        <input 
+          type="password" 
+          id="login-password" 
+          placeholder="Sua senha" 
+          required
+        >
 
+        <button type="submit">Entrar</button>
 
+        <p>
+          Não tem conta?
+          <a href="#register" id="show-register">Cadastre-se</a>
+        </p>
 
-    
-    <script src="script.js"></script>
+        <p id="login-message"></p>
+      </form>
+    </div>
+  </section>
+
+  <section id="register" style="display: none;">
+    <div>
+      <form id="register-form">
+        <h1>Cadastre-se</h1>
+
+        <input 
+          type="email" 
+          id="register-email" 
+          placeholder="Seu email" 
+          required
+        >
+
+        <input 
+          type="password" 
+          id="register-password" 
+          placeholder="Crie uma senha" 
+          required
+        >
+
+        <button type="submit">Criar conta</button>
+
+        <p>
+          Já tem conta?
+          <a href="#login" id="show-login">Voltar</a>
+        </p>
+
+        <p id="register-message"></p>
+      </form>
+    </div>
+  </section>
+
+  <div class="overlay-blur"></div>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>
