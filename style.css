@@ -66,8 +66,7 @@ body {
 
 section[id] {
     display: none;
-  
-
+    scroll-behavior: smooth;
 }  
 
 /*Header = Barra superior*/
