@@ -10,14 +10,12 @@
 <body id="login">
    
     <section id="login">
-        <div    >
+        <div>
             <form action="/login" method="post"></form>
-                <h1> Entrar </h1>
-                <input type="text" id="name_login" placeholder="Nome" >
-                <input type="password" id="password-login" placeholder="Senha" >
-                <p> Não tem conta? <a href="#register"> Cadastre-se </a></p>
-        
-                <div class="google-login">
+                
+                <div id="googlelogin-container" class="google-login">
+                    <h1> Entrar </h1>
+                   
                     <div id="g_id_onload"
                         data-client_id="SEU_CLIENT_ID"
                         data-context="signin"
@@ -32,7 +30,7 @@
                         data-text="signin_with"
                         data-size="large">
                     </div>
-                </div>
+                </div>  
             </form>
         </div>
         
@@ -50,6 +48,7 @@
         </div>
     </section>
     
+    <div class="overlay-blur"></div>
 
 
 

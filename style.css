@@ -29,26 +29,49 @@ body {
     font-family: 'Times New Roman', Times, serif;
     color: var(--principal);
     background-color: whitesmoke;
+
 }
 
 /* Formulário de login */
 #login {
     display: block;
-    width: 300px;   
-    margin: auto;
-    padding: 0;
-
+    background: linear-gradient(to right, #ead3ff, #eee4ff, #fffffffa);
+  
 }
 
-/* Formulário de cadastro (inicialmente oculto) */
-#register {
-    display: none;
-}
 
-/* Exibe o register quando e alvo de ancora */
-#register:target {
+#googlelogin-container {
     display: block;
+    margin-left: 200px;
+    margin-top: 200px;
+    border-radius: 6px;
+    width: 400px;
+    height: 500px;
+    background-color: #181818;
+    box-shadow: 0px 2px 4px  #202020;
+    transition: all 0.2s ease;
 }
+
+.overlay-blur {
+    filter: blur(100px);
+}
+   
+
+.google-login h1{
+    display: block;
+    text-align: center;
+    margin-top: 30;
+    color: var(--luz);
+
+   
+}
+
+.google-login #g_id_onload{
+    display: flex;
+    padding-top: 350px;
+
+}
+
 
 section[id] {
     display: none;
