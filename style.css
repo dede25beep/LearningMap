@@ -33,7 +33,7 @@ body {
 }
 
 #pagina-login {
-    background: linear-gradient(to left, rgb(255, 215, 255), rgb(255, 246, 255), rgb(255, 255, 255));
+    background: linear-gradient(to left, rgba(200, 0, 255, 0.475), rgb(255, 246, 255), rgb(255, 255, 255));
 }
 
 /* Formulário de login */
@@ -72,7 +72,9 @@ body {
     margin: 20px;
     text-align: center;
     color: white;
-}    
+}  
+
+
 
 #login-email::placeholder {
     display: flex;
@@ -95,9 +97,9 @@ body {
     border: none;
     border-radius: 10px;
     margin: auto;
-    background: linear-gradient(to right, #b700ff, rgb(206, 76, 233), rgb(236, 143, 255));
+    background: linear-gradient(to right, rgb(109, 7, 135), rgb(146, 18, 185), rgb(148, 29, 238));
     color: var(--bg);
-    margin-top: 30px;
+    margin-top: 200px;
 }
 
 .login-container a {
@@ -107,18 +109,93 @@ body {
 
 .login-container a:hover {
     text-decoration: none;
-    color: violet;
+    color: rgb(194, 82, 243);
     padding-top: 30px;
-   
+}
+
+.login-container p {
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+}
+
+#register {
+    display: block;
+    padding-left: 200px;
+    padding-top: 120px;
+}
+
+.register-container {
+    display: block;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    width: 350px;
+    height: 550px;
+    text-align: center;
+    background: rgb(24, 24, 24);
+    justify-items: center;
 
 }
-    
-    
-.login-container p {
+
+.register-container h1 {
+    color: var(--luz);
+    margin: 30px;
+
+}
+
+.register-container input {
+    display: block;
+    width: 300px;
+    height: 50px;
+    background: #000;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    margin: 20px;
+    text-align: center;
+    color: white;
+}    
+
+#register-email::placeholder {
+    display: flex;
+    color: rgba(157, 157, 157, 0.700);
+    text-align: left;
+    padding-left: 20px; 
+}
+
+#register-password::placeholder {
+    display: flex;
+    color: rgba(157, 157, 157, 0.700);
+    text-align: left;
+    padding-left: 20px;
+}
+
+.btn-register {
+    display: block;
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    background: linear-gradient(to right, rgb(109, 7, 135), rgb(146, 18, 185), rgb(148, 29, 238));
+    color: var(--bg);
+    margin-top: 200px;
+}
+
+.register-container a {
     text-decoration: none;
     color: whitesmoke;
 }
 
+.register-container a:hover {
+    text-decoration: none;
+    color: rgb(194, 82, 243);
+    padding-top: 30px;
+}
+    
+.register-container p {
+    color: whitesmoke;
+    padding-top: 20px;
+}
 
 section[id] {
     display: none;
