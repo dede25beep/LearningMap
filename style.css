@@ -18,7 +18,8 @@
     --sombra: rgba(109, 40, 217, 0.2);
 }
 
-html {
+/* Efeito de rolagem suave para toda a página */
+* {
 scroll-behavior: smooth;
 }
 
@@ -32,98 +33,20 @@ body {
 
 }
 
+/* Estiliza a seção de login */
 #pagina-login {
     background: linear-gradient(to left, rgba(200, 0, 255, 0.475), rgb(255, 246, 255), rgb(255, 255, 255));
 }
 
 /* Formulário de login */
-#login {
+#login, #register {
     display: block;
     padding-left: 200px;
     padding-top: 120px;
 }
 
-.login-container {
-    display: block;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 5px;
-    width: 350px;
-    height: 550px;
-    text-align: center;
-    background: rgb(24, 24, 24);
-    justify-items: center;
-
-}
-
-.login-container h1 {
-    color: var(--luz);
-    margin: 30px;
-
-}
-
-.login-container input {
-    display: block;
-    width: 300px;
-    height: 50px;
-    background: #000;
-    outline: none;
-    border-radius: 5px;
-    border: none;
-    margin: 20px;
-    text-align: center;
-    color: white;
-}  
-
-
-
-#login-email::placeholder {
-    display: flex;
-    color: rgba(157, 157, 157, 0.700);
-    text-align: left;
-    padding-left: 20px; 
-}
-
-#login-password::placeholder {
-    display: flex;
-    color: rgba(157, 157, 157, 0.700);
-    text-align: left;
-    padding-left: 20px;
-}
-
-.btn-login {
-    display: block;
-    width: 120px;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-    margin: auto;
-    background: linear-gradient(to right, rgb(109, 7, 135), rgb(146, 18, 185), rgb(148, 29, 238));
-    color: var(--bg);
-    margin-top: 200px;
-}
-
-.login-container a {
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-.login-container a:hover {
-    text-decoration: none;
-    color: rgb(194, 82, 243);
-    padding-top: 30px;
-}
-
-.login-container p {
-    color: rgb(255, 255, 255);
-    padding-top: 20px;
-}
-
-#register {
-    display: block;
-    padding-left: 200px;
-    padding-top: 120px;
-}
-
+/* Container do formulário de login e registro */
+.login-container, 
 .register-container {
     display: block;
     border: 2px solid rgb(0, 0, 0);
@@ -136,12 +59,16 @@ body {
 
 }
 
+/* Títulos de login e registro */
+.login-container h1,
 .register-container h1 {
     color: var(--luz);
     margin: 30px;
 
 }
 
+/* Inputs (caixas) de login e registro */
+.login-container input, 
 .register-container input {
     display: block;
     width: 300px;
@@ -153,8 +80,10 @@ body {
     margin: 20px;
     text-align: center;
     color: white;
-}    
+}  
 
+/* Placeholder dos inputs */
+#login-email::placeholder, 
 #register-email::placeholder {
     display: flex;
     color: rgba(157, 157, 157, 0.700);
@@ -162,6 +91,8 @@ body {
     padding-left: 20px; 
 }
 
+/* Placeholder dos campos de senha estilizados*/
+#login-password::placeholder, 
 #register-password::placeholder {
     display: flex;
     color: rgba(157, 157, 157, 0.700);
@@ -169,6 +100,8 @@ body {
     padding-left: 20px;
 }
 
+/* Botões de login e registro */
+.btn-login, 
 .btn-register {
     display: block;
     width: 120px;
@@ -181,26 +114,31 @@ body {
     margin-top: 200px;
 }
 
+/* Estiliza os links */
+.login-container a, 
 .register-container a {
     text-decoration: none;
     color: whitesmoke;
 }
 
+/* Hover dos links */
+.login-container a:hover, 
 .register-container a:hover {
     text-decoration: none;
     color: rgb(194, 82, 243);
-    padding-top: 30px;
-}
-    
-.register-container p {
-    color: whitesmoke;
-    padding-top: 20px;
+    margin-top: 30px;
 }
 
+/* Parágrafo abaixo do formulário */
+.login-container p, 
+.register-container p {
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+}
+
+/* Esconde todas as seções inicialmente */
 section[id] {
     display: none;
-  
-
 }  
 
 /*Header = Barra superior*/
