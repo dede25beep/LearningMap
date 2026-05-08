@@ -131,8 +131,7 @@ async function protegerPaginasPrivadas() {
   const paginaAtual = window.location.pathname
 
   const paginasPrivadas = [
-    'dashboard.html',
-    'main.html'
+    'dashboard.html'
   ]
 
   const estaEmPaginaPrivada = paginasPrivadas.some(pagina => {
