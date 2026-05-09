@@ -21,11 +21,11 @@
 
                 
                 <form action="/search" method="get" class="search-box">
-                        <input type="search" placeholder="buscar ferramenta" aria-label="Buscar ferramenta">                                                                                                                                                                                                                    
+                        <input type="search" placeholder="buscar ferramenta" aria-label="Buscar ferramenta">      
+
                         <svg class="search-icon" viewBox="0 0 16 16" fill="currentColor">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                        </svg>
-                        </input>              
+                        </svg>           
                 </form>        
                 
                 <button onclick="logout()" class="logout-button">Sair</button>
@@ -89,1118 +89,1111 @@
 
 
         <section id="ferramentas" class="page-section dashboard-section">
+                <div class="dashboard-container">
 
-                <form>
                         <form action="/search" method="get" class="search-box">
-                        <input type="search" placeholder="buscar ferramenta" aria-label="buscar ferramenta">
-                        <button type="submit">
-                                <img src="/img/lupa-icon.png" aria-label="Pesquisar" width="20" height="20">
-                        </button>
-                </form>
+                                <input type="search" placeholder="buscar ferramenta" aria-label="buscar ferramenta">
+                                <button type="submit" aria-label="Pesquisar">
+                                        <img src="/img/lupa-icon.png" alt="" width="20" height="20">
+                                </button>
+                        </form>
 
 
-                <h1> Acesso rápido para Ferramentas IAs </h1>
-                <p> recursos educacionais e softwares que podem transformar sua rotina de estudos e programação. </p>
+                        <h1> Acesso rápido para Ferramentas IAs </h1>
+                        <p> recursos educacionais e softwares que podem transformar sua rotina de estudos e programação. </p>
 
-                <div id="filtro">       
+                        <div id="filtro">       
 
-                      
-
-                </div>
-                
-                        <div id="ias" class="cards">
                         
 
-                                <div id="chatgpt" class="raciocinio freemium">
-                                        <h3>
-                                                <img src="/img/ChatGPT_logo.svg.png" height="30" width="30">
-                                                <span> ChatGPT </span>
-                                        </h3>
-                                        <p>
-                                                O ChatGPT é uma IA de conversa que responde perguntas, cria textos, resume
-                                                conteúdo e ajuda a organizar ideias de forma rápida e natural.
-                                                Ele é mais útil quando a tarefa envolve linguagem, explicação, análise de texto
-                                                ou geração de conteúdo.
-                                        </p>
-                                        <a href="http://chatgpt.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="gemini" class="raciocinio freemium">
-                                        <h3>
-                                                <img src="/img/gemini-logo.png" height="30" width="30">
-                                                <span> Gemini </span>
-                                        </h3>
-                                        <p>
-                                                O Gemini é a inteligência artificial mais avançada e capaz desenvolvida pelo
-                                                Google.                                                                                                                                                                                 
-                                                Ele não é apenas um "chatbot", mas sim um ecossistema de modelos de IA
-                                                projetados para serem nativamente multimodais.
-                                        </p>
-                                        <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer"> Acesse o site 
-                                        </a>
-                                </div>
-
-
-                                <div id="claude" class="raciocinio freemium">
-                                        <h3>
-                                                <img src="/img/Claude-ai-logo.png" height="30" width="30">
-                                                <span> Claude </span>
-                                        </h3>
-                                        <p>
-                                                Claude é um assistente de IA avançado focado em segurança e raciocínio ético.
-                                                Suas principais funções incluem geração de textos, análise de dados e imagens,
-                                                programação e resumos de documentos longos.
-                                        </p>
-                                        <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="grok-3" class="raciocinio freemium">
-                                        <h3>
-                                                <img src="/img/grok-logo.png" height="30" width="30">
-                                                <span> Grok </span>
-                                        </h3>
-                                        <p>
-                                                Grok é uma IA generativa conversacional com senso de humor inspirado no Guia do
-                                                Mochileiro das Galáxias.
-                                                Seus principais pontos incluem respostas rápidas, acesso em tempo real ao X
-                                                (Twitter), geração de textos, imagens, código e análise de dados.
-                                                <a href="https://grok.com/" target="_blank" rel="noopener noreferrer"> Acesse o
-                                                        site </a>
-                                </div>
-
-
-                                <div id="perplexity" class="raciocinio freemium">
-                                        <h3>
-                                                <img src="/img/perplexity.png" height="30" width="30">
-                                                <span> Perplexity </span>
-                                        </h3>
-                                        <p>
-                                                Perplexity é um motor de busca conversacional impulsionado por IA.
-                                                Serve principalmente para pesquisas rápidas ou aprofundadas, análise de
-                                                documentos, geração de relatórios acadêmicos e interações interativas, sendo
-                                                ideal para aprendizado e produtividade sem anúncios.
-                                        </p>
-                                        <a href="https://perplexity.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site </a>
-                                </div>
-
-
-                                <div id="elicit" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/elicit.png" height="30" width="30">
-                                                <span> Elicit </span>
-                                        </h3>
-                                        <p>
-                                                Elicit é um assistente de IA especializado em pesquisa acadêmica, que automatiza buscas em milhões de artigos científicos, gera resumos e extrai dados estruturados (métodos, resultados, amostras).
-                                                Serve principalmente para revisões sistemáticas, síntese de literatura e workflows de pesquisadores, com citações por sentença para verificação transparente.   
-                                        </p>        
-                                        <a href="https://elicit.com/" target="_blank" rel="noopener noreferrer"> Acesse o site </a>
-                                </div>
-
-
-                                <div id="jenni-ai" class="escrita-academica freemium">
-                                        <h3>
-                                                <img src="/img/Jenni-ai.png" height="30" width="30">
-                                                <span> Jenni AI </span>
-                                        </h3>
-                                        <p>
-                                                Jenni AI é uma assistente de escrita acadêmica e pesquisa com IA que atua como co-piloto para estudantes e pesquisadores, oferecendo autocompletar contextual, geração de esboços e suporte a citações diretamente de PDFs carregados.
-                                                Serve para criar ensaios, revisões sistemáticas e artigos com ferramentas como resumidor de textos, chat de pesquisa que usa suas fontes (não web), +2.600 estilos de citação (APA, Chicago), verificação de plágio e exportação para DOCX/LaTeX/HTML.
-                                        </p>     
-                                        <a href="https://jenni.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-
-
                         </div>
-
-
-                        <div id="sites-ias" class="cards">
-
-
-                                <div id="wix" class="nocode freemium">
-                                        <h3>
-                                                <img src="/img/wix-logo.png" height="30" width="30">
-                                                <span> WIX </span>
-                                        </h3>
-                                        <p>
-                                                O Wix é uma plataforma online baseada em nuvem, popularmente conhecida como um
-                                                criador de sites do tipo "arrastar e soltar".
-                                                Ele permite que pessoas sem nenhum conhecimento prévio em programação ou design
-                                                criem sites, blogs e lojas virtuais profissionais.
-                                        </p>
-                                        <a href="https://www.wix.com" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="hostinger" class="nocode freemium">
-                                        <h3>
-                                                <img src="/img/Hostinger-logl.png" height="30" width="30">
-                                                <span> Hostinger </span>
-                                        </h3>
-                                        <p>
-                                                A Hostinger AI é um conjunto de ferramentas baseadas em inteligência artificial
-                                                integrado aos serviços da Hostinger, projetado para simplificar e acelerar a
-                                                criação, gerenciamento e otimização de sites, mesmo para quem não tem
-                                                conhecimentos técnicos.
-                                        </p>
-                                        <a href="https://www.hostinger.com/" target="_blank" rel="noopener noreferrer"> Acesse o
-                                                site </a>
-                                </div>
-
-
-                                <div id="promakeia" class="nocode freemium">
-                                        <h3>
-                                                <img src="/img/Promake-logo.png" height="30" width="30">
-                                                <span> PromakeAI </span>
-                                        </h3>
-                                        <p>
-                                                PromakeAIé uma inteligência artificial que ajuda você a organizar e resumir
-                                                conteúdos de forma rápida e detalhada, usando prompts bem estruturados.
-                                        </p>
-                                        <a href="https://promake.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-                                <div id="readdy" class="nocode freemium">
-                                        <h3>
-                                                <img src="/img/Readdy AI.png" height="30" width="30">
-                                                <span> Readdy AI </span>
-                                        </h3>
-                                        <p>
-                                                Readdy AI é uma plataforma de construção de sites baseada em inteligência
-                                                artificial que cria páginas web profissionais, landing pages e e-commerce em
-                                                minutos através de conversas (prompts) em linguagem natural.
-                                        </p>
-                                        <a href="https://readdy.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="manus" class="nocode freemium">
-                                        <h3>
-                                                <img src="/img/manus.png" height="30" width="30">
-                                                <span> Manus AI </span>
-                                        </h3>
-                                        <p>
-                                                Manus é um agente de inteligência artificial artificial, desenvolvido na China,
-                                                que vai além de um chatbot tradicional (como ChatGPT) para executar tarefas de
-                                                ponta a ponta.
-                                                Ele pesquisa, analisa dados, cria sites completos, produz relatórios e organiza
-                                                informações de forma automática, ágil como um assistente proativo
-                                        </p>
-                                        <a href="https://manus.im/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="researchrabbit" class="pesquisa-academica gratis">
-                                        <h3>
-                                                <img src="/img/ResearchRabbit.png" height="30" width="30">
-                                                <span> ResearchRabbit </span>
-                                        </h3>
-                                        <p>
-                                                ResearchRabbit é uma ferramenta gratuita de mapeamento visual de literatura acadêmica, apelidada de "Spotify para artigos científicos", que cria redes de citações, timelines e mapas de calor para descobrir papers relacionados.
-                                                Serve para pesquisadores fazerem revisões de literatura rápidas, rastrearem autores, receberem alertas de novos artigos e colaborarem via coleções compartilháveis, acelerando 5x o workflow acadêmico.
-                                        </p>        
-                                        <a href="https://researchrabbit.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="rayyan" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/Rayyan.png" height="30" width="30">
-                                                <span> Rayyan </span>
-                                        </h3>
-                                        <p>
-                                                ResearchRabbit é uma ferramenta gratuita de mapeamento visual de literatura acadêmica, apelidada de "Spotify para artigos científicos", que cria redes de citações, timelines e mapas de calor para descobrir papers relacionados.
-                                                Serve para importar artigos, detectar duplicatas automaticamente, triar por relevância (incluir/excluir) com IA preditiva, colaborar em equipe e gerar fluxogramas PRISMA, economizando até 40-50% do tempo na seleção de estudos.
-                                        </p>
-                                        <a href="https://rayyan.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="open-knowledge-maps" class="pesquisa-academica gratis">
-                                        <h3>
-                                                <img src="/img/Logo-Open-Knowledge-Maps-.png" height="30" width="30">
-                                                <span> Open Knowledge Maps </span>
-                                        </h3>
-                                        <p>
-                                                O Open Knowledge Maps é um motor de busca visual sem fins lucrativos que transforma buscas acadêmicas em mapas interativos de conhecimento, organizando os documentos mais relevantes em clusters temáticos para facilitar a visão panorâmica de um assunto.
-                                                Serve para pesquisadores explorarem novas áreas de estudo, identificarem lacunas na literatura e acessarem conteúdos de forma rápida, conectando-se a bases globais como PubMed e BASE para otimizar o fluxo de trabalho de revisões bibliográficas.
-                                        </p>
-                                        <a href="https://openknowledgemaps.org/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="scholarcy" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/Scholarcy-logo.svg" height="30" width="30">
-                                                <span> Scholarcy </span>
-                                        </h3>
-                                        <p>
-                                                O Scholarcy é um resumidor de textos acadêmicos movido a IA que transforma artigos complexos e PDFs longos em "flashcards" interativos, extraindo automaticamente pontos-chave, metodologias, resultados e referências.
-                                                Serve para pesquisadores e estudantes otimizarem o fluxo de leitura, facilitando a revisão de literatura, a comparação entre estudos e a organização de bibliografias anotadas com integração direta a gestores de referências como Zotero.
-                                        </p>
-                                        <a href="https://scholarcy.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="anara" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/anara.png" height="30" width="30">
-                                                <span> Anara </span>
-                                        </h3>
-                                        <p>
-                                                O Anara AI (anteriormente conhecido como Unriddle AI) é um assistente de pesquisa com inteligência artificial que centraliza e analisa diversos formatos de documentos — incluindo PDFs, vídeos, áudios e imagens — em uma biblioteca de pesquisa unificada.
-                                                Serve para pesquisadores sintetizarem informações complexas, compararem argumentos entre múltiplos arquivos, extraírem citações precisas e criarem materiais de estudo (como flashcards), permitindo realizar revisões de literatura em larga escala com alta rastreabilidade de fontes.
-                                        </p>
-                                        <a href="https://anara.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="r-discovery" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/r-discovery.png" height="30" width="30">
-                                                <span> R Discovery </span>
-                                        </h3>
-                                        <p>
-                                                O R Discovery é um assistente de pesquisa impulsionado por IA que utiliza aprendizado de máquina para oferecer um feed personalizado de artigos acadêmicos, eliminando a necessidade de buscas manuais repetitivas.
-                                                Serve para pesquisadores descobrirem e lerem rapidamente mais de 250 milhões de artigos, oferecendo recursos como resumos em formato de "stories", leitura de áudio, tradução em múltiplos idiomas e chat com PDFs, economizando até 70% do tempo na revisão de literatura.
-                                        </p>
-                                        <a href="https://discovery.researcher.life/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="keenious" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/keenious.png" height="30" width="30">
-                                                <span> Keenious </span>
-                                        </h3>
-                                        <p>
-                                                Keenious AI é uma ferramenta de pesquisa acadêmica que analisa documentos (PDFs, texto ou URLs) para recomendar artigos relevantes de 250+ milhões de papers em 100 idiomas.
-                                                Serve para revisão de literatura, explicando conceitos complexos e encontrando estudos relacionados automaticamente, com destaque em textos e filtros por citações/data.
-                                        </p>
-                                        <a href="https://keenious.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="asreview" class="pesquisa-academica gratis">
-                                        <h3>
-                                                <img src="/img/asreview.png" height="30" width="30">
-                                                <span> ASReview </span>
-                                        </h3>
-                                        <p>
-                                                ASReview AI é uma ferramenta open-source de active learning que acelera revisões sistemáticas, priorizando registros relevantes de grandes datasets de abstracts científicos.
-                                                Serve para triagem inteligente de literatura (title/abstract screening), reduzindo 50-95% do tempo manual com modelos ELAS configuráveis e transparência total.
-                                        </p>
-                                        <a href="https://asreview.nl/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="atlas" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/atlas-workspace.png" height="30" width="30">
-                                                <span> Atlas </span>
-                                        </h3>
-                                        <p>
-                                                Atlas Workspace AI é um workspace de conhecimento com IA que organiza notas, documentos e ideias através de mapas mentais visuais automáticos e chat com múltiplos documentos.
-                                                Serve para pesquisadores e profissionais conectarem conceitos complexos, com autocomplete Claude, transcrições de reuniões e citações verificáveis para evitar alucinações.
-                                        </p>
-                                        <a href="https://atlasworkspace.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="okara-ai" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/okara-ai.png" height="30" width="30">
-                                                <span> Okara AI </span>
-                                        </h3>
-                                        <p>
-                                                Okara AI é um workspace privado que unifica 30+ modelos open-source (Llama, Mistral, DeepSeek) com chats criptografados end-to-end, pesquisa integrada (Reddit/X/YouTube) e geração de imagens/código.
-                                                Serve para desenvolvedores e profissionais que precisam de privacidade total, trocando modelos sem perder contexto e colaborando em equipe sem vazar dados para treinamento.
-                                        </p>
-                                        <a href="https://okara.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="avidnote" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/avidnote.png" height="30" width="30">
-                                                <span> Avidnote </span>
-                                        </h3>
-                                        <p>
-                                                Vidnote é uma plataforma de notas com IA para pesquisadores, que organiza papers, permite anotações lado a lado com PDFs e usa IA para resumir artigos, identificar gaps de pesquisa e transcrever entrevistas.
-                                                Serve para revisão de literatura, escrita acadêmica colaborativa e análise de dados com templates de IA, mantendo referências e documentos integrados no mesmo workspace.
-                                        </p>
-                                        <a href="https://avidnote.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="paper-digest" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/Paper-Digest.png" height="30" width="30">
-                                                <span> Paper Digest </span>
-                                        </h3>
-                                        <p>
-                                                Paper Digest AI é uma plataforma de revisão de literatura que gera resumos automáticos e digests estruturados de artigos científicos individuais ou múltiplos, identificando temas comuns e pontos-chave.
-                                                Serve para pesquisadores acelerarem revisões bibliográficas, acompanhar papers em tempo real por tópico e criar sínteses coesas para escrita acadêmica, com planos gratuito e pago.
-                                        </p>
-                                        <a href="https://paperdigest.org/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="covidence" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/covidence.png" height="30" width="30">
-                                                <span> Covidence </span>
-                                        </h3>
-                                        <p>
-                                                Covidence AI é uma plataforma líder para revisões sistemáticas que usa machine learning responsável para automatizar triagem, deduplicação e classificação de RCTs com >99% recall.
-                                                Serve para pesquisadores médicos/healthcare economizarem 35% do tempo em screening com priorização inteligente, sugestões de extração automática e fluxogramas PRISMA auditáveis.
-                                        </p>
-                                        <a href="https://covidence.org/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="consensus" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/Consensus.png" height="30" width="30">
-                                                <span> Consensus </span>
-                                        </h3>
-                                        <p>
-                                                Consensus AI é um motor de busca acadêmico com IA que responde perguntas analisando 200+ milhões de papers científicos, mostrando consenso científico via "Consensus Meter" (Sim/Não/Possívelmente).
-                                                Serve para pesquisadores encontrarem respostas baseadas em evidências com citações diretas, Deep Search para revisões completas e sínteses rápidas sem alucinações.
-                                        </p>
-                                        <a href="https://consensus.app/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="scite-ai" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/scite-ai.png" height="30" width="30">
-                                                <span> Scite AI </span>
-                                        </h3>
-                                        <p>
-                                                Scite AI é uma plataforma de pesquisa acadêmica que transforma citações tradicionais em Smart Citations, analisando 1.2+ bilhão de citações para classificar se apoiam, contrastam ou apenas mencionam uma afirmação.
-                                                Serve para pesquisadores avaliarem rapidamente a credibilidade científica de papers, descobrirem controvérsias e construírem argumentos sólidos com contexto real das citações, não apenas contagem bruta.
-                                        </p>
-                                        <a href="https://scite.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="scispace" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/scispace.png" height="30" width="30">
-                                                <span> SciSpace </span>
-                                        </h3>
-                                        <p>
-                                                SciSpace (antigo Typeset) é uma plataforma de IA acadêmica que facilita descoberta, leitura e escrita científica com Copilot IA para PDFs, explicações de textos complexos, tabelas e fórmulas.
-                                                Serve para revisão de literatura, geração de citações automáticas, resumos de artigos e projetos de pesquisa completos, com suporte a upload de PDFs próprios e busca sem palavras-chave.
-                                        </p>
-                                        <a href="https://scispace.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="connected-papers" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/connected-papers.png" height="30" width="30">
-                                                <span> Connected Papers </span>
-                                        </h3>
-                                        <p>
-                                                Connected Papers é uma ferramenta visual gratuita que gera mapas de grafos interativos de artigos científicos relacionados, baseado em similaridade semântica e co-citações (não só citações diretas).
-                                                Serve para pesquisadores explorarem literatura conectada visualmente, identificarem papers fundacionais/derivados, tendências temporais e lacunas de pesquisa rapidamente.
-                                        </p>
-                                        <a href="https://connectedpapers.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="undermind" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/undermind.png" height="30" width="30">
-                                                <span> Undermind </span>
-                                        </h3>
-                                        <p>
-                                                Undermind é um agente de IA avançado para pesquisa científica que faz buscas iterativas e adaptativas em Semantic Scholar, lendo centenas de papers autonomamente.
-                                                Serve para cientistas resolverem perguntas complexas com relatórios precisos (98% acurácia), redes de citações e sínteses baseadas em evidências, 10-50x mais eficaz que buscas tradicionais.
-                                        </p>
-                                        <a href="https://undermind.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="papersflow" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/papersflow.png" height="30" width="30">
-                                                <span> PapersFlow </span>
-                                        </h3>
-                                        <p>
-                                                PapersFlow é um workspace de pesquisa acadêmica all-in-one com IA que integra busca em 474M+ papers, revisão de literatura automatizada, gestão de citações, escrita LaTeX e verificação de contra-evidências.
-                                                Serve para pesquisadores executarem revisões sistemáticas completas, workflows colaborativos e escrita de manuscripts com Chain of Verification, integrando Zotero/Notion e exportando BibTeX/PDF.
-                                        </p>
-                                        <a href="https://papersflow.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="paperguide" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/paperguide.png" height="30" width="30">
-                                                <span> Paperguide </span>
-                                        </h3>
-                                        <p>
-                                                PaperGuide AI é um assistente de pesquisa tudo-em-um que escaneia artigos científicos automaticamente, extrai citações (DOI, autores), gera resumos instantâneos e responde perguntas baseadas em 200M+ papers.
-                                                Serve para pesquisadores gerenciarem referências, fazerem buscas por perguntas naturais, baterem papo com PDFs e escreverem papers com citações automáticas em qualquer estilo.
-                                        </p>
-                                        <a href="https://paperguide.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="litmaps" class="pesquisa-academica freemium">
-                                        <h3>
-                                                <img src="/img/litmaps.png" height="30" width="30">
-                                                <span> Litmaps </span>
-                                        </h3>
-                                        <p>
-                                                Litmaps é uma plataforma de visualização de literatura científica que cria mapas interativos dinâmicos conectando artigos por citações, similaridades e referências, mostrando evolução temporal de campos de pesquisa.
-                                                Serve para pesquisadores descobrirem papers fundamentais, tendências emergentes e lacunas de literatura através de grafos visuais, com alertas automáticos de novos artigos e integração Zotero/Mendeley.
-                                        </p>
-                                        <a href="https://litmaps.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="notebooklm" class="pesquisa-academica gratis">
-                                        <h3>
-                                                <img src="/img/notebooklm.png" height="30" width="30">
-                                                <span> NotebookLM </span>
-                                        </h3>
-                                        <p>
-                                                NotebookLM é uma ferramenta experimental do Google Labs que transforma documentos (PDFs, Google Docs, links, vídeos) em notebooks interativos com IA Gemini, gerando resumos, guias de estudo e podcasts automáticos personalizados.
-                                                Serve para estudantes e pesquisadores organizarem materiais, fazerem perguntas específicas sobre fontes carregadas e criarem conteúdos estruturados (FAQs, timelines, briefings) sem alucinações.
-                                        </p>
-                                        <a href="https://notebooklm.google.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="quizlet" class="educacao freemium">
-                                        <h3>
-                                                <img src="/img/quizlet.png" height="30" width="30">
-                                                <span> Quizlet </span>
-                                        </h3>
-                                        <p>
-                                                Quizlet é uma plataforma de estudo baseada em flashcards interativos, jogos e testes que usa repetição espaçada para memorizar conteúdos acadêmicos de forma gamificada.
-                                                Serve para estudantes criarem ou usarem conjuntos prontos de qualquer matéria (idiomas, história, ciências), com modos como Quizlet Live para aulas colaborativas e prática de pronúncia.
-                                        </p>
-                                        <a href="https://quizlet.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="laxu-ai" class="educacao freemium">
-                                        <h3>
-                                                <img src="/img/laxu-ai.png" height="30" width="30">
-                                                <span> Laxi AI </span>
-                                        </h3>
-                                        <p>
-                                                Laxu AI é uma ferramenta de estudo com IA que converte PDFs, slides, imagens e áudios de aulas em flashcards inteligentes, resumos estruturados e quizzes personalizados em segundos.
-                                                Serve para estudantes otimizarem revisão ativa com repetição espaçada, economizando tempo na formatação e focando na memorização de materiais acadêmicos reais.
-                                        </p>
-                                        <a href="https://laxuai.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="knowt" class="educacao freemium">
-                                        <h3>
-                                                <img src="/img/knowt.png" height="30" width="30">
-                                                <span> Knowt </span>
-                                        </h3>
-                                        <p>
-                                                Knowt AI é uma plataforma de estudo all-in-one que converte notas, PDFs, vídeos de aula e slides em flashcards, quizzes e testes automáticos via IA "Kai", com repetição espaçada ilimitada gratuita.
-                                                Serve como alternativa superior ao Quizlet para estudantes, oferecendo chat com documentos, importação direta de Quizlet, jogos de memorização e prática de exames personalizada.
-                                        </p>
-                                        <a href="https://knowt.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="studyfetch" class="educacao freemium">
-                                        <h3>
-                                                <img src="/img/studyfetch.png" height="30" width="30">
-                                                <span> StudyFetch </span>
-                                        </h3>
-                                        <p>
-                                                StudyFetch é uma plataforma de aprendizado com IA que converte materiais de curso (PDFs, PowerPoints, vídeos, anotações) em flashcards, quizzes, testes e notas detalhadas personalizadas automaticamente.
-                                                Serve para estudantes com seu tutor IA Spark.E que oferece feedback em tempo real, grava aulas ao vivo e usa repetição ativa, suportando 20+ idiomas e múltiplos formatos de upload.
-                                        </p>
-                                        <a href="https://studyfetch.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="studysmarter" class="educacao freemium">
-                                        <h3>
-                                                <img src="/img/studysmarter.png" height="30" width="30">
-                                                <span> StudySmarter </span>
-                                        </h3>
-                                        <p>
-                                                StudySmarter é uma plataforma de aprendizado com IA que transforma PDFs, slides e notas em resumos automáticos, flashcards inteligentes e simulados personalizados com feedback detalhado.
-                                                Serve para estudantes otimizarem estudo ativo com Explain AI (explicações instantâneas), Exam AI (testes adaptativos) e repetição espaçada, melhorando notas em até 94% com planos personalizados.
-                                        </p>
-                                        <a href="https://studysmarter.co.uk/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="keepmind" class="educacao freemium">
-                                        <h3>
-                                                <img src="/img/keepmind.png" height="30" width="30">
-                                                <span> Keepmind </span>
-                                        </h3>
-                                        <p>
-                                                Keepmind é um app de estudo com IA que converte notas, PDFs e textos em flashcards automáticas, quizzes inteligentes e mapas mentais, usando repetição espaçada FSRS-5 para máxima retenção.
-                                                Serve para estudantes e autodidatas visualizarem conteúdo complexo como Notion + Anki, com resumos rápidos e testes adaptativos que otimizam revisão ativa sem esforço manual.
-                                        </p>
-                                        <a href="https://keepmind.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="studley-ai" class="educacao freemium">
-                                        <h3>
-                                                <img src="/img/studley.png" height="30" width="30">
-                                                <span> Studley AI </span>
-                                        </h3>
-                                        <p>
-                                                Studley AI é um assistente de estudo completo que transforma slides de aula, PDFs, vídeos do YouTube e notas em conjuntos de estudo personalizados com flashcards, quizzes de múltipla escolha, testes escritos e modo tutor explicativo.
-                                                Serve para estudantes otimizarem aprendizado ativo com etiquetas inteligentes de domínio (desconhecido→mestrado), repetição espaçada e resumos instantâneos, superando Quizlet com IA adaptativa e edição total.
-                                        </p>
-                                        <a href="https://keepmind.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="thesify" class="educacao freemium">
-                                        <h3>
-                                                <img src="/img/thesify.png" height="30" width="30">
-                                                <span> Thesify </span>
-                                        </h3>
-                                        <p>
-                                                Thesify AI é um assistente de escrita acadêmica ético que oferece feedback em tempo real para ensaios, teses e propostas, com assistente Theo que analisa estrutura, argumentos e clareza sem gerar conteúdo automaticamente.
-                                                Serve para estudantes melhorarem redações com sugestões de literatura de 200M+ artigos, verificação de citações e conexão com journals/fundos, promovendo integridade acadêmica.
-                                        </p>
-                                        <a href="https://thesify.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="sana-labs" class="educacao freemium">
-                                        <h3>
-                                                <img src="/img/sana-labs.png" height="30" width="30">
-                                                <span> Sana Labs </span>
-                                        </h3>
-                                        <p>
-                                                Sana Labs AI é uma plataforma corporativa de aprendizado com IA que cria experiências personalizadas de treinamento, automatiza administração LMS e gera agentes inteligentes conectados ao conhecimento interno da empresa.
-                                                Serve para empresas acelerarem desenvolvimento de competências com tutores IA, criação automática de conteúdo e analytics em tempo real, integrando ferramentas como Google Workspace, Slack e Salesforce.
-                                        </p>
-                                        <a href="https://sanalabs.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="khanmigo" class="educacao freemium">
-                                        <h3>
-                                                <img src="/img/Khanmigo.png" height="30" width="30">
-                                                <span> Khanmigo </span>
-                                        </h3>
-                                        <p>
-                                                Khanmigo AI é o tutor virtual da Khan Academy (GPT-4o), que guia alunos com método socrático em matemática, escrita, história e programação, incentivando raciocínio crítico sem dar respostas prontas.
-                                                Serve para professores (grátis) criarem planos de aula instantâneos, rubricas e resumos de turma, e para alunos/pais terem suporte 24/7 com conteúdos da Khan Academy integrados
-                                        </p>
-                                        <a href="https://khanacademy.org/khan-labs" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="github-copilot" class="desenvolvimento freemium">
-                                        <h3>
-                                                <img src="/img/github-copilot.png" height="30" width="30">
-                                                <span> GitHub Copilot </span>
-                                        </h3>
-                                        <p>
-                                                GitHub Copilot é um assistente de programação por IA desenvolvido pelo GitHub em parceria com OpenAI e Microsoft, que sugere linhas ou funções completas em tempo real dentro de editores como VS Code.
-                                                Serve para acelerar codificação com autocompletar contextual (analisa arquivos abertos/comentários), chat para dúvidas, testes automáticos e pull requests via GitHub Actions, aumentando produtividade em até 55%.
-                                        </p>
-                                        <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="cursor" class="desenvolvimento freemium">
-                                        <h3>
-                                                <img src="/img/cursor-app.png" height="30" width="30">
-                                                <span> Cursor </span>
-                                        </h3>
-                                        <p>
-                                                Cursor AI é um editor de código AI-native (fork do VS Code) que integra modelos avançados como GPT-5 e Claude 4.5 diretamente no fluxo de trabalho de programação.
-                                                Serve para desenvolvedores acelerarem 10x com autocompletar multicurioso (prevê edições multi-linha), Composer (cria projetos completos via prompts naturais), refatoração automática, correção de bugs analisando terminal e chat contextual que entende arquitetura inteira do projeto.
-                                        </p>
-                                        <a href="https://cursor.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="amazon-codewhiperer" class="desenvolvimento freemium">
-                                        <h3>
-                                                <img src="/img/amazon-codewhisperer.png" height="30" width="30">
-                                                <span> Amazon CodeWhisperer </span>
-                                        </h3>
-                                        <p>
-                                                Amazon CodeWhisperer é um assistente de codificação por IA da AWS que gera sugestões de código em tempo real baseadas em bilhões de linhas de código open source e proprietário da Amazon.
-                                                Serve para desenvolvedores em IDEs (VS Code, JetBrains) aumentarem produtividade com autocompletar contextual, suporte a 15+ linguagens, detecção de vulnerabilidades e integração nativa AWS, gratuito para uso individual.
-                                        </p>
-                                        <a href="https://aws.amazon.com/codewhisperer" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="clickup-brain" class="produtividade freemium">
-                                        <h3>
-                                                <img src="/img/clickup-brain.png" height="30" width="30">
-                                                <span> ClickUp Brain </span>
-                                        </h3>
-                                        <p>
-                                                ClickUp Brain é a camada nativa de IA do ClickUp que conecta tarefas, documentos, comentários e ferramentas externas, oferecendo respostas contextuais instantâneas e automação inteligente.
-                                                Serve para equipes gerenciarem conhecimento com AI Knowledge Manager (responde perguntas sobre projetos), AI Project Manager (gera atualizações/resumos), AI Notetaker (transcreve reuniões Zoom/Teams) e agentes autônomos que criam tarefas e atualizam status automaticamente.
-                                        </p>
-                                        <a href="https://clickup.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="monday" class="produtividade freemium">
-                                        <h3>
-                                                <img src="/img/monday.png" height="30" width="30">
-                                                <span> Monday </span>
-                                        </h3>
-                                        <p>
-                                                Monday AI é a suíte de inteligência artificial nativa da plataforma monday.com, projetada para automatizar tarefas, gerar insights e otimizar fluxos de trabalho diretamente nos quadros de projetos, CRM e dev.
-                                                Serve para equipes com AI Blocks (resumos, categorização, extração de dados de PDFs/imagens), AI Agents (Service Agent para tickets, Deal Facilitator para vendas), automações inteligentes, notetaker de reuniões e fórmula builder que criam conteúdo contextual em colunas
-                                        </p>
-                                        <a href="https://monday.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="notion" class="produtividade freemium">
-                                        <h3>
-                                                <img src="/img/Notion.png" height="30" width="30">
-                                                <span> Notion AI </span>
-                                        </h3>
-                                        <p>
-                                                Notion AI é o assistente de IA nativo integrado ao Notion que usa modelos premium como GPT-5 e Claude para gerar, editar e analisar conteúdo diretamente nas páginas, documentos e bancos de dados.
-                                                Serve para equipes com resumos automáticos de documentos/reuniões, extração de itens de ação, agentes autônomos (Notion 3.0) que executam fluxos multi-etapa (atualizar DBs, triagem de tickets), busca contextual em todo workspace e automação de propriedades em databases.
-                                        </p>
-                                        <a href="https://notion.so/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="airtable" class="produtividade freemium">
-                                        <h3>
-                                                <img src="/img/airtable.png" height="30" width="30">
-                                                <span> Airtable AI </span>
-                                        </h3>
-                                        <p>
-                                                Airtable AI é o conjunto de funcionalidades de IA generativa integrado ao Airtable que permite automatizar tarefas em bases de dados, extrair insights e gerar conteúdo diretamente de registros e campos.
-                                                Serve para equipes com resumos automáticos de texto/conversas, categorização inteligente de dados, geração de conteúdo (e-mails, descrições), análise em linguagem natural (perguntas sobre dados), campos de IA configuráveis e templates pré-prontos para fluxos comuns como feedback e planejamento.
-                                        </p>
-                                        <a href="https://airtable.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="trello" class="produtividade freemium">
-                                        <h3>
-                                                <img src="/img/Trello.png" height="30" width="30">
-                                                <span> Trello AI </span>
-                                        </h3>
-                                        <p>
-                                                Trello AI (Atlassian Intelligence) é a IA nativa integrada ao Trello para usuários Premium/Enterprise que automatiza escrita e organização diretamente nos cartões e quadros.
-                                                Serve para equipes com drafting/resumos de descrições/comentários, brainstorm de ideias, extração de tarefas de notas/reuniões/emails (Quick Capture), análise de performance via power-ups e automações avançadas com Butler que movem cartões e integram Slack/Jira.
-                                        </p>
-                                        <a href="https://trello.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="taskade" class="produtividade freemium">
-                                        <h3>
-                                                <img src="/img/tasked.png" height="30" width="30">
-                                                <span> Taskade </span>
-                                        </h3>
-                                        <p>
-                                                Taskade AI é uma plataforma colaborativa de gerenciamento de tarefas e projetos que integra IA generativa para criar fluxos de trabalho, agentes autônomos e automações diretamente de prompts naturais.
-                                                Serve para equipes com AI Agents (Research, SEO, Roundtable para insights múltiplos), comandos slash (/summarize, /subtask, /brainstorm, /prioritize), geração instantânea de projetos completos a partir de sites/vídeos e automações que criam tarefas/respostas baseadas em gatilhos.
-                                        </p>
-                                        <a href="https://trello.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="mem-ai" class="produtividade freemium">
-                                        <h3>
-                                                <img src="/img/mem-ai.png" height="30" width="30">
-                                                <span> Mem AI </span>
-                                        </h3>
-                                        <p>
-                                                Mem.ai é um aplicativo de notas impulsionado por IA que funciona como um "segundo cérebro digital", capturando, organizando automaticamente e conectando ideias, reuniões e pesquisas sem pastas manuais.
-                                                Serve para profissionais com organização automática por IA (categoriza temas/conexões), busca semântica (encontra por descrição natural), Mem Chat (perguntas/resumos/drafts baseados nas suas notas), captura via voz/extensão Chrome/SMS e agentes proativos que resumem semanas ou sugerem ações.
-                                        <a href="https://mem.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="lovable" class="nocode freemium">
-                                        <h3>
-                                                <img src="/img/lovable.png" height="30" width="30">
-                                                <span> Lovable </span>
-                                        </h3>
-                                        <p>
-                                                Lovable é uma plataforma de desenvolvimento full-stack com IA generativa que permite criar aplicativos web completos (frontend React/Tailwind, backend Node.js, banco Supabase) usando apenas prompts em linguagem natural.
-                                                Serve para não-desenvolvedores e PMs prototiparem MVPs em horas (agendamento, SaaS, dashboards), com código real exportável para GitHub, autenticação nativa, integração de chatbots/análise de sentimentos e documentação README automática gerada por IA.
-                                        </p>
-                                        <a href="https://lovable.dev/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>
-                                </div>
-
-
-                                <div id="base44" class="nocode freemium">
-                                        <h3>
-                                                <img src="/img/base44.png" height="30" width="30">
-                                                <span> Base44 </span>
-                                        </h3>
-                                        <p>
-                                                Base44 é uma plataforma no-code com IA generativa que transforma descrições em linguagem natural em aplicativos web completos, incluindo frontend, backend, banco de dados, autenticação e hospedagem automática.
-                                                Serve para não-desenvolvedores criarem MVPs funcionais em minutos (reservas, cadastros, dashboards) com editor visual ao vivo, chat conversacional para ajustes, deploy instantâneo com domínio próprio, integrações nativas (e-mails, analytics) e exportação para GitHub.
-                                        </p>        
-                                        <a href="https://base44.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>        
-                                </div>
-
-
-                                <div id="otter-ai" class="audio-reunioes freemium">
-                                        <h3>
-                                                <img src="/img/Otter.png" height="30" width="30">
-                                                <span> Otter AI </span>
-                                        </h3>
-                                        <p>
-                                                Otter.ai é um assistente de reuniões com IA que grava, transcreve em tempo real e resume automaticamente conversas, aulas e entrevistas, identificando falantes e integrando-se nativamente com Zoom, Teams e Meet.
-                                                Serve para profissionais com resumos inteligentes (pontos-chave, decisões, ações), chat com IA para perguntas/respostas baseadas nas transcrições, busca por palavras-chave, exportação em DOC/PDF e automação via Zapier que cria tarefas em Asana/Slack a partir de insights.
-                                        </p>        
-                                        <a href="https://otter.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>                
-                                </div>
-
-
-                                <div id="tldv-io" class="audio-reunioes freemium">
-                                        <h3>
-                                                <img src="/img/tldv.png" height="30" width="30">
-                                                <span> tl;dv  </span>
-                                        </h3>
-                                        <p>
-                                                Fireflies.ai é um assistente de reuniões com IA que grava, transcreve em tempo real e analisa conversas automaticamente em plataformas como Zoom, Teams e Google Meet, identificando falantes e criando uma biblioteca pesquisável.
-                                                Serve para equipes com resumos automáticos (destaques, decisões, próximos passos, palavras-chave), análise de sentimento, extração de itens de ação, busca semântica por toda biblioteca de reuniões e +200 "mini apps" de IA para insights específicos de vendas/suporte/marketing.
-                                        </p>        
-                                        <a href="https://fireflies.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
-                                        </a>                
-                                </div>
-
-
-                                <div id="fireflies-ai" class="audio-reunioes freemium">
-                                        <h3>
-                                                <img src="/img/fireflies.png" height="30" width="30">
-                                                <span> Fireflies AI </span>
-                                        </h3>
-                                        <p>
-                                                tl;dv.io é um notetaker com IA para Zoom, Google Meet e MS Teams que grava, transcreve em tempo real e gera atas automáticas de reuniões em +30 idiomas, incluindo português brasileiro.
-                                                Serve para equipes com resumos inteligentes (destaques, itens de ação, tópicos, objeções), tradução instantânea, automação de follow-ups/CRM (HubSpot, Salesforce), clipes editáveis para compartilhamento e integração com +6000 ferramentas que atualiza Notion/Slack e treina vendas com insights agregados.
-                                        </p>     
-                                        <a href="https://tldv.io/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-                                <div id="writefull" class="escrita-academica freemium">
-                                        <h3>
-                                                <img src="/img/Writefull.png" height="30" width="30">
-                                                <span> Writefull AI </span>
-                                        </h3>
-                                        <p>
-                                                Writefull AI é uma ferramenta de escrita acadêmica com IA treinada em milhões de artigos científicos, oferecendo feedback de linguagem automatizado, parafraseamento e widgets para textos formais.
-                                                Serve para pesquisadores e estudantes com revisão em tempo real no Word/Overleaf (gramática, estilo acadêmico, consistência terminológica), Academizer (converte informal para formal), gerador de títulos/abstracts, paraphraser multinível e explain/summarize de trechos selecionados.
-                                        </p>     
-                                        <a href="https://writefull.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-                                <div id="paperpal" class="escrita-academica freemium">
-                                        <h3>
-                                                <img src="/img/paperpal.png" height="30" width="30">
-                                                <span> Paperpal </span>
-                                        </h3>
-                                        <p>
-                                                Writefull AI é uma ferramenta de escrita acadêmica com IA treinada em milhões de artigos científicos, oferecendo feedback de linguagem automatizado, parafraseamento e widgets para textos formais.
-                                                Serve para pesquisadores e estudantes com revisão em tempo real no Word/Overleaf (gramática, estilo acadêmico, consistência terminológica), Academizer (converte informal para formal), gerador de títulos/abstracts, paraphraser multinível e explain/summarize de trechos selecionados.
-                                        </p>     
-                                        <a href="https://paperpal.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-                                <div id="napkin-ai" class="design-visual freemium">
-                                        <h3>
-                                                <img src="/img/napkin-ai.png" height="30" width="30">
-                                                <span> Napkin AI </span>
-                                        </h3>
-                                        <p>
-                                                Napkin AI é uma plataforma de IA que transforma texto simples em visuais profissionais como diagramas, fluxogramas, mapas mentais e infográficos em segundos, usando processamento de linguagem natural.
-                                                Serve para profissionais de marketing, professores e equipes com geração automática de gráficos a partir de listas ou parágrafos, edição colaborativa em tempo real (cores, ícones, layout), exportação em PNG/PDF/SVG/PPT e integração com Google Docs/Notion/PowerPoint para apresentações e relatórios rápidos.
-                                        </p>     
-                                        <a href="https://napkin.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-                                <div id="beautiful-ai" class="design-visual freemium">
-                                        <h3>
-                                                <img src="/img/beautiful-ai.png" height="30" width="30">
-                                                <span> Beautiful AI </span>
-                                        </h3>
-                                        <p>
-                                                Beautiful.ai é uma plataforma de criação de apresentações com design inteligente impulsionado por IA que ajusta automaticamente layouts, cores e elementos visuais conforme o conteúdo é adicionado.
-                                                Serve para profissionais com DesignerBot (gera slides completos via prompts), templates "smart slides" (gráficos, timelines, listas que se adaptam), colaboração em tempo real, personalização de marca (logotipos/fonte) e exportação para PowerPoint/PDF, economizando 10x o tempo de design manual.
-                                                A interface exibe dashboards com exemplos de pitch decks profissionais gerados automaticamente.
-                                        </p>     
-                                        <a href="https://beautiful.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-                                <div id="gamma-app" class="design-visual freemium">
-                                        <h3>
-                                                <img src="/img/gamma-app.png" height="30" width="30">
-                                                <span> Gamma App </span>
-                                        </h3>
-                                        <p>
-                                                Gamma App é uma plataforma de criação de apresentações, documentos e sites alimentada por IA que gera conteúdo polido (slides, webpages, relatórios) a partir de prompts simples, arquivos importados ou templates.
-                                                Serve para profissionais e educadores com geração automática de decks completos (pitchs, relatórios, ebooks), layouts responsivos que se adaptam dinamicamente, edição colaborativa em tempo real, elementos interativos (gráficos, embeds, vídeos) e exportação para PDF/PPT, substituindo PowerPoint com 10x mais velocidade.
-                                        </p>     
-                                        <a href="https://gamma.app/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-                                <div id="venngage" class="design-visual freemium">
-                                        <h3>
-                                                <img src="/img/venngage.png" height="30" width="30">
-                                                <span> Venngage </span>
-                                        </h3>
-                                        <p>
-                                                Venngage AI é uma suíte de ferramentas de design gráfico com IA da plataforma Venngage que gera infográficos, relatórios, pôsteres, propostas e gráficos automaticamente a partir de prompts de texto ou dados.
-                                                Serve para marketers e profissionais com +100 geradores específicos (executive summaries, bar graphs, flyers, pitch decks, mapas mentais), editor drag-and-drop com kit de marca, verificação de acessibilidade (daltonismo, WCAG), colaboração em tempo real e templates para negócios/educacional/ONGs.
-                                        </p>     
-                                        <a href="https://venngage.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-                                <div id="canva" class="design-visual freemium">
-                                        <h3>
-                                                <img src="/img/canva.png" height="30" width="30">
-                                                <span> Canva </span>
-                                        </h3>
-                                        <p>
-                                                Canva AI (Magic Studio) é a suíte completa de inteligência artificial do Canva que integra geração de designs, imagens, textos e documentos em uma única interface conversacional acessível por texto ou voz.
-                                                Serve para criadores com Magic Design (gera apresentações/infográficos/pôsteres editáveis de prompts), Magic Write (redige/resume/expande textos com contexto do documento), Dream Lab (imagens de referência + comandos), análise de uploads (PDFs/imagens → insights/designs) e Insights Mágicos para dados/planilhas.
-                                        </p>     
-                                        <a href="https://www.canva.com/pt_br/ia-assistente/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-                                <div id="zapier-agents" class="automacao no-code freemium">
-                                        <h3>
-                                                <img src="/img/Zapier.png" height="30" width="30">
-                                                <span> Zapier Agents </span>
-                                        </h3>
-                                        <p>
-                                                Zapier Agents AI é uma plataforma no-code da Zapier que permite criar agentes autônomos de IA treinados para executar fluxos de trabalho complexos em +8.000 aplicativos, dividindo objetivos em subtarefas inteligentes.
-                                                Serve para equipes com agentes colaborativos (delegam tarefas entre si), tomada de decisão contextual (pesquisa web, análise de dados, redação de respostas), checkpoints humanos para ações sensíveis e integração nativa com CRMs/Slack/Notion para processar leads, tickets e follow-ups 24/7 sem intervenção manual.
-                                        </p>     
-                                        <a href="https://zapier.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-                                <div id="n8n" class="automacao no-code gratis">
-                                        <h3>
-                                                <img src="/img/n8n.png" height="30" width="30">
-                                                <span> n8n </span>
-                                        </h3>
-                                        <p>
-                                                n8n AI é uma plataforma open-source de automação low-code/no-code que cria fluxos de trabalho inteligentes conectando +400 apps com nós nativos de IA (OpenAI, Claude, Gemini).
-                                                Serve para desenvolvedores e PMs com agentes autônomos que planejam/ executam tarefas complexas (análise de emails, RAG, chatbots com memória), langchain integration para orquestração multi-modelo e templates prontos para marketing/vendas/suporte que processam dados e tomam decisões sem supervisão humana.
-                                        </p>     
-                                        <a href="https://n8n.io/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-                                <div id="make" class="automacao no-code freemium">
-                                        <h3>
-                                                <img src="/img/make-ai.png" height="30" width="30">
-                                                <span> Make </span>
-                                        </h3>
-                                        <p>
-                                                Make AI é a plataforma de automação visual no-code (ex-Integromat) que integra módulos de IA para criar workflows inteligentes conectando +2.000 apps sem programação.
-                                                Serve para equipes com agentes de IA que analisam dados/ tomam decisões (classificação de leads, respostas automáticas), cenários com lógica condicional (if/then multi-etapa), orquestração de APIs e templates prontos para marketing/vendas/suporte que processam formulários, e-mails e CRMs 24/7.
-                                        </p>        
-                                        <a href="https://make.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-                                <div id="pipedream" class="automacao no-code freemium">
-                                        <h3>
-                                                <img src="/img/pipedream.png" height="30" width="30">
-                                                <span> Pipedream </span>
-                                        </h3>
-                                        <p>
-                                                Pipedream AI é uma plataforma de automação serverless que combina desenvolvimento code/no-code com integração nativa de IA para criar workflows complexos conectando APIs, bancos de dados e +1.000 apps.
-                                                Serve para desenvolvedores com String (agentes criados via prompts naturais que planejam/correm fluxos multi-etapa), geração de código por IA no editor, servidores MCP para LLMs usarem 10k+ ações API como ferramentas, tratamento automático de erros e casos como análise de emails/CRM/chatbots que processam bilhões de eventos em escala empresarial.
-                                        </p>        
-                                        <a href="https://pipedream.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-                                <div id="parabola" class="automacao no-code freemium">
-                                        <h3>
-                                                <img src="/img/parabola-ai.png" height="30" width="30">
-                                                <span> Parabola </span>
-                                        </h3>
-                                        <p>
-                                                Parabola AI é uma plataforma no-code de automação de dados que usa IA para transformar dados desestruturados (PDFs, emails, planilhas) em fluxos de trabalho automatizados e estruturados.
-                                                Serve para operações com extração inteligente de informações de documentos via prompts naturais, limpeza/categorização automática em escala (como ChatGPT para dados), construção visual de workflows via linguagem simples e agendamento/notificações para processos como auditoria de estoque e relatórios operacionais.
-                                        </p>        
-                                        <a href="https://parabola.io/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-                                <div id="kuse" class="automacao no-code freemium">
-                                        <h3>
-                                                <img src="/img/kuse-ai.png" height="30" width="30">
-                                                <span> Kuse </span>
-                                        </h3>
-                                        <p>
-                                                Kuse AI é um workspace visual baseado em IA que organiza arquivos multimodais (PDFs, vídeos do YouTube, imagens, web pages) em uma tela infinita colaborativa, processando conteúdo automaticamente para criar entregáveis estruturados.
-                                                Serve para profissionais com agente de IA que analisa documentos e gera resumos/tabelas/mapas mentais, formatador automático (relatórios, slides, flashcards, dashboards), Junior (agente corporativo que acessa dados internos e gerencia processos) e base de conhecimento viva que sincroniza ferramentas externas para workflows de marketing/finanças/engenharia.
-                                        </p>        
-                                        <a href="https://kuse.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-                                <div id="gumloop" class="automacao no-code freemium">
-                                        <h3>
-                                                <img src="/img/gumloop.png" height="30" width="30">
-                                                <span> Gumloop </span>
-                                        </h3>
-                                        <p>
-                                                Gumloop é uma plataforma no-code de automação AI-first que permite criar fluxos de trabalho complexos conectando nós de IA (Claude, GPT-4, Grok) via interface visual drag-and-drop, processando listas automaticamente no "Loop Mode".
-                                                Serve para GTM/ops/marketing com extração de dados de PDFs/emails, análise de sentimento, geração de conteúdo em escala, web scraping, integração com Google Sheets/Gmail/WordPress e nós específicos para qualificação de leads, previsão de vendas e automação de anúncios.
-                                                A interface mostra workflows SEO com nós para análise de keywords e integração com ferramentas externas.
-                                        </p>        
-                                        <a href="https://gumloop.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-                                <div id="remnote" class="notetaking freemium">
-                                        <h3>
-                                                <img src="/img/remnote.png" height="30" width="30">
-                                                <span> RemNote </span>
-                                        </h3>
-                                        <p>
-                                                RemNote AI é um app de estudo tudo-em-um que combina anotações, flashcards com repetição espaçada, anotação de PDFs e tutor de IA para criar um "segundo cérebro" otimizado para retenção de longo prazo.
-                                                Serve para estudantes com resumos automáticos de PDFs/vídeos/texto (estrutura tópicos + conceitos-chave), geração de flashcards clicando em qualquer frase, AI Chat V2 (perguntas contextuais sobre documentos pessoais), AI Tutor personalizado que explica trechos destacados e quizzes gerados por IA conectados às notas para aprendizado ativo.
-                                        </p>        
-                                        <a href="https://remnote.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
-
-
-                                <div id="ninite" class="softwares gratis">
-                                        <h3>
-                                                <img src="/img/ninite.png" height="30" width="30">
-                                                <span> Ninite </span>
-                                        </h3>
-                                        <p>
-                                                Ninite é um gerenciador de pacotes gratuito para Windows que permite instalar ou atualizar múltiplos aplicativos populares de uma só vez, sem barras de ferramentas, anúncios ou telas desnecessárias de instalação.
-                                                Serve para usuários domésticos selecionarem programas essenciais (Chrome, VLC, Spotify, Discord, Java, .NET) em uma interface simples, gerando um executável customizado que baixa versões oficiais e instala silenciosamente em background, compatível com Windows 7+.
-                                        </p>        
-                                        <a href="https://ninite.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
-                                </div>
+                        
+                                <div id="tools-grid" class="cards">
                                 
 
-                                <div id="lindy" class="automacao freemium">
-                                        <h3>
-                                                <img src="/img/Lindy.png" height="30" width="30">
-                                                <span> Lindy AI </span>
-                                        </h3>
-                                        <p>
-                                                Lindy AI é uma plataforma no-code para criar agentes autônomos de IA ("Lindies") que executam tarefas complexas de escritório via instruções em linguagem natural, conectando +3.000 apps.
-                                                Serve para equipes com gerenciamento de calendário (lê emails e agenda reuniões automaticamente), triagem de inbox (responde FAQs, arquiva spam), qualificação de leads (monitora redes sociais, envia mensagens personalizadas), suporte 24/7 (responde tickets simples, escalona complexos para humanos) e workflows paralelos que pesquisam web/atualizam CRMs enquanto você dorme.
-                                        </p>        
-                                        <a href="https://lindy.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site   
-                                        </a>                
+                                        <div id="chatgpt" class="raciocinio freemium">
+                                                <h3>
+                                                        <img src="/img/ChatGPT_logo.svg.png" height="30" width="30">
+                                                        <span> ChatGPT </span>
+                                                </h3>
+                                                <p>
+                                                        O ChatGPT é uma IA de conversa que responde perguntas, cria textos, resume
+                                                        conteúdo e ajuda a organizar ideias de forma rápida e natural.
+                                                        Ele é mais útil quando a tarefa envolve linguagem, explicação, análise de texto
+                                                        ou geração de conteúdo.
+                                                </p>
+                                                <a href="http://chatgpt.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="gemini" class="raciocinio freemium">
+                                                <h3>
+                                                        <img src="/img/gemini-logo.png" height="30" width="30">
+                                                        <span> Gemini </span>
+                                                </h3>
+                                                <p>
+                                                        O Gemini é a inteligência artificial mais avançada e capaz desenvolvida pelo
+                                                        Google.                                                                                                                                                                                 
+                                                        Ele não é apenas um "chatbot", mas sim um ecossistema de modelos de IA
+                                                        projetados para serem nativamente multimodais.
+                                                </p>
+                                                <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer"> Acesse o site 
+                                                </a>
+                                        </div>
+
+
+                                        <div id="claude" class="raciocinio freemium">
+                                                <h3>
+                                                        <img src="/img/Claude-ai-logo.png" height="30" width="30">
+                                                        <span> Claude </span>
+                                                </h3>
+                                                <p>
+                                                        Claude é um assistente de IA avançado focado em segurança e raciocínio ético.
+                                                        Suas principais funções incluem geração de textos, análise de dados e imagens,
+                                                        programação e resumos de documentos longos.
+                                                </p>
+                                                <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="grok-3" class="raciocinio freemium">
+                                                <h3>
+                                                        <img src="/img/grok-logo.png" height="30" width="30">
+                                                        <span> Grok </span>
+                                                </h3>
+                                                <p>
+                                                        Grok é uma IA generativa conversacional com senso de humor inspirado no Guia do
+                                                        Mochileiro das Galáxias.
+                                                        Seus principais pontos incluem respostas rápidas, acesso em tempo real ao X
+                                                        (Twitter), geração de textos, imagens, código e análise de dados.
+                                                </p>
+                                                <a href="https://grok.com/" target="_blank" rel="noopener noreferrer"> Acesse o site 
+                                                </a>
+                                        </div>
+
+
+                                        <div id="perplexity" class="raciocinio freemium">
+                                                <h3>
+                                                        <img src="/img/perplexity.png" height="30" width="30">
+                                                        <span> Perplexity </span>
+                                                </h3>
+                                                <p>
+                                                        Perplexity é um motor de busca conversacional impulsionado por IA.
+                                                        Serve principalmente para pesquisas rápidas ou aprofundadas, análise de
+                                                        documentos, geração de relatórios acadêmicos e interações interativas, sendo
+                                                        ideal para aprendizado e produtividade sem anúncios.
+                                                </p>
+                                                <a href="https://perplexity.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site </a>
+                                        </div>
+
+
+                                        <div id="elicit" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/elicit.png" height="30" width="30">
+                                                        <span> Elicit </span>
+                                                </h3>
+                                                <p>
+                                                        Elicit é um assistente de IA especializado em pesquisa acadêmica, que automatiza buscas em milhões de artigos científicos, gera resumos e extrai dados estruturados (métodos, resultados, amostras).
+                                                        Serve principalmente para revisões sistemáticas, síntese de literatura e workflows de pesquisadores, com citações por sentença para verificação transparente.   
+                                                </p>        
+                                                <a href="https://elicit.com/" target="_blank" rel="noopener noreferrer"> Acesse o site </a>
+                                        </div>
+
+
+                                        <div id="jenni-ai" class="escrita-academica freemium">
+                                                <h3>
+                                                        <img src="/img/Jenni-ai.png" height="30" width="30">
+                                                        <span> Jenni AI </span>
+                                                </h3>
+                                                <p>
+                                                        Jenni AI é uma assistente de escrita acadêmica e pesquisa com IA que atua como co-piloto para estudantes e pesquisadores, oferecendo autocompletar contextual, geração de esboços e suporte a citações diretamente de PDFs carregados.
+                                                        Serve para criar ensaios, revisões sistemáticas e artigos com ferramentas como resumidor de textos, chat de pesquisa que usa suas fontes (não web), +2.600 estilos de citação (APA, Chicago), verificação de plágio e exportação para DOCX/LaTeX/HTML.
+                                                </p>     
+                                                <a href="https://jenni.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="wix" class="nocode freemium">
+                                                <h3>
+                                                        <img src="/img/wix-logo.png" height="30" width="30">
+                                                        <span> WIX </span>
+                                                </h3>
+                                                <p>
+                                                        O Wix é uma plataforma online baseada em nuvem, popularmente conhecida como um
+                                                        criador de sites do tipo "arrastar e soltar".
+                                                        Ele permite que pessoas sem nenhum conhecimento prévio em programação ou design
+                                                        criem sites, blogs e lojas virtuais profissionais.
+                                                </p>
+                                                <a href="https://www.wix.com" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="hostinger" class="nocode freemium">
+                                                <h3>
+                                                        <img src="/img/Hostinger-logl.png" height="30" width="30">
+                                                        <span> Hostinger </span>
+                                                </h3>
+                                                <p>
+                                                        A Hostinger AI é um conjunto de ferramentas baseadas em inteligência artificial
+                                                        integrado aos serviços da Hostinger, projetado para simplificar e acelerar a
+                                                        criação, gerenciamento e otimização de sites, mesmo para quem não tem
+                                                        conhecimentos técnicos.
+                                                </p>
+                                                <a href="https://www.hostinger.com/" target="_blank" rel="noopener noreferrer"> Acesse o
+                                                        site </a>
+                                        </div>
+
+
+                                        <div id="promakeia" class="nocode freemium">
+                                                <h3>
+                                                        <img src="/img/Promake-logo.png" height="30" width="30">
+                                                        <span> PromakeAI </span>
+                                                </h3>
+                                                <p>
+                                                        PromakeAIé uma inteligência artificial que ajuda você a organizar e resumir
+                                                        conteúdos de forma rápida e detalhada, usando prompts bem estruturados.
+                                                </p>
+                                                <a href="https://promake.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+                                        <div id="readdy" class="nocode freemium">
+                                                <h3>
+                                                        <img src="/img/Readdy AI.png" height="30" width="30">
+                                                        <span> Readdy AI </span>
+                                                </h3>
+                                                <p>
+                                                        Readdy AI é uma plataforma de construção de sites baseada em inteligência
+                                                        artificial que cria páginas web profissionais, landing pages e e-commerce em
+                                                        minutos através de conversas (prompts) em linguagem natural.
+                                                </p>
+                                                <a href="https://readdy.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="manus" class="nocode freemium">
+                                                <h3>
+                                                        <img src="/img/manus.png" height="30" width="30">
+                                                        <span> Manus AI </span>
+                                                </h3>
+                                                <p>
+                                                        Manus é um agente de inteligência artificial artificial, desenvolvido na China,
+                                                        que vai além de um chatbot tradicional (como ChatGPT) para executar tarefas de
+                                                        ponta a ponta.
+                                                        Ele pesquisa, analisa dados, cria sites completos, produz relatórios e organiza
+                                                        informações de forma automática, ágil como um assistente proativo
+                                                </p>
+                                                <a href="https://manus.im/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="researchrabbit" class="pesquisa-academica gratis">
+                                                <h3>
+                                                        <img src="/img/ResearchRabbit.png" height="30" width="30">
+                                                        <span> ResearchRabbit </span>
+                                                </h3>
+                                                <p>
+                                                        ResearchRabbit é uma ferramenta gratuita de mapeamento visual de literatura acadêmica, apelidada de "Spotify para artigos científicos", que cria redes de citações, timelines e mapas de calor para descobrir papers relacionados.
+                                                        Serve para pesquisadores fazerem revisões de literatura rápidas, rastrearem autores, receberem alertas de novos artigos e colaborarem via coleções compartilháveis, acelerando 5x o workflow acadêmico.
+                                                </p>        
+                                                <a href="https://researchrabbit.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="rayyan" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/Rayyan.png" height="30" width="30">
+                                                        <span> Rayyan </span>
+                                                </h3>
+                                                <p>
+                                                        ResearchRabbit é uma ferramenta gratuita de mapeamento visual de literatura acadêmica, apelidada de "Spotify para artigos científicos", que cria redes de citações, timelines e mapas de calor para descobrir papers relacionados.
+                                                        Serve para importar artigos, detectar duplicatas automaticamente, triar por relevância (incluir/excluir) com IA preditiva, colaborar em equipe e gerar fluxogramas PRISMA, economizando até 40-50% do tempo na seleção de estudos.
+                                                </p>
+                                                <a href="https://rayyan.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="open-knowledge-maps" class="pesquisa-academica gratis">
+                                                <h3>
+                                                        <img src="/img/Logo-Open-Knowledge-Maps-.png" height="30" width="30">
+                                                        <span> Open Knowledge Maps </span>
+                                                </h3>
+                                                <p>
+                                                        O Open Knowledge Maps é um motor de busca visual sem fins lucrativos que transforma buscas acadêmicas em mapas interativos de conhecimento, organizando os documentos mais relevantes em clusters temáticos para facilitar a visão panorâmica de um assunto.
+                                                        Serve para pesquisadores explorarem novas áreas de estudo, identificarem lacunas na literatura e acessarem conteúdos de forma rápida, conectando-se a bases globais como PubMed e BASE para otimizar o fluxo de trabalho de revisões bibliográficas.
+                                                </p>
+                                                <a href="https://openknowledgemaps.org/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="scholarcy" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/Scholarcy-logo.svg" height="30" width="30">
+                                                        <span> Scholarcy </span>
+                                                </h3>
+                                                <p>
+                                                        O Scholarcy é um resumidor de textos acadêmicos movido a IA que transforma artigos complexos e PDFs longos em "flashcards" interativos, extraindo automaticamente pontos-chave, metodologias, resultados e referências.
+                                                        Serve para pesquisadores e estudantes otimizarem o fluxo de leitura, facilitando a revisão de literatura, a comparação entre estudos e a organização de bibliografias anotadas com integração direta a gestores de referências como Zotero.
+                                                </p>
+                                                <a href="https://scholarcy.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="anara" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/anara.png" height="30" width="30">
+                                                        <span> Anara </span>
+                                                </h3>
+                                                <p>
+                                                        O Anara AI (anteriormente conhecido como Unriddle AI) é um assistente de pesquisa com inteligência artificial que centraliza e analisa diversos formatos de documentos — incluindo PDFs, vídeos, áudios e imagens — em uma biblioteca de pesquisa unificada.
+                                                        Serve para pesquisadores sintetizarem informações complexas, compararem argumentos entre múltiplos arquivos, extraírem citações precisas e criarem materiais de estudo (como flashcards), permitindo realizar revisões de literatura em larga escala com alta rastreabilidade de fontes.
+                                                </p>
+                                                <a href="https://anara.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="r-discovery" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/r-discovery.png" height="30" width="30">
+                                                        <span> R Discovery </span>
+                                                </h3>
+                                                <p>
+                                                        O R Discovery é um assistente de pesquisa impulsionado por IA que utiliza aprendizado de máquina para oferecer um feed personalizado de artigos acadêmicos, eliminando a necessidade de buscas manuais repetitivas.
+                                                        Serve para pesquisadores descobrirem e lerem rapidamente mais de 250 milhões de artigos, oferecendo recursos como resumos em formato de "stories", leitura de áudio, tradução em múltiplos idiomas e chat com PDFs, economizando até 70% do tempo na revisão de literatura.
+                                                </p>
+                                                <a href="https://discovery.researcher.life/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="keenious" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/keenious.png" height="30" width="30">
+                                                        <span> Keenious </span>
+                                                </h3>
+                                                <p>
+                                                        Keenious AI é uma ferramenta de pesquisa acadêmica que analisa documentos (PDFs, texto ou URLs) para recomendar artigos relevantes de 250+ milhões de papers em 100 idiomas.
+                                                        Serve para revisão de literatura, explicando conceitos complexos e encontrando estudos relacionados automaticamente, com destaque em textos e filtros por citações/data.
+                                                </p>
+                                                <a href="https://keenious.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="asreview" class="pesquisa-academica gratis">
+                                                <h3>
+                                                        <img src="/img/asreview.png" height="30" width="30">
+                                                        <span> ASReview </span>
+                                                </h3>
+                                                <p>
+                                                        ASReview AI é uma ferramenta open-source de active learning que acelera revisões sistemáticas, priorizando registros relevantes de grandes datasets de abstracts científicos.
+                                                        Serve para triagem inteligente de literatura (title/abstract screening), reduzindo 50-95% do tempo manual com modelos ELAS configuráveis e transparência total.
+                                                </p>
+                                                <a href="https://asreview.nl/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="atlas" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/atlas-workspace.png" height="30" width="30">
+                                                        <span> Atlas </span>
+                                                </h3>
+                                                <p>
+                                                        Atlas Workspace AI é um workspace de conhecimento com IA que organiza notas, documentos e ideias através de mapas mentais visuais automáticos e chat com múltiplos documentos.
+                                                        Serve para pesquisadores e profissionais conectarem conceitos complexos, com autocomplete Claude, transcrições de reuniões e citações verificáveis para evitar alucinações.
+                                                </p>
+                                                <a href="https://atlasworkspace.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="okara-ai" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/okara-ai.png" height="30" width="30">
+                                                        <span> Okara AI </span>
+                                                </h3>
+                                                <p>
+                                                        Okara AI é um workspace privado que unifica 30+ modelos open-source (Llama, Mistral, DeepSeek) com chats criptografados end-to-end, pesquisa integrada (Reddit/X/YouTube) e geração de imagens/código.
+                                                        Serve para desenvolvedores e profissionais que precisam de privacidade total, trocando modelos sem perder contexto e colaborando em equipe sem vazar dados para treinamento.
+                                                </p>
+                                                <a href="https://okara.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="avidnote" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/avidnote.png" height="30" width="30">
+                                                        <span> Avidnote </span>
+                                                </h3>
+                                                <p>
+                                                        Vidnote é uma plataforma de notas com IA para pesquisadores, que organiza papers, permite anotações lado a lado com PDFs e usa IA para resumir artigos, identificar gaps de pesquisa e transcrever entrevistas.
+                                                        Serve para revisão de literatura, escrita acadêmica colaborativa e análise de dados com templates de IA, mantendo referências e documentos integrados no mesmo workspace.
+                                                </p>
+                                                <a href="https://avidnote.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="paper-digest" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/Paper-Digest.png" height="30" width="30">
+                                                        <span> Paper Digest </span>
+                                                </h3>
+                                                <p>
+                                                        Paper Digest AI é uma plataforma de revisão de literatura que gera resumos automáticos e digests estruturados de artigos científicos individuais ou múltiplos, identificando temas comuns e pontos-chave.
+                                                        Serve para pesquisadores acelerarem revisões bibliográficas, acompanhar papers em tempo real por tópico e criar sínteses coesas para escrita acadêmica, com planos gratuito e pago.
+                                                </p>
+                                                <a href="https://paperdigest.org/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="covidence" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/covidence.png" height="30" width="30">
+                                                        <span> Covidence </span>
+                                                </h3>
+                                                <p>
+                                                        Covidence AI é uma plataforma líder para revisões sistemáticas que usa machine learning responsável para automatizar triagem, deduplicação e classificação de RCTs com >99% recall.
+                                                        Serve para pesquisadores médicos/healthcare economizarem 35% do tempo em screening com priorização inteligente, sugestões de extração automática e fluxogramas PRISMA auditáveis.
+                                                </p>
+                                                <a href="https://covidence.org/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="consensus" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/Consensus.png" height="30" width="30">
+                                                        <span> Consensus </span>
+                                                </h3>
+                                                <p>
+                                                        Consensus AI é um motor de busca acadêmico com IA que responde perguntas analisando 200+ milhões de papers científicos, mostrando consenso científico via "Consensus Meter" (Sim/Não/Possívelmente).
+                                                        Serve para pesquisadores encontrarem respostas baseadas em evidências com citações diretas, Deep Search para revisões completas e sínteses rápidas sem alucinações.
+                                                </p>
+                                                <a href="https://consensus.app/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="scite-ai" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/scite-ai.png" height="30" width="30">
+                                                        <span> Scite AI </span>
+                                                </h3>
+                                                <p>
+                                                        Scite AI é uma plataforma de pesquisa acadêmica que transforma citações tradicionais em Smart Citations, analisando 1.2+ bilhão de citações para classificar se apoiam, contrastam ou apenas mencionam uma afirmação.
+                                                        Serve para pesquisadores avaliarem rapidamente a credibilidade científica de papers, descobrirem controvérsias e construírem argumentos sólidos com contexto real das citações, não apenas contagem bruta.
+                                                </p>
+                                                <a href="https://scite.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="scispace" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/scispace.png" height="30" width="30">
+                                                        <span> SciSpace </span>
+                                                </h3>
+                                                <p>
+                                                        SciSpace (antigo Typeset) é uma plataforma de IA acadêmica que facilita descoberta, leitura e escrita científica com Copilot IA para PDFs, explicações de textos complexos, tabelas e fórmulas.
+                                                        Serve para revisão de literatura, geração de citações automáticas, resumos de artigos e projetos de pesquisa completos, com suporte a upload de PDFs próprios e busca sem palavras-chave.
+                                                </p>
+                                                <a href="https://scispace.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="connected-papers" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/connected-papers.png" height="30" width="30">
+                                                        <span> Connected Papers </span>
+                                                </h3>
+                                                <p>
+                                                        Connected Papers é uma ferramenta visual gratuita que gera mapas de grafos interativos de artigos científicos relacionados, baseado em similaridade semântica e co-citações (não só citações diretas).
+                                                        Serve para pesquisadores explorarem literatura conectada visualmente, identificarem papers fundacionais/derivados, tendências temporais e lacunas de pesquisa rapidamente.
+                                                </p>
+                                                <a href="https://connectedpapers.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="undermind" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/undermind.png" height="30" width="30">
+                                                        <span> Undermind </span>
+                                                </h3>
+                                                <p>
+                                                        Undermind é um agente de IA avançado para pesquisa científica que faz buscas iterativas e adaptativas em Semantic Scholar, lendo centenas de papers autonomamente.
+                                                        Serve para cientistas resolverem perguntas complexas com relatórios precisos (98% acurácia), redes de citações e sínteses baseadas em evidências, 10-50x mais eficaz que buscas tradicionais.
+                                                </p>
+                                                <a href="https://undermind.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="papersflow" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/papersflow.png" height="30" width="30">
+                                                        <span> PapersFlow </span>
+                                                </h3>
+                                                <p>
+                                                        PapersFlow é um workspace de pesquisa acadêmica all-in-one com IA que integra busca em 474M+ papers, revisão de literatura automatizada, gestão de citações, escrita LaTeX e verificação de contra-evidências.
+                                                        Serve para pesquisadores executarem revisões sistemáticas completas, workflows colaborativos e escrita de manuscripts com Chain of Verification, integrando Zotero/Notion e exportando BibTeX/PDF.
+                                                </p>
+                                                <a href="https://papersflow.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="paperguide" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/paperguide.png" height="30" width="30">
+                                                        <span> Paperguide </span>
+                                                </h3>
+                                                <p>
+                                                        PaperGuide AI é um assistente de pesquisa tudo-em-um que escaneia artigos científicos automaticamente, extrai citações (DOI, autores), gera resumos instantâneos e responde perguntas baseadas em 200M+ papers.
+                                                        Serve para pesquisadores gerenciarem referências, fazerem buscas por perguntas naturais, baterem papo com PDFs e escreverem papers com citações automáticas em qualquer estilo.
+                                                </p>
+                                                <a href="https://paperguide.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="litmaps" class="pesquisa-academica freemium">
+                                                <h3>
+                                                        <img src="/img/litmaps.png" height="30" width="30">
+                                                        <span> Litmaps </span>
+                                                </h3>
+                                                <p>
+                                                        Litmaps é uma plataforma de visualização de literatura científica que cria mapas interativos dinâmicos conectando artigos por citações, similaridades e referências, mostrando evolução temporal de campos de pesquisa.
+                                                        Serve para pesquisadores descobrirem papers fundamentais, tendências emergentes e lacunas de literatura através de grafos visuais, com alertas automáticos de novos artigos e integração Zotero/Mendeley.
+                                                </p>
+                                                <a href="https://litmaps.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="notebooklm" class="pesquisa-academica gratis">
+                                                <h3>
+                                                        <img src="/img/notebooklm.png" height="30" width="30">
+                                                        <span> NotebookLM </span>
+                                                </h3>
+                                                <p>
+                                                        NotebookLM é uma ferramenta experimental do Google Labs que transforma documentos (PDFs, Google Docs, links, vídeos) em notebooks interativos com IA Gemini, gerando resumos, guias de estudo e podcasts automáticos personalizados.
+                                                        Serve para estudantes e pesquisadores organizarem materiais, fazerem perguntas específicas sobre fontes carregadas e criarem conteúdos estruturados (FAQs, timelines, briefings) sem alucinações.
+                                                </p>
+                                                <a href="https://notebooklm.google.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="quizlet" class="educacao freemium">
+                                                <h3>
+                                                        <img src="/img/quizlet.png" height="30" width="30">
+                                                        <span> Quizlet </span>
+                                                </h3>
+                                                <p>
+                                                        Quizlet é uma plataforma de estudo baseada em flashcards interativos, jogos e testes que usa repetição espaçada para memorizar conteúdos acadêmicos de forma gamificada.
+                                                        Serve para estudantes criarem ou usarem conjuntos prontos de qualquer matéria (idiomas, história, ciências), com modos como Quizlet Live para aulas colaborativas e prática de pronúncia.
+                                                </p>
+                                                <a href="https://quizlet.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="laxu-ai" class="educacao freemium">
+                                                <h3>
+                                                        <img src="/img/laxu-ai.png" height="30" width="30">
+                                                        <span> Laxi AI </span>
+                                                </h3>
+                                                <p>
+                                                        Laxu AI é uma ferramenta de estudo com IA que converte PDFs, slides, imagens e áudios de aulas em flashcards inteligentes, resumos estruturados e quizzes personalizados em segundos.
+                                                        Serve para estudantes otimizarem revisão ativa com repetição espaçada, economizando tempo na formatação e focando na memorização de materiais acadêmicos reais.
+                                                </p>
+                                                <a href="https://laxuai.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="knowt" class="educacao freemium">
+                                                <h3>
+                                                        <img src="/img/knowt.png" height="30" width="30">
+                                                        <span> Knowt </span>
+                                                </h3>
+                                                <p>
+                                                        Knowt AI é uma plataforma de estudo all-in-one que converte notas, PDFs, vídeos de aula e slides em flashcards, quizzes e testes automáticos via IA "Kai", com repetição espaçada ilimitada gratuita.
+                                                        Serve como alternativa superior ao Quizlet para estudantes, oferecendo chat com documentos, importação direta de Quizlet, jogos de memorização e prática de exames personalizada.
+                                                </p>
+                                                <a href="https://knowt.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="studyfetch" class="educacao freemium">
+                                                <h3>
+                                                        <img src="/img/studyfetch.png" height="30" width="30">
+                                                        <span> StudyFetch </span>
+                                                </h3>
+                                                <p>
+                                                        StudyFetch é uma plataforma de aprendizado com IA que converte materiais de curso (PDFs, PowerPoints, vídeos, anotações) em flashcards, quizzes, testes e notas detalhadas personalizadas automaticamente.
+                                                        Serve para estudantes com seu tutor IA Spark.E que oferece feedback em tempo real, grava aulas ao vivo e usa repetição ativa, suportando 20+ idiomas e múltiplos formatos de upload.
+                                                </p>
+                                                <a href="https://studyfetch.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="studysmarter" class="educacao freemium">
+                                                <h3>
+                                                        <img src="/img/studysmarter.png" height="30" width="30">
+                                                        <span> StudySmarter </span>
+                                                </h3>
+                                                <p>
+                                                        StudySmarter é uma plataforma de aprendizado com IA que transforma PDFs, slides e notas em resumos automáticos, flashcards inteligentes e simulados personalizados com feedback detalhado.
+                                                        Serve para estudantes otimizarem estudo ativo com Explain AI (explicações instantâneas), Exam AI (testes adaptativos) e repetição espaçada, melhorando notas em até 94% com planos personalizados.
+                                                </p>
+                                                <a href="https://studysmarter.co.uk/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="keepmind" class="educacao freemium">
+                                                <h3>
+                                                        <img src="/img/keepmind.png" height="30" width="30">
+                                                        <span> Keepmind </span>
+                                                </h3>
+                                                <p>
+                                                        Keepmind é um app de estudo com IA que converte notas, PDFs e textos em flashcards automáticas, quizzes inteligentes e mapas mentais, usando repetição espaçada FSRS-5 para máxima retenção.
+                                                        Serve para estudantes e autodidatas visualizarem conteúdo complexo como Notion + Anki, com resumos rápidos e testes adaptativos que otimizam revisão ativa sem esforço manual.
+                                                </p>
+                                                <a href="https://keepmind.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="studley-ai" class="educacao freemium">
+                                                <h3>
+                                                        <img src="/img/studley.png" height="30" width="30">
+                                                        <span> Studley AI </span>
+                                                </h3>
+                                                <p>
+                                                        Studley AI é um assistente de estudo completo que transforma slides de aula, PDFs, vídeos do YouTube e notas em conjuntos de estudo personalizados com flashcards, quizzes de múltipla escolha, testes escritos e modo tutor explicativo.
+                                                        Serve para estudantes otimizarem aprendizado ativo com etiquetas inteligentes de domínio (desconhecido→mestrado), repetição espaçada e resumos instantâneos, superando Quizlet com IA adaptativa e edição total.
+                                                </p>
+                                                <a href="https://keepmind.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="thesify" class="educacao freemium">
+                                                <h3>
+                                                        <img src="/img/thesify.png" height="30" width="30">
+                                                        <span> Thesify </span>
+                                                </h3>
+                                                <p>
+                                                        Thesify AI é um assistente de escrita acadêmica ético que oferece feedback em tempo real para ensaios, teses e propostas, com assistente Theo que analisa estrutura, argumentos e clareza sem gerar conteúdo automaticamente.
+                                                        Serve para estudantes melhorarem redações com sugestões de literatura de 200M+ artigos, verificação de citações e conexão com journals/fundos, promovendo integridade acadêmica.
+                                                </p>
+                                                <a href="https://thesify.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="sana-labs" class="educacao freemium">
+                                                <h3>
+                                                        <img src="/img/sana-labs.png" height="30" width="30">
+                                                        <span> Sana Labs </span>
+                                                </h3>
+                                                <p>
+                                                        Sana Labs AI é uma plataforma corporativa de aprendizado com IA que cria experiências personalizadas de treinamento, automatiza administração LMS e gera agentes inteligentes conectados ao conhecimento interno da empresa.
+                                                        Serve para empresas acelerarem desenvolvimento de competências com tutores IA, criação automática de conteúdo e analytics em tempo real, integrando ferramentas como Google Workspace, Slack e Salesforce.
+                                                </p>
+                                                <a href="https://sanalabs.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="khanmigo" class="educacao freemium">
+                                                <h3>
+                                                        <img src="/img/Khanmigo.png" height="30" width="30">
+                                                        <span> Khanmigo </span>
+                                                </h3>
+                                                <p>
+                                                        Khanmigo AI é o tutor virtual da Khan Academy (GPT-4o), que guia alunos com método socrático em matemática, escrita, história e programação, incentivando raciocínio crítico sem dar respostas prontas.
+                                                        Serve para professores (grátis) criarem planos de aula instantâneos, rubricas e resumos de turma, e para alunos/pais terem suporte 24/7 com conteúdos da Khan Academy integrados
+                                                </p>
+                                                <a href="https://khanacademy.org/khan-labs" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="github-copilot" class="desenvolvimento freemium">
+                                                <h3>
+                                                        <img src="/img/github-copilot.png" height="30" width="30">
+                                                        <span> GitHub Copilot </span>
+                                                </h3>
+                                                <p>
+                                                        GitHub Copilot é um assistente de programação por IA desenvolvido pelo GitHub em parceria com OpenAI e Microsoft, que sugere linhas ou funções completas em tempo real dentro de editores como VS Code.
+                                                        Serve para acelerar codificação com autocompletar contextual (analisa arquivos abertos/comentários), chat para dúvidas, testes automáticos e pull requests via GitHub Actions, aumentando produtividade em até 55%.
+                                                </p>
+                                                <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="cursor" class="desenvolvimento freemium">
+                                                <h3>
+                                                        <img src="/img/cursor-app.png" height="30" width="30">
+                                                        <span> Cursor </span>
+                                                </h3>
+                                                <p>
+                                                        Cursor AI é um editor de código AI-native (fork do VS Code) que integra modelos avançados como GPT-5 e Claude 4.5 diretamente no fluxo de trabalho de programação.
+                                                        Serve para desenvolvedores acelerarem 10x com autocompletar multicurioso (prevê edições multi-linha), Composer (cria projetos completos via prompts naturais), refatoração automática, correção de bugs analisando terminal e chat contextual que entende arquitetura inteira do projeto.
+                                                </p>
+                                                <a href="https://cursor.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="amazon-codewhiperer" class="desenvolvimento freemium">
+                                                <h3>
+                                                        <img src="/img/amazon-codewhisperer.png" height="30" width="30">
+                                                        <span> Amazon CodeWhisperer </span>
+                                                </h3>
+                                                <p>
+                                                        Amazon CodeWhisperer é um assistente de codificação por IA da AWS que gera sugestões de código em tempo real baseadas em bilhões de linhas de código open source e proprietário da Amazon.
+                                                        Serve para desenvolvedores em IDEs (VS Code, JetBrains) aumentarem produtividade com autocompletar contextual, suporte a 15+ linguagens, detecção de vulnerabilidades e integração nativa AWS, gratuito para uso individual.
+                                                </p>
+                                                <a href="https://aws.amazon.com/codewhisperer" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="clickup-brain" class="produtividade freemium">
+                                                <h3>
+                                                        <img src="/img/clickup-brain.png" height="30" width="30">
+                                                        <span> ClickUp Brain </span>
+                                                </h3>
+                                                <p>
+                                                        ClickUp Brain é a camada nativa de IA do ClickUp que conecta tarefas, documentos, comentários e ferramentas externas, oferecendo respostas contextuais instantâneas e automação inteligente.
+                                                        Serve para equipes gerenciarem conhecimento com AI Knowledge Manager (responde perguntas sobre projetos), AI Project Manager (gera atualizações/resumos), AI Notetaker (transcreve reuniões Zoom/Teams) e agentes autônomos que criam tarefas e atualizam status automaticamente.
+                                                </p>
+                                                <a href="https://clickup.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="monday" class="produtividade freemium">
+                                                <h3>
+                                                        <img src="/img/monday.png" height="30" width="30">
+                                                        <span> Monday </span>
+                                                </h3>
+                                                <p>
+                                                        Monday AI é a suíte de inteligência artificial nativa da plataforma monday.com, projetada para automatizar tarefas, gerar insights e otimizar fluxos de trabalho diretamente nos quadros de projetos, CRM e dev.
+                                                        Serve para equipes com AI Blocks (resumos, categorização, extração de dados de PDFs/imagens), AI Agents (Service Agent para tickets, Deal Facilitator para vendas), automações inteligentes, notetaker de reuniões e fórmula builder que criam conteúdo contextual em colunas
+                                                </p>
+                                                <a href="https://monday.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="notion" class="produtividade freemium">
+                                                <h3>
+                                                        <img src="/img/Notion.png" height="30" width="30">
+                                                        <span> Notion AI </span>
+                                                </h3>
+                                                <p>
+                                                        Notion AI é o assistente de IA nativo integrado ao Notion que usa modelos premium como GPT-5 e Claude para gerar, editar e analisar conteúdo diretamente nas páginas, documentos e bancos de dados.
+                                                        Serve para equipes com resumos automáticos de documentos/reuniões, extração de itens de ação, agentes autônomos (Notion 3.0) que executam fluxos multi-etapa (atualizar DBs, triagem de tickets), busca contextual em todo workspace e automação de propriedades em databases.
+                                                </p>
+                                                <a href="https://notion.so/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="airtable" class="produtividade freemium">
+                                                <h3>
+                                                        <img src="/img/airtable.png" height="30" width="30">
+                                                        <span> Airtable AI </span>
+                                                </h3>
+                                                <p>
+                                                        Airtable AI é o conjunto de funcionalidades de IA generativa integrado ao Airtable que permite automatizar tarefas em bases de dados, extrair insights e gerar conteúdo diretamente de registros e campos.
+                                                        Serve para equipes com resumos automáticos de texto/conversas, categorização inteligente de dados, geração de conteúdo (e-mails, descrições), análise em linguagem natural (perguntas sobre dados), campos de IA configuráveis e templates pré-prontos para fluxos comuns como feedback e planejamento.
+                                                </p>
+                                                <a href="https://airtable.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="trello" class="produtividade freemium">
+                                                <h3>
+                                                        <img src="/img/Trello.png" height="30" width="30">
+                                                        <span> Trello AI </span>
+                                                </h3>
+                                                <p>
+                                                        Trello AI (Atlassian Intelligence) é a IA nativa integrada ao Trello para usuários Premium/Enterprise que automatiza escrita e organização diretamente nos cartões e quadros.
+                                                        Serve para equipes com drafting/resumos de descrições/comentários, brainstorm de ideias, extração de tarefas de notas/reuniões/emails (Quick Capture), análise de performance via power-ups e automações avançadas com Butler que movem cartões e integram Slack/Jira.
+                                                </p>
+                                                <a href="https://trello.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="taskade" class="produtividade freemium">
+                                                <h3>
+                                                        <img src="/img/tasked.png" height="30" width="30">
+                                                        <span> Taskade </span>
+                                                </h3>
+                                                <p>
+                                                        Taskade AI é uma plataforma colaborativa de gerenciamento de tarefas e projetos que integra IA generativa para criar fluxos de trabalho, agentes autônomos e automações diretamente de prompts naturais.
+                                                        Serve para equipes com AI Agents (Research, SEO, Roundtable para insights múltiplos), comandos slash (/summarize, /subtask, /brainstorm, /prioritize), geração instantânea de projetos completos a partir de sites/vídeos e automações que criam tarefas/respostas baseadas em gatilhos.
+                                                </p>
+                                                <a href="https://trello.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="mem-ai" class="produtividade freemium">
+                                                <h3>
+                                                        <img src="/img/mem-ai.png" height="30" width="30">
+                                                        <span> Mem AI </span>
+                                                </h3>
+                                                <p>
+                                                        Mem.ai é um aplicativo de notas impulsionado por IA que funciona como um "segundo cérebro digital", capturando, organizando automaticamente e conectando ideias, reuniões e pesquisas sem pastas manuais.
+                                                        Serve para profissionais com organização automática por IA (categoriza temas/conexões), busca semântica (encontra por descrição natural), Mem Chat (perguntas/resumos/drafts baseados nas suas notas), captura via voz/extensão Chrome/SMS e agentes proativos que resumem semanas ou sugerem ações.
+                                                <a href="https://mem.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="lovable" class="nocode freemium">
+                                                <h3>
+                                                        <img src="/img/lovable.png" height="30" width="30">
+                                                        <span> Lovable </span>
+                                                </h3>
+                                                <p>
+                                                        Lovable é uma plataforma de desenvolvimento full-stack com IA generativa que permite criar aplicativos web completos (frontend React/Tailwind, backend Node.js, banco Supabase) usando apenas prompts em linguagem natural.
+                                                        Serve para não-desenvolvedores e PMs prototiparem MVPs em horas (agendamento, SaaS, dashboards), com código real exportável para GitHub, autenticação nativa, integração de chatbots/análise de sentimentos e documentação README automática gerada por IA.
+                                                </p>
+                                                <a href="https://lovable.dev/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>
+                                        </div>
+
+
+                                        <div id="base44" class="nocode freemium">
+                                                <h3>
+                                                        <img src="/img/base44.png" height="30" width="30">
+                                                        <span> Base44 </span>
+                                                </h3>
+                                                <p>
+                                                        Base44 é uma plataforma no-code com IA generativa que transforma descrições em linguagem natural em aplicativos web completos, incluindo frontend, backend, banco de dados, autenticação e hospedagem automática.
+                                                        Serve para não-desenvolvedores criarem MVPs funcionais em minutos (reservas, cadastros, dashboards) com editor visual ao vivo, chat conversacional para ajustes, deploy instantâneo com domínio próprio, integrações nativas (e-mails, analytics) e exportação para GitHub.
+                                                </p>        
+                                                <a href="https://base44.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>        
+                                        </div>
+
+
+                                        <div id="otter-ai" class="audio-reunioes freemium">
+                                                <h3>
+                                                        <img src="/img/Otter.png" height="30" width="30">
+                                                        <span> Otter AI </span>
+                                                </h3>
+                                                <p>
+                                                        Otter.ai é um assistente de reuniões com IA que grava, transcreve em tempo real e resume automaticamente conversas, aulas e entrevistas, identificando falantes e integrando-se nativamente com Zoom, Teams e Meet.
+                                                        Serve para profissionais com resumos inteligentes (pontos-chave, decisões, ações), chat com IA para perguntas/respostas baseadas nas transcrições, busca por palavras-chave, exportação em DOC/PDF e automação via Zapier que cria tarefas em Asana/Slack a partir de insights.
+                                                </p>        
+                                                <a href="https://otter.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="tldv-io" class="audio-reunioes freemium">
+                                                <h3>
+                                                        <img src="/img/tldv.png" height="30" width="30">
+                                                        <span> tl;dv  </span>
+                                                </h3>
+                                                <p>
+                                                        Fireflies.ai é um assistente de reuniões com IA que grava, transcreve em tempo real e analisa conversas automaticamente em plataformas como Zoom, Teams e Google Meet, identificando falantes e criando uma biblioteca pesquisável.
+                                                        Serve para equipes com resumos automáticos (destaques, decisões, próximos passos, palavras-chave), análise de sentimento, extração de itens de ação, busca semântica por toda biblioteca de reuniões e +200 "mini apps" de IA para insights específicos de vendas/suporte/marketing.
+                                                </p>        
+                                                <a href="https://fireflies.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="fireflies-ai" class="audio-reunioes freemium">
+                                                <h3>
+                                                        <img src="/img/fireflies.png" height="30" width="30">
+                                                        <span> Fireflies AI </span>
+                                                </h3>
+                                                <p>
+                                                        tl;dv.io é um notetaker com IA para Zoom, Google Meet e MS Teams que grava, transcreve em tempo real e gera atas automáticas de reuniões em +30 idiomas, incluindo português brasileiro.
+                                                        Serve para equipes com resumos inteligentes (destaques, itens de ação, tópicos, objeções), tradução instantânea, automação de follow-ups/CRM (HubSpot, Salesforce), clipes editáveis para compartilhamento e integração com +6000 ferramentas que atualiza Notion/Slack e treina vendas com insights agregados.
+                                                </p>     
+                                                <a href="https://tldv.io/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="writefull" class="escrita-academica freemium">
+                                                <h3>
+                                                        <img src="/img/Writefull.png" height="30" width="30">
+                                                        <span> Writefull AI </span>
+                                                </h3>
+                                                <p>
+                                                        Writefull AI é uma ferramenta de escrita acadêmica com IA treinada em milhões de artigos científicos, oferecendo feedback de linguagem automatizado, parafraseamento e widgets para textos formais.
+                                                        Serve para pesquisadores e estudantes com revisão em tempo real no Word/Overleaf (gramática, estilo acadêmico, consistência terminológica), Academizer (converte informal para formal), gerador de títulos/abstracts, paraphraser multinível e explain/summarize de trechos selecionados.
+                                                </p>     
+                                                <a href="https://writefull.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="paperpal" class="escrita-academica freemium">
+                                                <h3>
+                                                        <img src="/img/paperpal.png" height="30" width="30">
+                                                        <span> Paperpal </span>
+                                                </h3>
+                                                <p>
+                                                        Writefull AI é uma ferramenta de escrita acadêmica com IA treinada em milhões de artigos científicos, oferecendo feedback de linguagem automatizado, parafraseamento e widgets para textos formais.
+                                                        Serve para pesquisadores e estudantes com revisão em tempo real no Word/Overleaf (gramática, estilo acadêmico, consistência terminológica), Academizer (converte informal para formal), gerador de títulos/abstracts, paraphraser multinível e explain/summarize de trechos selecionados.
+                                                </p>     
+                                                <a href="https://paperpal.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="napkin-ai" class="design-visual freemium">
+                                                <h3>
+                                                        <img src="/img/napkin-ai.png" height="30" width="30">
+                                                        <span> Napkin AI </span>
+                                                </h3>
+                                                <p>
+                                                        Napkin AI é uma plataforma de IA que transforma texto simples em visuais profissionais como diagramas, fluxogramas, mapas mentais e infográficos em segundos, usando processamento de linguagem natural.
+                                                        Serve para profissionais de marketing, professores e equipes com geração automática de gráficos a partir de listas ou parágrafos, edição colaborativa em tempo real (cores, ícones, layout), exportação em PNG/PDF/SVG/PPT e integração com Google Docs/Notion/PowerPoint para apresentações e relatórios rápidos.
+                                                </p>     
+                                                <a href="https://napkin.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="beautiful-ai" class="design-visual freemium">
+                                                <h3>
+                                                        <img src="/img/beautiful-ai.png" height="30" width="30">
+                                                        <span> Beautiful AI </span>
+                                                </h3>
+                                                <p>
+                                                        Beautiful.ai é uma plataforma de criação de apresentações com design inteligente impulsionado por IA que ajusta automaticamente layouts, cores e elementos visuais conforme o conteúdo é adicionado.
+                                                        Serve para profissionais com DesignerBot (gera slides completos via prompts), templates "smart slides" (gráficos, timelines, listas que se adaptam), colaboração em tempo real, personalização de marca (logotipos/fonte) e exportação para PowerPoint/PDF, economizando 10x o tempo de design manual.
+                                                        A interface exibe dashboards com exemplos de pitch decks profissionais gerados automaticamente.
+                                                </p>     
+                                                <a href="https://beautiful.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="gamma-app" class="design-visual freemium">
+                                                <h3>
+                                                        <img src="/img/gamma-app.png" height="30" width="30">
+                                                        <span> Gamma App </span>
+                                                </h3>
+                                                <p>
+                                                        Gamma App é uma plataforma de criação de apresentações, documentos e sites alimentada por IA que gera conteúdo polido (slides, webpages, relatórios) a partir de prompts simples, arquivos importados ou templates.
+                                                        Serve para profissionais e educadores com geração automática de decks completos (pitchs, relatórios, ebooks), layouts responsivos que se adaptam dinamicamente, edição colaborativa em tempo real, elementos interativos (gráficos, embeds, vídeos) e exportação para PDF/PPT, substituindo PowerPoint com 10x mais velocidade.
+                                                </p>     
+                                                <a href="https://gamma.app/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="venngage" class="design-visual freemium">
+                                                <h3>
+                                                        <img src="/img/venngage.png" height="30" width="30">
+                                                        <span> Venngage </span>
+                                                </h3>
+                                                <p>
+                                                        Venngage AI é uma suíte de ferramentas de design gráfico com IA da plataforma Venngage que gera infográficos, relatórios, pôsteres, propostas e gráficos automaticamente a partir de prompts de texto ou dados.
+                                                        Serve para marketers e profissionais com +100 geradores específicos (executive summaries, bar graphs, flyers, pitch decks, mapas mentais), editor drag-and-drop com kit de marca, verificação de acessibilidade (daltonismo, WCAG), colaboração em tempo real e templates para negócios/educacional/ONGs.
+                                                </p>     
+                                                <a href="https://venngage.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="canva" class="design-visual freemium">
+                                                <h3>
+                                                        <img src="/img/canva.png" height="30" width="30">
+                                                        <span> Canva </span>
+                                                </h3>
+                                                <p>
+                                                        Canva AI (Magic Studio) é a suíte completa de inteligência artificial do Canva que integra geração de designs, imagens, textos e documentos em uma única interface conversacional acessível por texto ou voz.
+                                                        Serve para criadores com Magic Design (gera apresentações/infográficos/pôsteres editáveis de prompts), Magic Write (redige/resume/expande textos com contexto do documento), Dream Lab (imagens de referência + comandos), análise de uploads (PDFs/imagens → insights/designs) e Insights Mágicos para dados/planilhas.
+                                                </p>     
+                                                <a href="https://www.canva.com/pt_br/ia-assistente/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="zapier-agents" class="automacao no-code freemium">
+                                                <h3>
+                                                        <img src="/img/Zapier.png" height="30" width="30">
+                                                        <span> Zapier Agents </span>
+                                                </h3>
+                                                <p>
+                                                        Zapier Agents AI é uma plataforma no-code da Zapier que permite criar agentes autônomos de IA treinados para executar fluxos de trabalho complexos em +8.000 aplicativos, dividindo objetivos em subtarefas inteligentes.
+                                                        Serve para equipes com agentes colaborativos (delegam tarefas entre si), tomada de decisão contextual (pesquisa web, análise de dados, redação de respostas), checkpoints humanos para ações sensíveis e integração nativa com CRMs/Slack/Notion para processar leads, tickets e follow-ups 24/7 sem intervenção manual.
+                                                </p>     
+                                                <a href="https://zapier.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="n8n" class="automacao no-code gratis">
+                                                <h3>
+                                                        <img src="/img/n8n.png" height="30" width="30">
+                                                        <span> n8n </span>
+                                                </h3>
+                                                <p>
+                                                        n8n AI é uma plataforma open-source de automação low-code/no-code que cria fluxos de trabalho inteligentes conectando +400 apps com nós nativos de IA (OpenAI, Claude, Gemini).
+                                                        Serve para desenvolvedores e PMs com agentes autônomos que planejam/ executam tarefas complexas (análise de emails, RAG, chatbots com memória), langchain integration para orquestração multi-modelo e templates prontos para marketing/vendas/suporte que processam dados e tomam decisões sem supervisão humana.
+                                                </p>     
+                                                <a href="https://n8n.io/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="make" class="automacao no-code freemium">
+                                                <h3>
+                                                        <img src="/img/make-ai.png" height="30" width="30">
+                                                        <span> Make </span>
+                                                </h3>
+                                                <p>
+                                                        Make AI é a plataforma de automação visual no-code (ex-Integromat) que integra módulos de IA para criar workflows inteligentes conectando +2.000 apps sem programação.
+                                                        Serve para equipes com agentes de IA que analisam dados/ tomam decisões (classificação de leads, respostas automáticas), cenários com lógica condicional (if/then multi-etapa), orquestração de APIs e templates prontos para marketing/vendas/suporte que processam formulários, e-mails e CRMs 24/7.
+                                                </p>        
+                                                <a href="https://make.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="pipedream" class="automacao no-code freemium">
+                                                <h3>
+                                                        <img src="/img/pipedream.png" height="30" width="30">
+                                                        <span> Pipedream </span>
+                                                </h3>
+                                                <p>
+                                                        Pipedream AI é uma plataforma de automação serverless que combina desenvolvimento code/no-code com integração nativa de IA para criar workflows complexos conectando APIs, bancos de dados e +1.000 apps.
+                                                        Serve para desenvolvedores com String (agentes criados via prompts naturais que planejam/correm fluxos multi-etapa), geração de código por IA no editor, servidores MCP para LLMs usarem 10k+ ações API como ferramentas, tratamento automático de erros e casos como análise de emails/CRM/chatbots que processam bilhões de eventos em escala empresarial.
+                                                </p>        
+                                                <a href="https://pipedream.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="parabola" class="automacao no-code freemium">
+                                                <h3>
+                                                        <img src="/img/parabola-ai.png" height="30" width="30">
+                                                        <span> Parabola </span>
+                                                </h3>
+                                                <p>
+                                                        Parabola AI é uma plataforma no-code de automação de dados que usa IA para transformar dados desestruturados (PDFs, emails, planilhas) em fluxos de trabalho automatizados e estruturados.
+                                                        Serve para operações com extração inteligente de informações de documentos via prompts naturais, limpeza/categorização automática em escala (como ChatGPT para dados), construção visual de workflows via linguagem simples e agendamento/notificações para processos como auditoria de estoque e relatórios operacionais.
+                                                </p>        
+                                                <a href="https://parabola.io/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="kuse" class="automacao no-code freemium">
+                                                <h3>
+                                                        <img src="/img/kuse-ai.png" height="30" width="30">
+                                                        <span> Kuse </span>
+                                                </h3>
+                                                <p>
+                                                        Kuse AI é um workspace visual baseado em IA que organiza arquivos multimodais (PDFs, vídeos do YouTube, imagens, web pages) em uma tela infinita colaborativa, processando conteúdo automaticamente para criar entregáveis estruturados.
+                                                        Serve para profissionais com agente de IA que analisa documentos e gera resumos/tabelas/mapas mentais, formatador automático (relatórios, slides, flashcards, dashboards), Junior (agente corporativo que acessa dados internos e gerencia processos) e base de conhecimento viva que sincroniza ferramentas externas para workflows de marketing/finanças/engenharia.
+                                                </p>        
+                                                <a href="https://kuse.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="gumloop" class="automacao no-code freemium">
+                                                <h3>
+                                                        <img src="/img/gumloop.png" height="30" width="30">
+                                                        <span> Gumloop </span>
+                                                </h3>
+                                                <p>
+                                                        Gumloop é uma plataforma no-code de automação AI-first que permite criar fluxos de trabalho complexos conectando nós de IA (Claude, GPT-4, Grok) via interface visual drag-and-drop, processando listas automaticamente no "Loop Mode".
+                                                        Serve para GTM/ops/marketing com extração de dados de PDFs/emails, análise de sentimento, geração de conteúdo em escala, web scraping, integração com Google Sheets/Gmail/WordPress e nós específicos para qualificação de leads, previsão de vendas e automação de anúncios.
+                                                        A interface mostra workflows SEO com nós para análise de keywords e integração com ferramentas externas.
+                                                </p>        
+                                                <a href="https://gumloop.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="remnote" class="notetaking freemium">
+                                                <h3>
+                                                        <img src="/img/remnote.png" height="30" width="30">
+                                                        <span> RemNote </span>
+                                                </h3>
+                                                <p>
+                                                        RemNote AI é um app de estudo tudo-em-um que combina anotações, flashcards com repetição espaçada, anotação de PDFs e tutor de IA para criar um "segundo cérebro" otimizado para retenção de longo prazo.
+                                                        Serve para estudantes com resumos automáticos de PDFs/vídeos/texto (estrutura tópicos + conceitos-chave), geração de flashcards clicando em qualquer frase, AI Chat V2 (perguntas contextuais sobre documentos pessoais), AI Tutor personalizado que explica trechos destacados e quizzes gerados por IA conectados às notas para aprendizado ativo.
+                                                </p>        
+                                                <a href="https://remnote.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
+                                        <div id="ninite" class="softwares gratis">
+                                                <h3>
+                                                        <img src="/img/ninite.png" height="30" width="30">
+                                                        <span> Ninite </span>
+                                                </h3>
+                                                <p>
+                                                        Ninite é um gerenciador de pacotes gratuito para Windows que permite instalar ou atualizar múltiplos aplicativos populares de uma só vez, sem barras de ferramentas, anúncios ou telas desnecessárias de instalação.
+                                                        Serve para usuários domésticos selecionarem programas essenciais (Chrome, VLC, Spotify, Discord, Java, .NET) em uma interface simples, gerando um executável customizado que baixa versões oficiais e instala silenciosamente em background, compatível com Windows 7+.
+                                                </p>        
+                                                <a href="https://ninite.com/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+                                        
+
+                                        <div id="lindy" class="automacao freemium">
+                                                <h3>
+                                                        <img src="/img/Lindy.png" height="30" width="30">
+                                                        <span> Lindy AI </span>
+                                                </h3>
+                                                <p>
+                                                        Lindy AI é uma plataforma no-code para criar agentes autônomos de IA ("Lindies") que executam tarefas complexas de escritório via instruções em linguagem natural, conectando +3.000 apps.
+                                                        Serve para equipes com gerenciamento de calendário (lê emails e agenda reuniões automaticamente), triagem de inbox (responde FAQs, arquiva spam), qualificação de leads (monitora redes sociais, envia mensagens personalizadas), suporte 24/7 (responde tickets simples, escalona complexos para humanos) e workflows paralelos que pesquisam web/atualizam CRMs enquanto você dorme.
+                                                </p>        
+                                                <a href="https://lindy.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site   
+                                                </a>                
+                                        </div>
+
+
                                 </div>
-
-
                         </div>
-                </div>
 
-                        <div id="apps-ias" class="cards">
+                        
 
                                 <div id="photomath" class="educacao freemium">
                                         <h3>
@@ -1215,7 +1208,7 @@
                                         <a href="https://play.google.com/store/apps/details?id=com.microblink.photomath" target="_blank" rel="noopener noreferrer">
                                                         <img src="/img/android-icon.png" height="30" width="30"></img>
                                         </a>
-                                               
+                                        
                                         <a href="https://apps.apple.com/us/app/photomath/id919087726" target="_blank" rel="noopener noreferrer">
                                                         <img src="/img/ios-icon.png" height="30" width="30"></img>
 
@@ -1245,24 +1238,15 @@
                                                         <img src="/img/windows-icon.png" height="30" width="30"></img>
                                         </a>
 
-                                       
+                                
                 
 
                                 </div>
 
+                        </section>
 
 
-
-
-
-
-
-
-
-        </section>
-
-
-        <section id="contato" class="page-section dashboard-section">
+        <section id="contato" class="page-section flex-section">
 
                 <div>
                         <input type="text" id="nome_login" aria-label="Nome de usuário">

@@ -8,6 +8,7 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 document.addEventListener('DOMContentLoaded', async function () {
   configurarNavegacaoSidebar()
   configurarTelaLogin()
+  await redirecionarSeJaEstiverLogado()
   await protegerPaginasPrivadas()
 })
 
@@ -160,6 +161,36 @@ async function logarUsuario(event) {
   window.location.href = 'dashboard.html'
 }
 
+async function logout() {
+  const { error } = await supabase.auth.signOut()
 
+  if (error) {
+    console.error('Erro ao sair:', error.message)
+    return
+  }
+
+  window.location.href = 'login.html'
+}
+
+async function redirecionarSeJaEstiverLogado() {
+  const paginaAtual = window.location.pathname
+
+  const estaNoLogin = paginaAtual.endsWith('login.html')
+
+  if (!estaNoLogin) {
+    return
+  }
+
+  const { data, error } = await supabase.auth.getSession()
+
+  if (error) {
+    console.error('Erro ao verificar sessão:', error.message)
+    return
+  }
+
+  if (data.session) {
+    window.location.href = 'dashboard.html'
+  }
+}
 
 window.logout = logout
