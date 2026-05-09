@@ -141,7 +141,7 @@ body #dashboard #ferramentas {
 
 /* Cabeçalho interno da seção ferramentas */
 body #dashboard .tools-header,
-body#dashboard .section-header {
+body #dashboard .section-header {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
     align-items: end;
@@ -173,7 +173,7 @@ body #dashboard #ferramentas > p {
 }
 
 /* Busca dentro da seção ferramentas */
-body#dashboard #ferramentas .search-box {
+body #dashboard #ferramentas .search-box {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -226,7 +226,7 @@ body #dashboard .filter-bar {
     margin: 22px 0 34px;
 }
 
-body#dashboard .filter-bar label {
+body #dashboard .filter-bar label {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -365,7 +365,7 @@ body #dashboard .cards a:hover {
         padding-top: 32px;
     }
 
-    body#dashboard .cards {
+    body #dashboard .cards {
         grid-template-columns: 1fr;
     }
 }
