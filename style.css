@@ -137,9 +137,22 @@ body {
 }
 
 /* Esconde todas as seções inicialmente */
-section[id] {
+.page-section {
     display: none;
-}  
+}
+
+.page-section.is-active {
+    display: block;
+}
+
+.page-section.is-active.dashboard-section {
+    display: block;
+}
+
+#inicio.page-section.is-active {
+    display: flex;
+    flex-direction: column;
+}
 
 /*Header = Barra superior*/
 header {
