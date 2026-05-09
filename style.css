@@ -124,7 +124,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .search-box input[type="search"] {
     padding-right: 30px;
     flex: 1;
-   
 }
 
 /* Posiciona o botão de pesquisa dentro da caixa de pesquisa */
@@ -145,7 +144,6 @@ input[type="search"]::-webkit-search-results-decoration {
     display: flex;
     text-align: center;
     opacity: 80%;
-   
 }
 
 /* Lista de navegacao */
@@ -204,8 +202,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
 #container-title h1 {
     margin: 0px 0px 10px;
-}
+    font-size: 45px;
+    
 
+}
 /* Paragrafo dentro do titulo*/
 #container-title p {
     max-width: 800px;
