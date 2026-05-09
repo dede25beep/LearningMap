@@ -145,13 +145,8 @@ body {
     display: block;
 }
 
-.page-section.is-active.dashboard-section {
-    display: block;
-}
-
-#inicio.page-section.is-active {
+.page-section.is-active.flex-section {
     display: flex;
-    flex-direction: column;
 }
 
 /*Header = Barra superior*/
@@ -225,6 +220,22 @@ input[type="search"]::-webkit-search-results-decoration {
     box-shadow: 0 2px 6px var(--sombra);
     transition: all 0.3s ease;
     
+}
+/*botão de login*/
+.sidebar-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 12px;
+
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+
+    background-color: whitesmoke;
+    color: var(--secundaria);
+
+    box-shadow: 0 2px 6px var(--sombra);
+    transition: all 0.3s ease;
 }
 
 /* Efeito hover nos links*/
