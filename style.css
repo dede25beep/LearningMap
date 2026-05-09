@@ -1,6 +1,6 @@
 /* ===== DASHBOARD: CORREÇÃO DEFINITIVA DE LAYOUT ===== */
 
-body#dashboard {
+body #dashboard {
     min-height: 100vh;
     background:
         radial-gradient(circle at top left, rgba(124, 58, 237, 0.10), transparent 30%),
@@ -10,7 +10,7 @@ body#dashboard {
 }
 
 /* Header mais estável */
-body#dashboard header {
+body #dashboard header {
     display: grid;
     grid-template-columns: auto auto minmax(260px, 420px) auto auto;
     align-items: center;
@@ -24,7 +24,7 @@ body#dashboard header {
     box-shadow: 0 10px 35px rgba(49, 46, 129, 0.08);
 }
 
-body#dashboard header > img {
+body #dashboard header > img {
     width: 170px;
     height: 80px;
     object-fit: contain;
@@ -32,16 +32,16 @@ body#dashboard header > img {
 }
 
 /* Botões do menu */
-body#dashboard .sidebar ul {
+body #dashboard .sidebar ul {
     display: flex;
     align-items: center;
     gap: 12px;
     list-style: none;
 }
 
-body#dashboard .sidebar a,
-body#dashboard .logout-button,
-body#dashboard .sidebar-btn {
+body #dashboard .sidebar a,
+body #dashboard .logout-button,
+body #dashboard .sidebar-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -61,9 +61,9 @@ body#dashboard .sidebar-btn {
     transition: 0.25s ease;
 }
 
-body#dashboard .sidebar a:hover,
-body#dashboard .logout-button:hover,
-body#dashboard .sidebar-btn:hover {
+body #dashboard .sidebar a:hover,
+body #dashboard .logout-button:hover,
+body #dashboard .sidebar-btn:hover {
     transform: translateY(-2px);
     background: #f3e8ff;
     box-shadow: 0 14px 30px rgba(109, 40, 217, 0.18);
@@ -87,7 +87,7 @@ body#dashboard header .search-box {
     box-shadow: 0 6px 18px rgba(49, 46, 129, 0.06);
 }
 
-body#dashboard header .search-box input {
+body #dashboard header .search-box input {
     width: 100%;
     padding: 12px 18px;
 
@@ -100,7 +100,7 @@ body#dashboard header .search-box input {
     color: #312e81;
 }
 
-body#dashboard header .search-icon {
+body #dashboard header .search-icon {
     position: static;
     width: 18px;
     height: 18px;
@@ -109,7 +109,7 @@ body#dashboard header .search-icon {
 }
 
 /* Sistema de seções */
-body#dashboard .page-section {
+body #dashboard .page-section {
     display: none;
 }
 
@@ -122,25 +122,25 @@ body#dashboard .page-section.is-active {
    mesmo se #ferramentas ainda tiver flex-section no HTML,
    ele NÃO pode virar display:flex.
 */
-body#dashboard #ferramentas.page-section.is-active {
+body #dashboard #ferramentas.page-section.is-active {
     display: block !important;
 }
 
 /* Início pode continuar flex */
-body#dashboard #inicio.page-section.is-active {
+body #dashboard #inicio.page-section.is-active {
     display: flex;
     flex-direction: column;
 }
 
 /* Seção ferramentas */
-body#dashboard #ferramentas {
+body #dashboard #ferramentas {
     width: min(1180px, calc(100% - 48px));
     margin: 0 auto;
     padding: 48px 0 80px;
 }
 
 /* Cabeçalho interno da seção ferramentas */
-body#dashboard .tools-header,
+body #dashboard .tools-header,
 body#dashboard .section-header {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
@@ -150,9 +150,9 @@ body#dashboard .section-header {
     margin-bottom: 24px;
 }
 
-body#dashboard .tools-title h1,
-body#dashboard .section-header h1,
-body#dashboard #ferramentas > h1 {
+body #dashboard .tools-title h1,
+body #dashboard .section-header h1,
+body #dashboard #ferramentas > h1 {
     max-width: 720px;
 
     color: #312e81;
@@ -161,9 +161,9 @@ body#dashboard #ferramentas > h1 {
     letter-spacing: -0.04em;
 }
 
-body#dashboard .tools-title p,
-body#dashboard .section-header p,
-body#dashboard #ferramentas > p {
+body #dashboard .tools-title p,
+body #dashboard .section-header p,
+body #dashboard #ferramentas > p {
     max-width: 680px;
     margin-top: 14px;
 
@@ -188,7 +188,7 @@ body#dashboard #ferramentas .search-box {
     box-shadow: 0 8px 22px rgba(49, 46, 129, 0.08);
 }
 
-body#dashboard #ferramentas .search-box input {
+body #dashboard #ferramentas .search-box input {
     width: 100%;
     padding: 12px 16px;
 
@@ -201,7 +201,7 @@ body#dashboard #ferramentas .search-box input {
     text-align: left;
 }
 
-body#dashboard #ferramentas .search-box button {
+body #dashboard #ferramentas .search-box button {
     width: 44px;
     height: 44px;
 
@@ -217,8 +217,8 @@ body#dashboard #ferramentas .search-box button {
 }
 
 /* Filtros */
-body#dashboard #filtro,
-body#dashboard .filter-bar {
+body #dashboard #filtro,
+body #dashboard .filter-bar {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -245,7 +245,7 @@ body#dashboard .filter-bar label {
 }
 
 /* Grid dos cards */
-body#dashboard .cards {
+body #dashboard .cards {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 28px;
@@ -261,7 +261,7 @@ body#dashboard .cards + .cards {
 }
 
 /* Card individual */
-body#dashboard .cards > * {
+body #dashboard .cards > * {
     width: auto !important;
     height: auto !important;
     min-height: 330px;
@@ -289,7 +289,7 @@ body#dashboard .cards > * {
         border-color 0.25s ease;
 }
 
-body#dashboard .cards > *:hover {
+body #dashboard .cards > *:hover {
     transform: translateY(-8px);
     border-color: rgba(124, 58, 237, 0.35);
 
@@ -299,7 +299,7 @@ body#dashboard .cards > *:hover {
 }
 
 /* Conteúdo dos cards */
-body#dashboard .cards h3 {
+body #dashboard .cards h3 {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -310,13 +310,13 @@ body#dashboard .cards h3 {
     font-size: 1.1rem;
 }
 
-body#dashboard .cards p {
+body #dashboard .cards p {
     color: #5b21b6;
     line-height: 1.65;
     font-size: 0.95rem;
 }
 
-body#dashboard .cards img {
+body #dashboard .cards img {
     border: 1px solid rgba(124, 58, 237, 0.55);
     border-radius: 12px;
     padding: 6px;
@@ -324,7 +324,7 @@ body#dashboard .cards img {
     background: rgba(255, 255, 255, 0.75);
 }
 
-body#dashboard .cards a {
+body #dashboard .cards a {
     align-self: flex-start;
 
     margin-top: auto;
@@ -341,26 +341,26 @@ body#dashboard .cards a {
     box-shadow: 0 12px 28px rgba(109, 40, 217, 0.26);
 }
 
-body#dashboard .cards a:hover {
+body #dashboard .cards a:hover {
     transform: translateY(-2px);
     box-shadow: 0 16px 36px rgba(109, 40, 217, 0.35);
 }
 
 /* Responsivo */
 @media (max-width: 900px) {
-    body#dashboard header {
+    body #dashboard header {
         grid-template-columns: 1fr;
         justify-items: center;
         gap: 16px;
     }
 
-    body#dashboard .tools-header,
-    body#dashboard .section-header {
+    body #dashboard .tools-header,
+    body #dashboard .section-header {
         grid-template-columns: 1fr;
         align-items: stretch;
     }
 
-    body#dashboard #ferramentas {
+    body #dashboard #ferramentas {
         width: min(100% - 28px, 1180px);
         padding-top: 32px;
     }
@@ -370,15 +370,15 @@ body#dashboard .cards a:hover {
     }
 }
 
-body#dashboard .cards > * {
+body #dashboard .cards > * {
     overflow: visible;
 }
 
-body#dashboard .cards p {
+body #dashboard .cards p {
     margin: 0;
 }
 
-body#dashboard .cards a {
+body #dashboard .cards a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
