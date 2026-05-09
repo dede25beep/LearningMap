@@ -26,17 +26,20 @@ function configurarNavegacaoSidebar() {
 
       const targetSection = document.querySelector(targetId)
 
-      document.querySelectorAll('section[id]').forEach(section => {
-        section.style.display = 'none'
+      if (!targetSection) {
+        return
+      }
+
+      document.querySelectorAll('.page-section').forEach(section => {
+        section.classList.remove('is-active')
       })
 
-      if (targetSection) {
-        targetSection.style.display = 'block'
-        targetSection.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'  
-        })
-      }
+      targetSection.classList.add('is-active')
+
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
     })
   })
 }
@@ -54,16 +57,18 @@ function configurarTelaLogin() {
   if (showRegister && loginSection && registerSection) {
     showRegister.addEventListener('click', function (e) {
       e.preventDefault()
-      loginSection.style.display = 'none'
-      registerSection.style.display = 'block'
+
+      loginSection.classList.remove('is-active')
+      registerSection.classList.add('is-active')
     })
   }
 
   if (showLogin && loginSection && registerSection) {
     showLogin.addEventListener('click', function (e) {
       e.preventDefault()
-      registerSection.style.display = 'none'
-      loginSection.style.display = 'block'
+
+      registerSection.classList.remove('is-active')
+      loginSection.classList.add('is-active')
     })
   }
 
@@ -73,6 +78,34 @@ function configurarTelaLogin() {
 
   if (loginForm) {
     loginForm.addEventListener('submit', logarUsuario)
+  }
+}
+
+async function protegerPaginasPrivadas() {
+  const paginaAtual = window.location.pathname
+
+  const paginasPrivadas = [
+    'dashboard.html'
+  ]
+
+  const estaEmPaginaPrivada = paginasPrivadas.some(pagina => {
+    return paginaAtual.endsWith(pagina)
+  })
+
+  if (!estaEmPaginaPrivada) {
+    return
+  }
+
+  const { data, error } = await supabase.auth.getSession()
+
+  if (error) {
+    console.error('Erro ao verificar sessão:', error.message)
+    window.location.href = 'login.html'
+    return
+  }
+
+  if (!data.session) {
+    window.location.href = 'login.html'
   }
 }
 
@@ -127,43 +160,6 @@ async function logarUsuario(event) {
   window.location.href = 'dashboard.html'
 }
 
-async function protegerPaginasPrivadas() {
-  const paginaAtual = window.location.pathname
 
-  const paginasPrivadas = [
-    'dashboard.html'
-  ]
-
-  const estaEmPaginaPrivada = paginasPrivadas.some(pagina => {
-    return paginaAtual.endsWith(pagina)
-  })
-
-  if (!estaEmPaginaPrivada) {
-    return
-  }
-
-  const { data, error } = await supabase.auth.getSession()
-
-  if (error) {
-    console.error('Erro ao verificar sessão:', error.message)
-    window.location.href = 'login.html'
-    return
-  }
-
-  if (!data.session) {
-    window.location.href = 'login.html'
-  }
-}
-
-async function logout() {
-  const { error } = await supabase.auth.signOut()
-
-  if (error) {
-    console.error('Erro ao sair:', error.message)
-    return
-  }
-
-  window.location.href = 'login.html'
-}
 
 window.logout = logout
