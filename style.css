@@ -1,6 +1,191 @@
-/* ===== DASHBOARD: CORREÇÃO DEFINITIVA DE LAYOUT ===== */
+:root {
+    --bg: #ffffff;
+    --principal: #312e81;
+    --secundaria: #5b21b6;
+    --roxo: #7c3aed;
+    --roxo-escuro: #4c1d95;
+    --azul: #2563eb;
+    --texto-claro: #f8f7ff;
+    --borda: rgba(109, 40, 217, 0.14);
+    --sombra: 0 18px 45px rgba(49, 46, 129, 0.10);
+}
 
-body #dashboard {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ===== Sistema geral de seções ===== */
+
+.page-section {
+    display: none;
+}
+
+.page-section.is-active {
+    display: block;
+}
+
+.page-section.is-active.flex-section {
+    display: flex;
+}
+
+/* ===== Login / Cadastro ===== */
+
+body#pagina-login {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at left, rgba(124, 58, 237, 0.28), transparent 32%),
+        radial-gradient(circle at right, rgba(168, 85, 247, 0.22), transparent 34%),
+        linear-gradient(135deg, #0f0f1a, #181825);
+    color: white;
+}
+
+body#pagina-login #login,
+body#pagina-login #register {
+    min-height: 100vh;
+    place-items: center;
+    padding: 24px;
+}
+
+body#pagina-login .page-section.is-active {
+    display: grid;
+}
+
+.login-container,
+.register-container {
+    width: min(420px, 100%);
+    padding: 48px 40px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+        0 26px 80px rgba(0, 0, 0, 0.36),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+}
+
+.login-container form,
+.register-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+.login-container h1,
+.register-container h1 {
+    margin-bottom: 12px;
+    font-size: 2rem;
+    color: white;
+}
+
+.login-container input,
+.register-container input {
+    width: 100%;
+    height: 52px;
+    padding: 0 18px;
+    border: none;
+    outline: none;
+    border-radius: 14px;
+    background: #fff9bf;
+    color: #111827;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.btn-login,
+.btn-register {
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #9333ea, #c026d3);
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 16px 34px rgba(168, 85, 247, 0.34);
+    transition: 0.25s ease;
+}
+
+.btn-login:hover,
+.btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 44px rgba(168, 85, 247, 0.45);
+}
+
+.login-container p,
+.register-container p {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.login-container a,
+.register-container a {
+    color: #d8b4fe;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#login-message,
+#register-message {
+    min-height: 22px;
+    text-align: center;
+    color: #fef3c7;
+}
+
+/* ===== Main público ===== */
+
+body#main {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, rgba(124, 58, 237, 0.16), transparent 30%),
+        linear-gradient(135deg, #f8f7ff, #ffffff);
+    color: var(--principal);
+}
+
+body#main header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 36px;
+    background: rgba(255, 255, 255, 0.86);
+    border-bottom: 1px solid var(--borda);
+    box-shadow: 0 10px 35px rgba(49, 46, 129, 0.08);
+}
+
+body#main header img {
+    width: 170px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+body#main h1 {
+    width: min(1000px, calc(100% - 48px));
+    margin: 80px auto 20px;
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+body#main p {
+    width: min(800px, calc(100% - 48px));
+    margin: 0 auto;
+    color: var(--secundaria);
+    line-height: 1.7;
+}
+
+/* ===== Dashboard ===== */
+
+body#dashboard {
     min-height: 100vh;
     background:
         radial-gradient(circle at top left, rgba(124, 58, 237, 0.10), transparent 30%),
@@ -9,107 +194,109 @@ body #dashboard {
     font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-/* Header mais estável */
-body #dashboard header {
+body#dashboard header {
     display: grid;
-    grid-template-columns: auto auto minmax(260px, 420px) auto auto;
+    grid-template-columns: auto auto minmax(260px, 420px) auto;
     align-items: center;
     gap: 24px;
-
     padding: 18px 32px;
     background: rgba(255, 255, 255, 0.86);
     backdrop-filter: blur(12px);
-
     border-bottom: 1px solid rgba(109, 40, 217, 0.10);
     box-shadow: 0 10px 35px rgba(49, 46, 129, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-body #dashboard header > img {
+body#dashboard header > img {
     width: 170px;
     height: 80px;
     object-fit: contain;
     border-radius: 12px;
 }
 
-/* Botões do menu */
-body #dashboard .sidebar ul {
+body#dashboard .sidebar ul {
     display: flex;
     align-items: center;
     gap: 12px;
     list-style: none;
 }
 
-body #dashboard .sidebar a,
-body #dashboard .logout-button,
-body #dashboard .sidebar-btn {
+body#dashboard .sidebar a,
+body#dashboard .logout-button,
+body#dashboard .sidebar-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 10px 18px;
     border: 1px solid rgba(109, 40, 217, 0.15);
     border-radius: 999px;
-
     background: rgba(255, 255, 255, 0.92);
-    color: #4c1d95;
-
+    color: var(--roxo-escuro);
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
-
     box-shadow: 0 8px 22px rgba(109, 40, 217, 0.10);
     transition: 0.25s ease;
 }
 
-body #dashboard .sidebar a:hover,
-body #dashboard .logout-button:hover,
-body #dashboard .sidebar-btn:hover {
+body#dashboard .sidebar a:hover,
+body#dashboard .logout-button:hover,
+body#dashboard .sidebar-btn:hover {
     transform: translateY(-2px);
     background: #f3e8ff;
     box-shadow: 0 14px 30px rgba(109, 40, 217, 0.18);
 }
 
-/* Busca do header */
-body#dashboard header .search-box {
-    justify-self: center;
-
+body#dashboard .user-profile {
     display: flex;
     align-items: center;
+    gap: 12px;
+    justify-self: end;
+}
 
+body#dashboard .user-profile img {
+    width: 34px;
+    height: 34px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+body#dashboard header .search-box {
+    justify-self: center;
+    display: flex;
+    align-items: center;
     width: 100%;
     max-width: 420px;
-
     padding: 0;
     border-radius: 999px;
     background: white;
     border: 1px solid rgba(109, 40, 217, 0.14);
-
     box-shadow: 0 6px 18px rgba(49, 46, 129, 0.06);
 }
 
-body #dashboard header .search-box input {
+body#dashboard header .search-box input {
     width: 100%;
     padding: 12px 18px;
-
     border: none;
     outline: none;
     border-radius: 999px;
-
     background: transparent;
     text-align: left;
     color: #312e81;
 }
 
-body #dashboard header .search-icon {
-    position: static;
+body#dashboard header .search-icon {
     width: 18px;
     height: 18px;
     margin-right: 14px;
-    color: #7c3aed;
+    color: var(--roxo);
 }
 
-/* Sistema de seções */
-body #dashboard .page-section {
+/* Seções do dashboard */
+
+body#dashboard .page-section {
     display: none;
 }
 
@@ -117,271 +304,299 @@ body#dashboard .page-section.is-active {
     display: block;
 }
 
-/*
-   Correção crítica:
-   mesmo se #ferramentas ainda tiver flex-section no HTML,
-   ele NÃO pode virar display:flex.
-*/
-body #dashboard #ferramentas.page-section.is-active {
-    display: block !important;
-}
-
-/* Início pode continuar flex */
-body #dashboard #inicio.page-section.is-active {
+body#dashboard #inicio.page-section.is-active {
     display: flex;
     flex-direction: column;
 }
 
-/* Seção ferramentas */
-body #dashboard #ferramentas {
+body#dashboard #ferramentas.page-section.is-active {
+    display: block !important;
+}
+
+/* Início */
+
+body#dashboard #inicio {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 70px 0 90px;
+    gap: 48px;
+}
+
+#container-title {
+    max-width: 780px;
+}
+
+#container-title h1 {
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+    color: #312e81;
+}
+
+#container-title p {
+    margin-top: 18px;
+    max-width: 680px;
+    color: #5b21b6;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+#introducao {
+    padding: 34px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(109, 40, 217, 0.12);
+    box-shadow: var(--sombra);
+}
+
+#introducao h2 {
+    color: #312e81;
+    margin-bottom: 14px;
+}
+
+#introducao p {
+    color: #5b21b6;
+    line-height: 1.7;
+    margin-top: 12px;
+}
+
+.flashcards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.flash-cards {
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(238, 235, 255, 0.88));
+    border: 1px solid rgba(109, 40, 217, 0.10);
+    box-shadow: 0 12px 30px rgba(49, 46, 129, 0.08);
+    font-weight: 700;
+}
+
+/* Ferramentas */
+
+body#dashboard #ferramentas {
     width: min(1180px, calc(100% - 48px));
     margin: 0 auto;
     padding: 48px 0 80px;
 }
 
-/* Cabeçalho interno da seção ferramentas */
-body #dashboard .tools-header,
-body #dashboard .section-header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
-    align-items: end;
-    gap: 32px;
-
-    margin-bottom: 24px;
+.dashboard-container {
+    width: 100%;
 }
 
-body #dashboard .tools-title h1,
-body #dashboard .section-header h1,
-body #dashboard #ferramentas > h1 {
+body#dashboard #ferramentas > .dashboard-container > h1 {
     max-width: 720px;
-
     color: #312e81;
     font-size: clamp(2.1rem, 4vw, 4rem);
     line-height: 0.95;
     letter-spacing: -0.04em;
+    margin-top: 24px;
 }
 
-body #dashboard .tools-title p,
-body #dashboard .section-header p,
-body #dashboard #ferramentas > p {
+body#dashboard #ferramentas > .dashboard-container > p {
     max-width: 680px;
     margin-top: 14px;
-
     color: #5b21b6;
     line-height: 1.6;
     font-size: 1rem;
 }
 
-/* Busca dentro da seção ferramentas */
-body #dashboard #ferramentas .search-box {
+body#dashboard #ferramentas .search-box {
     display: flex;
     align-items: center;
     gap: 8px;
-
     width: min(420px, 100%);
     padding: 6px;
-
     border-radius: 999px;
     background: white;
     border: 1px solid rgba(109, 40, 217, 0.14);
-
     box-shadow: 0 8px 22px rgba(49, 46, 129, 0.08);
 }
 
-body #dashboard #ferramentas .search-box input {
+body#dashboard #ferramentas .search-box input {
     width: 100%;
     padding: 12px 16px;
-
     border: none;
     outline: none;
     border-radius: 999px;
-
     background: transparent;
     color: #312e81;
     text-align: left;
 }
 
-body #dashboard #ferramentas .search-box button {
+body#dashboard #ferramentas .search-box button {
     width: 44px;
     height: 44px;
-
     border: none;
     border-radius: 50%;
-
     background: linear-gradient(135deg, #2563eb, #7c3aed);
     cursor: pointer;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Filtros */
-body #dashboard #filtro,
-body #dashboard .filter-bar {
+body#dashboard #filtro,
+body#dashboard .filter-bar {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-
     margin: 22px 0 34px;
 }
 
-body #dashboard .filter-bar label {
+body#dashboard .filter-bar label {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-
     padding: 8px 12px;
-
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.86);
     border: 1px solid rgba(109, 40, 217, 0.12);
-
     color: #4c1d95;
     font-size: 0.9rem;
     font-weight: 600;
-
     box-shadow: 0 6px 18px rgba(49, 46, 129, 0.06);
 }
 
-/* Grid dos cards */
-body #dashboard .cards {
+/* Cards */
+
+body#dashboard .cards {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 28px;
-
     width: 100%;
-    margin-top: 28px;
+    margin-top: 34px;
     padding: 0;
 }
 
-/* Espaço entre grupos de cards */
-body#dashboard .cards + .cards {
-    margin-top: 28px;
-}
-
-/* Card individual */
-body #dashboard .cards > * {
+body#dashboard .cards > * {
     width: auto !important;
     height: auto !important;
     min-height: 330px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 18px;
-
     padding: 26px;
-
     border-radius: 24px;
-    background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(238, 235, 255, 0.92));
-
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(238, 235, 255, 0.92));
     border: 1px solid rgba(109, 40, 217, 0.10);
-
     box-shadow:
         0 18px 45px rgba(49, 46, 129, 0.10),
         inset 0 1px 0 rgba(255, 255, 255, 0.75);
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    overflow: visible;
 }
 
-body #dashboard .cards > *:hover {
+body#dashboard .cards > *:hover {
     transform: translateY(-8px);
     border-color: rgba(124, 58, 237, 0.35);
-
     box-shadow:
         0 28px 70px rgba(49, 46, 129, 0.18),
         0 0 30px rgba(124, 58, 237, 0.12);
 }
 
-/* Conteúdo dos cards */
-body #dashboard .cards h3 {
+body#dashboard .cards h3 {
     display: flex;
     align-items: center;
     gap: 12px;
-
     margin: 0;
-
     color: #312e81;
     font-size: 1.1rem;
 }
 
-body #dashboard .cards p {
+body#dashboard .cards p {
+    margin: 0;
     color: #5b21b6;
     line-height: 1.65;
     font-size: 0.95rem;
 }
 
-body #dashboard .cards img {
+body#dashboard .cards img {
     border: 1px solid rgba(124, 58, 237, 0.55);
     border-radius: 12px;
     padding: 6px;
-
     background: rgba(255, 255, 255, 0.75);
 }
 
-body #dashboard .cards a {
+body#dashboard .cards a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     align-self: flex-start;
-
+    width: fit-content;
+    max-width: 100%;
     margin-top: auto;
     padding: 12px 18px;
-
     border-radius: 14px;
-
     background: linear-gradient(135deg, #2563eb, #7c3aed, #4c1d95);
     color: white;
-
     text-decoration: none;
     font-weight: 800;
-
     box-shadow: 0 12px 28px rgba(109, 40, 217, 0.26);
 }
 
-body #dashboard .cards a:hover {
+body#dashboard .cards a:hover {
     transform: translateY(-2px);
     box-shadow: 0 16px 36px rgba(109, 40, 217, 0.35);
 }
 
+/* Contato */
+
+body#dashboard #contato.page-section.is-active {
+    display: grid;
+    place-items: center;
+    min-height: calc(100vh - 120px);
+    padding: 48px;
+}
+
+body#dashboard #contato div {
+    display: grid;
+    gap: 16px;
+    width: min(420px, 100%);
+    padding: 32px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(109, 40, 217, 0.12);
+    box-shadow: var(--sombra);
+}
+
+body#dashboard #contato input {
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid rgba(109, 40, 217, 0.14);
+    border-radius: 12px;
+    outline: none;
+}
+
 /* Responsivo */
+
 @media (max-width: 900px) {
-    body #dashboard header {
+    body#dashboard header {
         grid-template-columns: 1fr;
         justify-items: center;
         gap: 16px;
     }
 
-    body #dashboard .tools-header,
-    body #dashboard .section-header {
-        grid-template-columns: 1fr;
-        align-items: stretch;
+    body#dashboard .sidebar ul {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    body #dashboard #ferramentas {
+    body#dashboard #inicio,
+    body#dashboard #ferramentas {
         width: min(100% - 28px, 1180px);
-        padding-top: 32px;
     }
 
-    body #dashboard .cards {
+    body#dashboard .cards {
         grid-template-columns: 1fr;
     }
-}
 
-body #dashboard .cards > * {
-    overflow: visible;
-}
-
-body #dashboard .cards p {
-    margin: 0;
-}
-
-body #dashboard .cards a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    max-width: 100%;
+    #container-title h1 {
+        font-size: clamp(2.2rem, 12vw, 4rem);
+    }
 }
