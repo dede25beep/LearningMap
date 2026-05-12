@@ -96,10 +96,25 @@ body#pagina-login .page-section.is-active {
     border: none;
     outline: none;
     border-radius: 14px;
-    background: #fff9bf;
+    background: #f4eeff;
     color: #111827;
     text-align: center;
     font-size: 0.95rem;
+}
+
+body#pagina-login #show-register,
+body#pagina-login #show-login {
+    color: #d8b4fe;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+body#pagina-login #show-register:hover,
+body#pagina-login #show-login:hover {
+    color: #9826df;
+    transform: translateY(-2px);
 }
 
 .btn-login,
