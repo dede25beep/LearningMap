@@ -1,0 +1,39 @@
+:root {
+    --bg: #ffffff;
+    --principal: #312e81;
+    --secundaria: #5b21b6;
+    --roxo: #7c3aed;
+    --roxo-escuro: #4c1d95;
+    --azul: #2563eb;
+    --texto-claro: #f8f7ff;
+    --borda: rgba(109, 40, 217, 0.14);
+    --sombra: 0 18px 45px rgba(49, 46, 129, 0.10);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ===== Sistema geral de seções ===== */
+
+.page-section {
+    display: none;
+}
+
+.page-section.is-active {
+    display: block;
+}
+
+.page-section.is-active.flex-section {
+    display: flex;
+}
