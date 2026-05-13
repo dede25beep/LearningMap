@@ -22,6 +22,7 @@
                         </ul>
                 </nav>
                 <img src="/img/logotipo.jpg" alt="Lotipo do Site" height="100" width="200"></img>
+                
 
                 
                 <form action="/search" method="get" class="search-box">
@@ -107,65 +108,77 @@
                         <h1> Acesso rápido para Ferramentas IAs </h1>
                         <p> recursos educacionais e softwares que podem transformar sua rotina de estudos e programação. </p>
 
-                        <div id="filtro">       
+                <div id="filtro">       
+                        <input type="checkbox" class="filtro-btn" data-categoria="todas"> Todas </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="raciocinio"> Raciocínio </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="escrita-academica"> Escrita Acadêmica </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="pesquisa-academica"> Pesquisa Acadêmica </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="nocode"> No-code </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="educacao"> Educação </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="desenvolvimento"> Desenvolvimento </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="produtividade"> Produtividade </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="audio-reunioes"> Áudio & Reuniões </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="design-visual"> Design & Visual </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="automacao"> Automação </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="notetaking"> Notetaking </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="softwares"> Softwares </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="gratuito"> Gratuito </button>
+                        <input type="checkbox" class="filtro-btn" data-categoria="limitado"> Limitado </button>
+                      
 
-                        
-
-                        </div>
-                        
+                </div>
+                
                         <div id="tools-grid" class="cards">
                         
 
-                                <div id="chatgpt" class="raciocinio freemium">
+                                <div id="chatgpt" class="raciocinio limitado">
                                         <h3>
-                                                <img src="/img/ChatGPT_logo.svg.png" height="30" width="30">
+                                                <img src="/img/ChatGPT_logo.svg.png" height="30" width="30"></img></img>
                                                 <span> ChatGPT </span>
                                         </h3>
                                         <p>
-                                                O ChatGPT é uma IA de conversa que responde perguntas, cria textos, resume
-                                                conteúdo e ajuda a organizar ideias de forma rápida e natural.
-                                                Ele é mais útil quando a tarefa envolve linguagem, explicação, análise de texto
-                                                ou geração de conteúdo.
+                                               ChatGPT é a IA conversacional mais versátil da OpenAI, projetada para interações naturais e rápidas. 
+                                               Principais pontos: responde perguntas, cria textos e resume conteúdos com eficiência. 
+                                               Função: organizar ideias, analisar texto e gerar linguagem de forma intuitiva.z.
                                         </p>
                                         <a href="http://chatgpt.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
                                         </a>
                                 </div>
 
 
-                                <div id="gemini" class="raciocinio freemium">
+                                <div id="gemini" class="raciocinio limitado">
                                         <h3>
-                                                <img src="/img/gemini-logo.png" height="30" width="30">
+                                                <img src="/img/gemini-logo.png" height="30" width="30"></img>
                                                 <span> Gemini </span>
                                         </h3>
                                         <p>
-                                                O Gemini é a inteligência artificial mais avançada e capaz desenvolvida pelo
-                                                Google.                                                                                                                                                                                 
-                                                Ele não é apenas um "chatbot", mas sim um ecossistema de modelos de IA
-                                                projetados para serem nativamente multimodais.
+                                             Gemini é a IA mais avançada do Google, projetada como ecossistema multimodal nativo. 
+                                             Principais pontos: não é apenas chatbot, mas modelos versáteis para múltiplas funções. 
+                                             Função: processar texto, imagem, áudio e vídeo de forma integrada e capaz.
                                         </p>
                                         <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer"> Acesse o site 
                                         </a>
                                 </div>
 
 
-                                <div id="claude" class="raciocinio freemium">
+                                <div id="claude" class="raciocinio limitado">
                                         <h3>
-                                                <img src="/img/Claude-ai-logo.png" height="30" width="30">
+                                                <img src="/img/Claude-ai-logo.png" height="30" width="30"></img>
                                                 <span> Claude </span>
                                         </h3>
                                         <p>
-                                                Claude é um assistente de IA avançado focado em segurança e raciocínio ético.
-                                                Suas principais funções incluem geração de textos, análise de dados e imagens,
-                                                programação e resumos de documentos longos.
+                                              Claude é um assistente de IA avançado da Anthropic, focado em segurança e raciocínio ético. 
+                                              Principais pontos: gera textos, analisa dados e imagens, auxilia em programação. 
+                                              Função: resume documentos longos com precisão e responsabilidade.
                                         </p>
                                         <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
                                         </a>
                                 </div>
 
 
-                                <div id="grok-3" class="raciocinio freemium">
+                                <div id="grok-3" class="raciocinio limitado">
                                         <h3>
-                                                <img src="/img/grok-logo.png" height="30" width="30">
+                                                <img src="/img/grok-logo.png" height="30" width="30"></img>
                                                 <span> Grok </span>
                                         </h3>
                                         <p>
@@ -179,240 +192,257 @@
                                 </div>
 
 
-                                <div id="perplexity" class="raciocinio freemium">
+                                <div id="perplexity" class="raciocinio limitado">
                                         <h3>
-                                                <img src="/img/perplexity.png" height="30" width="30">
+                                                <img src="/img/perplexity.png" height="30" width="30"></img>
                                                 <span> Perplexity </span>
                                         </h3>
                                         <p>
-                                                Perplexity é um motor de busca conversacional impulsionado por IA.
-                                                Serve principalmente para pesquisas rápidas ou aprofundadas, análise de
-                                                documentos, geração de relatórios acadêmicos e interações interativas, sendo
-                                                ideal para aprendizado e produtividade sem anúncios.
+                                                Perplexity é um motor de busca conversacional impulsionado por IA, ideal para produtividade sem anúncios. 
+                                                Principais pontos: pesquisas rápidas ou aprofundadas e análise de documentos. 
+                                                Função: gera relatórios acadêmicos e interações interativas para aprendizado eficiente.
                                         </p>
-                                        <a href="https://perplexity.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site </a>
+                                        <a href="https://perplexity.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site 
+                                        </a>
                                 </div>
 
 
-                                <div id="elicit" class="pesquisa-academica freemium">
+                                <div id="elicit" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/elicit.png" height="30" width="30">
+                                                <img src="/img/elicit.png" height="30" width="30"></img>
                                                 <span> Elicit </span>
                                         </h3>
                                         <p>
-                                                Elicit é um assistente de IA especializado em pesquisa acadêmica, que automatiza buscas em milhões de artigos científicos, gera resumos e extrai dados estruturados (métodos, resultados, amostras).
-                                                Serve principalmente para revisões sistemáticas, síntese de literatura e workflows de pesquisadores, com citações por sentença para verificação transparente.   
+                                               Elicit é um assistente de IA especializado em pesquisa acadêmica, automatizando buscas em milhões de artigos científicos. 
+                                               Principais pontos: gera resumos e extrai dados estruturados como métodos, resultados e amostras. 
+                                               Função: apoia revisões sistemáticas, síntese de literatura e workflows de pesquisadores com citações transparentes por sentença.   
                                         </p>        
-                                        <a href="https://elicit.com/" target="_blank" rel="noopener noreferrer"> Acesse o site </a>
+                                        <a href="https://elicit.com/" target="_blank" rel="noopener noreferrer"> Acesse o site 
+                                        </a>
                                 </div>
 
 
-                                <div id="jenni-ai" class="escrita-academica freemium">
+                                <div id="jenni-ai" class="escrita-academica limitado">
                                         <h3>
-                                                <img src="/img/Jenni-ai.png" height="30" width="30">
+                                                <img src="/img/Jenni-ai.png" height="30" width="30"></img>
                                                 <span> Jenni AI </span>
                                         </h3>
                                         <p>
-                                                Jenni AI é uma assistente de escrita acadêmica e pesquisa com IA que atua como co-piloto para estudantes e pesquisadores, oferecendo autocompletar contextual, geração de esboços e suporte a citações diretamente de PDFs carregados.
-                                                Serve para criar ensaios, revisões sistemáticas e artigos com ferramentas como resumidor de textos, chat de pesquisa que usa suas fontes (não web), +2.600 estilos de citação (APA, Chicago), verificação de plágio e exportação para DOCX/LaTeX/HTML.
+                                               Jenni AI é uma assistente de escrita acadêmica e pesquisa com IA, atuando como co-piloto para estudantes e pesquisadores. 
+                                               Principais pontos: autocompletar contextual, geração de esboços e suporte a citações de PDFs carregados. 
+                                               Função: cria ensaios, revisões sistemáticas e artigos com resumidor, chat de fontes próprias, +2.600 estilos de citação, verificação de plágio e exportação para DOCX/LaTeX/HTML.
                                         </p>     
                                         <a href="https://jenni.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site   
                                         </a>                
                                 </div>
 
 
-                                <div id="wix" class="nocode freemium">
+
+
+                        </div>
+
+
+                        <div id="sites-ias" class="cards">
+
+
+                                <div id="wix" class="nocode limitado">
                                         <h3>
-                                                <img src="/img/wix-logo.png" height="30" width="30">
+                                                <img src="/img/wix-logo.png" height="30" width="30"></img>
                                                 <span> WIX </span>
                                         </h3>
                                         <p>
-                                                O Wix é uma plataforma online baseada em nuvem, popularmente conhecida como um
-                                                criador de sites do tipo "arrastar e soltar".
-                                                Ele permite que pessoas sem nenhum conhecimento prévio em programação ou design
-                                                criem sites, blogs e lojas virtuais profissionais.
+                                               Wix é uma plataforma online baseada em nuvem, conhecida como criador de sites "arrastar e soltar". 
+                                               Principais pontos: permite criar sites, blogs e lojas virtuais sem programação ou design prévio. 
+                                               Função: possibilita resultados profissionais para iniciantes de forma simples e intuitiva.
                                         </p>
                                         <a href="https://www.wix.com" target="_blank" rel="noopener noreferrer"> Acesse o site
                                         </a>
                                 </div>
 
 
-                                <div id="hostinger" class="nocode freemium">
+                                <div id="hostinger" class="nocode limitado">
                                         <h3>
-                                                <img src="/img/Hostinger-logl.png" height="30" width="30">
+                                                <img src="/img/Hostinger-logl.png" height="30" width="30"></img>
                                                 <span> Hostinger </span>
                                         </h3>
                                         <p>
-                                                A Hostinger AI é um conjunto de ferramentas baseadas em inteligência artificial
-                                                integrado aos serviços da Hostinger, projetado para simplificar e acelerar a
-                                                criação, gerenciamento e otimização de sites, mesmo para quem não tem
-                                                conhecimentos técnicos.
+                                                Hostinger AI é um conjunto de ferramentas de IA integrado aos serviços da Hostinger para simplificar criação e gerenciamento de sites. 
+                                                Principais pontos: acelera processos sem necessidade de conhecimentos técnicos. 
+                                                Função: otimiza hospedagem, conteúdo e design para iniciantes de forma automática e eficiente.
                                         </p>
-                                        <a href="https://www.hostinger.com/" target="_blank" rel="noopener noreferrer"> Acesse o
-                                                site </a>
+                                        <a href="https://www.hostinger.com/" target="_blank" rel="noopener noreferrer"> Acesse o site 
+
+                                        </a>
                                 </div>
 
 
-                                <div id="promakeia" class="nocode freemium">
+                                <div id="promakeia" class="nocode limitado">
                                         <h3>
-                                                <img src="/img/Promake-logo.png" height="30" width="30">
+                                                <img src="/img/Promake-logo.png" height="30" width="30"></img>
                                                 <span> PromakeAI </span>
                                         </h3>
                                         <p>
-                                                PromakeAIé uma inteligência artificial que ajuda você a organizar e resumir
-                                                conteúdos de forma rápida e detalhada, usando prompts bem estruturados.
+                                               PromakeAI é uma inteligência artificial que organiza e resume conteúdos de forma rápida e detalhada. 
+                                               Principais pontos: usa prompts bem estruturados para processamento eficiente. 
+                                               Função: facilita análise e síntese de informações com clareza e agilidade.
                                         </p>
                                         <a href="https://promake.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
                                         </a>
                                 </div>
 
-                                <div id="readdy" class="nocode freemium">
+                                <div id="readdy" class="nocode limitado">
                                         <h3>
-                                                <img src="/img/Readdy AI.png" height="30" width="30">
+                                                <img src="/img/Readdy AI.png" height="30" width="30"></img>
                                                 <span> Readdy AI </span>
                                         </h3>
                                         <p>
-                                                Readdy AI é uma plataforma de construção de sites baseada em inteligência
-                                                artificial que cria páginas web profissionais, landing pages e e-commerce em
-                                                minutos através de conversas (prompts) em linguagem natural.
+                                               Readdy AI é uma plataforma de construção de sites baseada em IA que cria páginas profissionais, landing pages e e-commerce em minutos. 
+                                               Principais pontos: usa conversas em linguagem natural (prompts) para geração rápida. 
+                                               Função: simplifica criação web sem código para resultados profissionais e ágeis.
                                         </p>
                                         <a href="https://readdy.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
                                         </a>
                                 </div>
 
 
-                                <div id="manus" class="nocode freemium">
+                                <div id="manus" class="nocode limitado">
                                         <h3>
-                                                <img src="/img/manus.png" height="30" width="30">
+                                                <img src="/img/manus.png" height="30" width="30"></img>
                                                 <span> Manus AI </span>
                                         </h3>
                                         <p>
-                                                Manus é um agente de inteligência artificial artificial, desenvolvido na China,
-                                                que vai além de um chatbot tradicional (como ChatGPT) para executar tarefas de
-                                                ponta a ponta.
-                                                Ele pesquisa, analisa dados, cria sites completos, produz relatórios e organiza
-                                                informações de forma automática, ágil como um assistente proativo
+                                               Manus é um agente de IA chinês que executa tarefas completas além de chatbots tradicionais. 
+                                               Principais pontos: pesquisa, analisa dados, cria sites e produz relatórios automaticamente. 
+                                               Função: atua como assistente proativo, organizando informações de forma ágil e ponta a ponta.
                                         </p>
                                         <a href="https://manus.im/" target="_blank" rel="noopener noreferrer"> Acesse o site
                                         </a>
                                 </div>
 
 
-                                <div id="researchrabbit" class="pesquisa-academica gratis">
+                                <div id="researchrabbit" class="pesquisa-academica gratuito">
                                         <h3>
-                                                <img src="/img/ResearchRabbit.png" height="30" width="30">
+                                                <img src="/img/ResearchRabbit.png" height="30" width="30"></img>
                                                 <span> ResearchRabbit </span>
                                         </h3>
                                         <p>
-                                                ResearchRabbit é uma ferramenta gratuita de mapeamento visual de literatura acadêmica, apelidada de "Spotify para artigos científicos", que cria redes de citações, timelines e mapas de calor para descobrir papers relacionados.
-                                                Serve para pesquisadores fazerem revisões de literatura rápidas, rastrearem autores, receberem alertas de novos artigos e colaborarem via coleções compartilháveis, acelerando 5x o workflow acadêmico.
+                                                ResearchRabbit é uma ferramenta gratuita de mapeamento visual de literatura acadêmica, apelidada de "Spotify para artigos científicos". 
+                                                Principais pontos: cria redes de citações, timelines e mapas de calor para descobrir papers relacionados. 
+                                                Função: acelera revisões de literatura, rastreia autores, envia alertas e permite colaboração em workflows acadêmicos 5x mais rápidos.
                                         </p>        
                                         <a href="https://researchrabbit.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
                                         </a>
                                 </div>
 
 
-                                <div id="rayyan" class="pesquisa-academica freemium">
+                                <div id="rayyan" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/Rayyan.png" height="30" width="30">
+                                                <img src="/img/Rayyan.png" height="30" width="30"></img>
                                                 <span> Rayyan </span>
                                         </h3>
                                         <p>
-                                                ResearchRabbit é uma ferramenta gratuita de mapeamento visual de literatura acadêmica, apelidada de "Spotify para artigos científicos", que cria redes de citações, timelines e mapas de calor para descobrir papers relacionados.
-                                                Serve para importar artigos, detectar duplicatas automaticamente, triar por relevância (incluir/excluir) com IA preditiva, colaborar em equipe e gerar fluxogramas PRISMA, economizando até 40-50% do tempo na seleção de estudos.
+                                               Rayyan AI é uma plataforma de IA para revisões sistemáticas de literatura, acelerando triagem de artigos científicos. 
+                                               Principais pontos: remove duplicatas, faz mineração de texto e usa classificadores preditivos. 
+                                               Função: suporta pesquisas baseadas em evidências com colaboração em equipe, economizando 50-80% do tempo em revisões acadêmicas.
                                         </p>
                                         <a href="https://rayyan.ai/" target="_blank" rel="noopener noreferrer"> Acesse o site
                                         </a>
                                 </div>
 
 
-                                <div id="open-knowledge-maps" class="pesquisa-academica gratis">
+                                <div id="open-knowledge-maps" class="pesquisa-academica gratuito">
                                         <h3>
-                                                <img src="/img/Logo-Open-Knowledge-Maps-.png" height="30" width="30">
+                                                <img src="/img/Logo-Open-Knowledge-Maps-.png" height="30" width="30"></img>
                                                 <span> Open Knowledge Maps </span>
                                         </h3>
                                         <p>
-                                                O Open Knowledge Maps é um motor de busca visual sem fins lucrativos que transforma buscas acadêmicas em mapas interativos de conhecimento, organizando os documentos mais relevantes em clusters temáticos para facilitar a visão panorâmica de um assunto.
-                                                Serve para pesquisadores explorarem novas áreas de estudo, identificarem lacunas na literatura e acessarem conteúdos de forma rápida, conectando-se a bases globais como PubMed e BASE para otimizar o fluxo de trabalho de revisões bibliográficas.
+                                                Open Knowledge Maps é um motor de busca visual sem fins lucrativos que cria mapas interativos de conhecimento acadêmico. 
+                                                Principais pontos: organiza documentos relevantes em clusters temáticos conectados a bases como PubMed e BASE. 
+                                                Função: facilita exploração de áreas de estudo, identificação de lacunas na literatura e otimização de revisões bibliográficas.
                                         </p>
                                         <a href="https://openknowledgemaps.org/" target="_blank" rel="noopener noreferrer"> Acesse o site
                                         </a>
                                 </div>
 
 
-                                <div id="scholarcy" class="pesquisa-academica freemium">
+                                <div id="scholarcy" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/Scholarcy-logo.svg" height="30" width="30">
+                                                <img src="/img/Scholarcy-logo.svg" height="30" width="30"></img>
                                                 <span> Scholarcy </span>
                                         </h3>
                                         <p>
-                                                O Scholarcy é um resumidor de textos acadêmicos movido a IA que transforma artigos complexos e PDFs longos em "flashcards" interativos, extraindo automaticamente pontos-chave, metodologias, resultados e referências.
-                                                Serve para pesquisadores e estudantes otimizarem o fluxo de leitura, facilitando a revisão de literatura, a comparação entre estudos e a organização de bibliografias anotadas com integração direta a gestores de referências como Zotero.
+                                                Scholarcy é um resumidor de textos acadêmicos movido a IA que transforma artigos e PDFs longos em flashcards interativos. 
+                                                Principais pontos: extrai automaticamente pontos-chave, metodologias, resultados e referências. 
+                                                Função: otimiza leitura para pesquisadores e estudantes, facilitando revisão de literatura, comparação de estudos e integração com Zotero.
                                         </p>
                                         <a href="https://scholarcy.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
                                         </a>
                                 </div>
 
 
-                                <div id="anara" class="pesquisa-academica freemium">
+                                <div id="anara" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/anara.png" height="30" width="30">
+                                                <img src="/img/anara.png" height="30" width="30"></img>
                                                 <span> Anara </span>
                                         </h3>
                                         <p>
-                                                O Anara AI (anteriormente conhecido como Unriddle AI) é um assistente de pesquisa com inteligência artificial que centraliza e analisa diversos formatos de documentos — incluindo PDFs, vídeos, áudios e imagens — em uma biblioteca de pesquisa unificada.
-                                                Serve para pesquisadores sintetizarem informações complexas, compararem argumentos entre múltiplos arquivos, extraírem citações precisas e criarem materiais de estudo (como flashcards), permitindo realizar revisões de literatura em larga escala com alta rastreabilidade de fontes.
+                                                Anara AI (ex-Unriddle AI) é um assistente de pesquisa com IA que centraliza e analisa PDFs, vídeos, áudios e imagens em uma biblioteca unificada. 
+                                                Principais pontos: sintetiza informações complexas e compara argumentos entre múltiplos arquivos. 
+                                                Função: extrai citações precisas, cria flashcards e facilita revisões de literatura em larga escala com rastreabilidade total de fontes.
                                         </p>
                                         <a href="https://anara.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
                                         </a>
                                 </div>
 
 
-                                <div id="r-discovery" class="pesquisa-academica freemium">
+                                <div id="r-discovery" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/r-discovery.png" height="30" width="30">
+                                                <img src="/img/r-discovery.png" height="30" width="30"></img>
                                                 <span> R Discovery </span>
                                         </h3>
                                         <p>
-                                                O R Discovery é um assistente de pesquisa impulsionado por IA que utiliza aprendizado de máquina para oferecer um feed personalizado de artigos acadêmicos, eliminando a necessidade de buscas manuais repetitivas.
-                                                Serve para pesquisadores descobrirem e lerem rapidamente mais de 250 milhões de artigos, oferecendo recursos como resumos em formato de "stories", leitura de áudio, tradução em múltiplos idiomas e chat com PDFs, economizando até 70% do tempo na revisão de literatura.
+                                               R Discovery é um assistente de pesquisa com IA que usa aprendizado de máquina para feeds personalizados de artigos acadêmicos. 
+                                               Principais pontos: elimina buscas manuais e cobre 250 milhões de papers com resumos em "stories". 
+                                               Função: oferece leitura de áudio, tradução multilíngue e chat com PDFs, economizando 70% do tempo em revisões de literatura.
                                         </p>
                                         <a href="https://discovery.researcher.life/" target="_blank" rel="noopener noreferrer"> Acesse o site
                                         </a>
                                 </div>
 
 
-                                <div id="keenious" class="pesquisa-academica freemium">
+                                <div id="keenious" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/keenious.png" height="30" width="30">
+                                                <img src="/img/keenious.png" height="30" width="30"></img>
                                                 <span> Keenious </span>
                                         </h3>
                                         <p>
-                                                Keenious AI é uma ferramenta de pesquisa acadêmica que analisa documentos (PDFs, texto ou URLs) para recomendar artigos relevantes de 250+ milhões de papers em 100 idiomas.
-                                                Serve para revisão de literatura, explicando conceitos complexos e encontrando estudos relacionados automaticamente, com destaque em textos e filtros por citações/data.
+                                                Keenious AI é uma ferramenta de pesquisa acadêmica que analisa PDFs, textos ou URLs para recomendar artigos relevantes de 250+ milhões de papers em 100 idiomas. 
+                                                Principais pontos: explica conceitos complexos e encontra estudos relacionados automaticamente. 
+                                                Função: facilita revisão de literatura com filtros por citações, data e destaque em textos para pesquisadores.
                                         </p>
                                         <a href="https://keenious.com/" target="_blank" rel="noopener noreferrer"> Acesse o site
                                         </a>
                                 </div>
 
 
-                                <div id="asreview" class="pesquisa-academica gratis">
+                                <div id="asreview" class="pesquisa-academica gratuito">
                                         <h3>
-                                                <img src="/img/asreview.png" height="30" width="30">
+                                                <img src="/img/asreview.png" height="30" width="30"></img>
                                                 <span> ASReview </span>
                                         </h3>
                                         <p>
-                                                ASReview AI é uma ferramenta open-source de active learning que acelera revisões sistemáticas, priorizando registros relevantes de grandes datasets de abstracts científicos.
-                                                Serve para triagem inteligente de literatura (title/abstract screening), reduzindo 50-95% do tempo manual com modelos ELAS configuráveis e transparência total.
+                                                ASReview AI é uma ferramenta open-source de active learning que acelera revisões sistemáticas priorizando abstracts relevantes. 
+                                                Principais pontos: triagem inteligente de datasets grandes com modelos ELAS configuráveis. 
+                                                Função: reduz 50-95% do tempo manual garantindo transparência total em screening de literatura científica.
                                         </p>
                                         <a href="https://asreview.nl/" target="_blank" rel="noopener noreferrer"> Acesse o site
                                         </a>
                                 </div>
 
 
-                                <div id="atlas" class="pesquisa-academica freemium">
+                                <div id="atlas" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/atlas-workspace.png" height="30" width="30">
+                                                <img src="/img/atlas-workspace.png" height="30" width="30"></img>
                                                 <span> Atlas </span>
                                         </h3>
                                         <p>
@@ -424,9 +454,9 @@
                                 </div>
 
 
-                                <div id="okara-ai" class="pesquisa-academica freemium">
+                                <div id="okara-ai" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/okara-ai.png" height="30" width="30">
+                                                <img src="/img/okara-ai.png" height="30" width="30"></img>
                                                 <span> Okara AI </span>
                                         </h3>
                                         <p>
@@ -438,9 +468,9 @@
                                 </div>
 
 
-                                <div id="avidnote" class="pesquisa-academica freemium">
+                                <div id="avidnote" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/avidnote.png" height="30" width="30">
+                                                <img src="/img/avidnote.png" height="30" width="30"></img>
                                                 <span> Avidnote </span>
                                         </h3>
                                         <p>
@@ -452,9 +482,9 @@
                                 </div>
 
 
-                                <div id="paper-digest" class="pesquisa-academica freemium">
+                                <div id="paper-digest" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/Paper-Digest.png" height="30" width="30">
+                                                <img src="/img/Paper-Digest.png" height="30" width="30"></img>
                                                 <span> Paper Digest </span>
                                         </h3>
                                         <p>
@@ -466,9 +496,9 @@
                                 </div>
 
 
-                                <div id="covidence" class="pesquisa-academica freemium">
+                                <div id="covidence" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/covidence.png" height="30" width="30">
+                                                <img src="/img/covidence.png" height="30" width="30"></img>
                                                 <span> Covidence </span>
                                         </h3>
                                         <p>
@@ -480,9 +510,9 @@
                                 </div>
 
 
-                                <div id="consensus" class="pesquisa-academica freemium">
+                                <div id="consensus" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/Consensus.png" height="30" width="30">
+                                                <img src="/img/Consensus.png" height="30" width="30"></img>
                                                 <span> Consensus </span>
                                         </h3>
                                         <p>
@@ -494,9 +524,9 @@
                                 </div>
 
 
-                                <div id="scite-ai" class="pesquisa-academica freemium">
+                                <div id="scite-ai" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/scite-ai.png" height="30" width="30">
+                                                <img src="/img/scite-ai.png" height="30" width="30"></img>
                                                 <span> Scite AI </span>
                                         </h3>
                                         <p>
@@ -508,9 +538,9 @@
                                 </div>
 
 
-                                <div id="scispace" class="pesquisa-academica freemium">
+                                <div id="scispace" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/scispace.png" height="30" width="30">
+                                                <img src="/img/scispace.png" height="30" width="30"></img>
                                                 <span> SciSpace </span>
                                         </h3>
                                         <p>
@@ -522,9 +552,9 @@
                                 </div>
 
 
-                                <div id="connected-papers" class="pesquisa-academica freemium">
+                                <div id="connected-papers" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/connected-papers.png" height="30" width="30">
+                                                <img src="/img/connected-papers.png" height="30" width="30"></img>
                                                 <span> Connected Papers </span>
                                         </h3>
                                         <p>
@@ -536,9 +566,9 @@
                                 </div>
 
 
-                                <div id="undermind" class="pesquisa-academica freemium">
+                                <div id="undermind" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/undermind.png" height="30" width="30">
+                                                <img src="/img/undermind.png" height="30" width="30"></img>
                                                 <span> Undermind </span>
                                         </h3>
                                         <p>
@@ -550,9 +580,9 @@
                                 </div>
 
 
-                                <div id="papersflow" class="pesquisa-academica freemium">
+                                <div id="papersflow" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/papersflow.png" height="30" width="30">
+                                                <img src="/img/papersflow.png" height="30" width="30"></img>
                                                 <span> PapersFlow </span>
                                         </h3>
                                         <p>
@@ -564,9 +594,9 @@
                                 </div>
 
 
-                                <div id="paperguide" class="pesquisa-academica freemium">
+                                <div id="paperguide" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/paperguide.png" height="30" width="30">
+                                                <img src="/img/paperguide.png" height="30" width="30"></img>
                                                 <span> Paperguide </span>
                                         </h3>
                                         <p>
@@ -578,9 +608,9 @@
                                 </div>
 
 
-                                <div id="litmaps" class="pesquisa-academica freemium">
+                                <div id="litmaps" class="pesquisa-academica limitado">
                                         <h3>
-                                                <img src="/img/litmaps.png" height="30" width="30">
+                                                <img src="/img/litmaps.png" height="30" width="30"></img>
                                                 <span> Litmaps </span>
                                         </h3>
                                         <p>
@@ -592,9 +622,9 @@
                                 </div>
 
 
-                                <div id="notebooklm" class="pesquisa-academica gratis">
+                                <div id="notebooklm" class="pesquisa-academica gratuito">
                                         <h3>
-                                                <img src="/img/notebooklm.png" height="30" width="30">
+                                                <img src="/img/notebooklm.png" height="30" width="30"></img>
                                                 <span> NotebookLM </span>
                                         </h3>
                                         <p>
@@ -606,9 +636,9 @@
                                 </div>
 
 
-                                <div id="quizlet" class="educacao freemium">
+                                <div id="quizlet" class="educacao limitado">
                                         <h3>
-                                                <img src="/img/quizlet.png" height="30" width="30">
+                                                <img src="/img/quizlet.png" height="30" width="30"></img>
                                                 <span> Quizlet </span>
                                         </h3>
                                         <p>
@@ -620,9 +650,9 @@
                                 </div>
 
 
-                                <div id="laxu-ai" class="educacao freemium">
+                                <div id="laxu-ai" class="educacao limitado">
                                         <h3>
-                                                <img src="/img/laxu-ai.png" height="30" width="30">
+                                                <img src="/img/laxu-ai.png" height="30" width="30"></img>
                                                 <span> Laxi AI </span>
                                         </h3>
                                         <p>
@@ -634,9 +664,9 @@
                                 </div>
 
 
-                                <div id="knowt" class="educacao freemium">
+                                <div id="knowt" class="educacao limitado">
                                         <h3>
-                                                <img src="/img/knowt.png" height="30" width="30">
+                                                <img src="/img/knowt.png" height="30" width="30"></img>
                                                 <span> Knowt </span>
                                         </h3>
                                         <p>
@@ -648,9 +678,9 @@
                                 </div>
 
 
-                                <div id="studyfetch" class="educacao freemium">
+                                <div id="studyfetch" class="educacao limitado">
                                         <h3>
-                                                <img src="/img/studyfetch.png" height="30" width="30">
+                                                <img src="/img/studyfetch.png" height="30" width="30"></img>
                                                 <span> StudyFetch </span>
                                         </h3>
                                         <p>
@@ -662,9 +692,9 @@
                                 </div>
 
 
-                                <div id="studysmarter" class="educacao freemium">
+                                <div id="studysmarter" class="educacao limitado">
                                         <h3>
-                                                <img src="/img/studysmarter.png" height="30" width="30">
+                                                <img src="/img/studysmarter.png" height="30" width="30"></img>
                                                 <span> StudySmarter </span>
                                         </h3>
                                         <p>
@@ -676,9 +706,9 @@
                                 </div>
 
 
-                                <div id="keepmind" class="educacao freemium">
+                                <div id="keepmind" class="educacao limitado">
                                         <h3>
-                                                <img src="/img/keepmind.png" height="30" width="30">
+                                                <img src="/img/keepmind.png" height="30" width="30"></img>
                                                 <span> Keepmind </span>
                                         </h3>
                                         <p>
@@ -690,9 +720,9 @@
                                 </div>
 
 
-                                <div id="studley-ai" class="educacao freemium">
+                                <div id="studley-ai" class="educacao limitado">
                                         <h3>
-                                                <img src="/img/studley.png" height="30" width="30">
+                                                <img src="/img/studley.png" height="30" width="30"></img>
                                                 <span> Studley AI </span>
                                         </h3>
                                         <p>
@@ -704,9 +734,9 @@
                                 </div>
 
 
-                                <div id="thesify" class="educacao freemium">
+                                <div id="thesify" class="educacao limitado">
                                         <h3>
-                                                <img src="/img/thesify.png" height="30" width="30">
+                                                <img src="/img/thesify.png" height="30" width="30"></img>
                                                 <span> Thesify </span>
                                         </h3>
                                         <p>
@@ -718,9 +748,9 @@
                                 </div>
 
 
-                                <div id="sana-labs" class="educacao freemium">
+                                <div id="sana-labs" class="educacao limitado">
                                         <h3>
-                                                <img src="/img/sana-labs.png" height="30" width="30">
+                                                <img src="/img/sana-labs.png" height="30" width="30"></img>
                                                 <span> Sana Labs </span>
                                         </h3>
                                         <p>
@@ -732,9 +762,9 @@
                                 </div>
 
 
-                                <div id="khanmigo" class="educacao freemium">
+                                <div id="khanmigo" class="educacao limitado">
                                         <h3>
-                                                <img src="/img/Khanmigo.png" height="30" width="30">
+                                                <img src="/img/Khanmigo.png" height="30" width="30"></img>
                                                 <span> Khanmigo </span>
                                         </h3>
                                         <p>
@@ -746,9 +776,9 @@
                                 </div>
 
 
-                                <div id="github-copilot" class="desenvolvimento freemium">
+                                <div id="github-copilot" class="desenvolvimento limitado">
                                         <h3>
-                                                <img src="/img/github-copilot.png" height="30" width="30">
+                                                <img src="/img/github-copilot.png" height="30" width="30"></img>
                                                 <span> GitHub Copilot </span>
                                         </h3>
                                         <p>
@@ -760,9 +790,9 @@
                                 </div>
 
 
-                                <div id="cursor" class="desenvolvimento freemium">
+                                <div id="cursor" class="desenvolvimento limitado">
                                         <h3>
-                                                <img src="/img/cursor-app.png" height="30" width="30">
+                                                <img src="/img/cursor-app.png" height="30" width="30"></img>
                                                 <span> Cursor </span>
                                         </h3>
                                         <p>
@@ -774,9 +804,9 @@
                                 </div>
 
 
-                                <div id="amazon-codewhiperer" class="desenvolvimento freemium">
+                                <div id="amazon-codewhiperer" class="desenvolvimento limitado">
                                         <h3>
-                                                <img src="/img/amazon-codewhisperer.png" height="30" width="30">
+                                                <img src="/img/amazon-codewhisperer.png" height="30" width="30"></img>
                                                 <span> Amazon CodeWhisperer </span>
                                         </h3>
                                         <p>
@@ -788,9 +818,9 @@
                                 </div>
 
 
-                                <div id="clickup-brain" class="produtividade freemium">
+                                <div id="clickup-brain" class="produtividade limitado">
                                         <h3>
-                                                <img src="/img/clickup-brain.png" height="30" width="30">
+                                                <img src="/img/clickup-brain.png" height="30" width="30"></img>
                                                 <span> ClickUp Brain </span>
                                         </h3>
                                         <p>
@@ -802,9 +832,9 @@
                                 </div>
 
 
-                                <div id="monday" class="produtividade freemium">
+                                <div id="monday" class="produtividade limitado">
                                         <h3>
-                                                <img src="/img/monday.png" height="30" width="30">
+                                                <img src="/img/monday.png" height="30" width="30"></img>
                                                 <span> Monday </span>
                                         </h3>
                                         <p>
@@ -816,9 +846,9 @@
                                 </div>
 
 
-                                <div id="notion" class="produtividade freemium">
+                                <div id="notion" class="produtividade limitado">
                                         <h3>
-                                                <img src="/img/Notion.png" height="30" width="30">
+                                                <img src="/img/Notion.png" height="30" width="30"></img>
                                                 <span> Notion AI </span>
                                         </h3>
                                         <p>
@@ -830,9 +860,9 @@
                                 </div>
 
 
-                                <div id="airtable" class="produtividade freemium">
+                                <div id="airtable" class="produtividade limitado">
                                         <h3>
-                                                <img src="/img/airtable.png" height="30" width="30">
+                                                <img src="/img/airtable.png" height="30" width="30"></img>
                                                 <span> Airtable AI </span>
                                         </h3>
                                         <p>
@@ -844,9 +874,9 @@
                                 </div>
 
 
-                                <div id="trello" class="produtividade freemium">
+                                <div id="trello" class="produtividade limitado">
                                         <h3>
-                                                <img src="/img/Trello.png" height="30" width="30">
+                                                <img src="/img/Trello.png" height="30" width="30"></img>
                                                 <span> Trello AI </span>
                                         </h3>
                                         <p>
@@ -858,9 +888,9 @@
                                 </div>
 
 
-                                <div id="taskade" class="produtividade freemium">
+                                <div id="taskade" class="produtividade limitado">
                                         <h3>
-                                                <img src="/img/tasked.png" height="30" width="30">
+                                                <img src="/img/tasked.png" height="30" width="30"></img>
                                                 <span> Taskade </span>
                                         </h3>
                                         <p>
@@ -872,9 +902,9 @@
                                 </div>
 
 
-                                <div id="mem-ai" class="produtividade freemium">
+                                <div id="mem-ai" class="produtividade limitado">
                                         <h3>
-                                                <img src="/img/mem-ai.png" height="30" width="30">
+                                                <img src="/img/mem-ai.png" height="30" width="30"></img>
                                                 <span> Mem AI </span>
                                         </h3>
                                         <p>
@@ -886,9 +916,9 @@
                                 </div>
 
 
-                                <div id="lovable" class="nocode freemium">
+                                <div id="lovable" class="nocode limitado">
                                         <h3>
-                                                <img src="/img/lovable.png" height="30" width="30">
+                                                <img src="/img/lovable.png" height="30" width="30"></img>
                                                 <span> Lovable </span>
                                         </h3>
                                         <p>
@@ -900,9 +930,9 @@
                                 </div>
 
 
-                                <div id="base44" class="nocode freemium">
+                                <div id="base44" class="nocode limitado">
                                         <h3>
-                                                <img src="/img/base44.png" height="30" width="30">
+                                                <img src="/img/base44.png" height="30" width="30"></img>
                                                 <span> Base44 </span>
                                         </h3>
                                         <p>
@@ -914,9 +944,9 @@
                                 </div>
 
 
-                                <div id="otter-ai" class="audio-reunioes freemium">
+                                <div id="otter-ai" class="audio-reunioes limitado">
                                         <h3>
-                                                <img src="/img/Otter.png" height="30" width="30">
+                                                <img src="/img/Otter.png" height="30" width="30"></img>
                                                 <span> Otter AI </span>
                                         </h3>
                                         <p>
@@ -928,9 +958,9 @@
                                 </div>
 
 
-                                <div id="tldv-io" class="audio-reunioes freemium">
+                                <div id="tldv-io" class="audio-reunioes limitado">
                                         <h3>
-                                                <img src="/img/tldv.png" height="30" width="30">
+                                                <img src="/img/tldv.png" height="30" width="30"></img>
                                                 <span> tl;dv  </span>
                                         </h3>
                                         <p>
@@ -942,9 +972,9 @@
                                 </div>
 
 
-                                <div id="fireflies-ai" class="audio-reunioes freemium">
+                                <div id="fireflies-ai" class="audio-reunioes limitado">
                                         <h3>
-                                                <img src="/img/fireflies.png" height="30" width="30">
+                                                <img src="/img/fireflies.png" height="30" width="30"></img>
                                                 <span> Fireflies AI </span>
                                         </h3>
                                         <p>
@@ -956,9 +986,9 @@
                                 </div>
 
 
-                                <div id="writefull" class="escrita-academica freemium">
+                                <div id="writefull" class="escrita-academica limitado">
                                         <h3>
-                                                <img src="/img/Writefull.png" height="30" width="30">
+                                                <img src="/img/Writefull.png" height="30" width="30"></img>
                                                 <span> Writefull AI </span>
                                         </h3>
                                         <p>
@@ -970,9 +1000,9 @@
                                 </div>
 
 
-                                <div id="paperpal" class="escrita-academica freemium">
+                                <div id="paperpal" class="escrita-academica limitado">
                                         <h3>
-                                                <img src="/img/paperpal.png" height="30" width="30">
+                                                <img src="/img/paperpal.png" height="30" width="30"></img>
                                                 <span> Paperpal </span>
                                         </h3>
                                         <p>
@@ -984,9 +1014,9 @@
                                 </div>
 
 
-                                <div id="napkin-ai" class="design-visual freemium">
+                                <div id="napkin-ai" class="design-visual limitado">
                                         <h3>
-                                                <img src="/img/napkin-ai.png" height="30" width="30">
+                                                <img src="/img/napkin-ai.png" height="30" width="30"></img>
                                                 <span> Napkin AI </span>
                                         </h3>
                                         <p>
@@ -998,9 +1028,9 @@
                                 </div>
 
 
-                                <div id="beautiful-ai" class="design-visual freemium">
+                                <div id="beautiful-ai" class="design-visual limitado">
                                         <h3>
-                                                <img src="/img/beautiful-ai.png" height="30" width="30">
+                                                <img src="/img/beautiful-ai.png" height="30" width="30"></img>
                                                 <span> Beautiful AI </span>
                                         </h3>
                                         <p>
@@ -1013,9 +1043,9 @@
                                 </div>
 
 
-                                <div id="gamma-app" class="design-visual freemium">
+                                <div id="gamma-app" class="design-visual limitado">
                                         <h3>
-                                                <img src="/img/gamma-app.png" height="30" width="30">
+                                                <img src="/img/gamma-app.png" height="30" width="30"></img>
                                                 <span> Gamma App </span>
                                         </h3>
                                         <p>
@@ -1027,9 +1057,9 @@
                                 </div>
 
 
-                                <div id="venngage" class="design-visual freemium">
+                                <div id="venngage" class="design-visual limitado">
                                         <h3>
-                                                <img src="/img/venngage.png" height="30" width="30">
+                                                <img src="/img/venngage.png" height="30" width="30"></img>
                                                 <span> Venngage </span>
                                         </h3>
                                         <p>
@@ -1041,9 +1071,9 @@
                                 </div>
 
 
-                                <div id="canva" class="design-visual freemium">
+                                <div id="canva" class="design-visual limitado">
                                         <h3>
-                                                <img src="/img/canva.png" height="30" width="30">
+                                                <img src="/img/canva.png" height="30" width="30"></img>
                                                 <span> Canva </span>
                                         </h3>
                                         <p>
@@ -1055,9 +1085,9 @@
                                 </div>
 
 
-                                <div id="zapier-agents" class="automacao no-code freemium">
+                                <div id="zapier-agents" class="automacao no-code limitado">
                                         <h3>
-                                                <img src="/img/Zapier.png" height="30" width="30">
+                                                <img src="/img/Zapier.png" height="30" width="30"></img>
                                                 <span> Zapier Agents </span>
                                         </h3>
                                         <p>
@@ -1069,9 +1099,9 @@
                                 </div>
 
 
-                                <div id="n8n" class="automacao no-code gratis">
+                                <div id="n8n" class="automacao no-code gratuito">
                                         <h3>
-                                                <img src="/img/n8n.png" height="30" width="30">
+                                                <img src="/img/n8n.png" height="30" width="30"></img>
                                                 <span> n8n </span>
                                         </h3>
                                         <p>
@@ -1083,9 +1113,9 @@
                                 </div>
 
 
-                                <div id="make" class="automacao no-code freemium">
+                                <div id="make" class="automacao no-code limitado">
                                         <h3>
-                                                <img src="/img/make-ai.png" height="30" width="30">
+                                                <img src="/img/make-ai.png" height="30" width="30"></img>
                                                 <span> Make </span>
                                         </h3>
                                         <p>
@@ -1097,9 +1127,9 @@
                                 </div>
 
 
-                                <div id="pipedream" class="automacao no-code freemium">
+                                <div id="pipedream" class="automacao no-code limitado">
                                         <h3>
-                                                <img src="/img/pipedream.png" height="30" width="30">
+                                                <img src="/img/pipedream.png" height="30" width="30"></img>
                                                 <span> Pipedream </span>
                                         </h3>
                                         <p>
@@ -1111,9 +1141,9 @@
                                 </div>
 
 
-                                <div id="parabola" class="automacao no-code freemium">
+                                <div id="parabola" class="automacao no-code limitado">
                                         <h3>
-                                                <img src="/img/parabola-ai.png" height="30" width="30">
+                                                <img src="/img/parabola-ai.png" height="30" width="30"></img>
                                                 <span> Parabola </span>
                                         </h3>
                                         <p>
@@ -1125,9 +1155,9 @@
                                 </div>
 
 
-                                <div id="kuse" class="automacao no-code freemium">
+                                <div id="kuse" class="automacao no-code limitado">
                                         <h3>
-                                                <img src="/img/kuse-ai.png" height="30" width="30">
+                                                <img src="/img/kuse-ai.png" height="30" width="30"></img>
                                                 <span> Kuse </span>
                                         </h3>
                                         <p>
@@ -1139,9 +1169,9 @@
                                 </div>
 
 
-                                <div id="gumloop" class="automacao no-code freemium">
+                                <div id="gumloop" class="automacao no-code limitado">
                                         <h3>
-                                                <img src="/img/gumloop.png" height="30" width="30">
+                                                <img src="/img/gumloop.png" height="30" width="30"></img>
                                                 <span> Gumloop </span>
                                         </h3>
                                         <p>
@@ -1154,9 +1184,9 @@
                                 </div>
 
 
-                                <div id="remnote" class="notetaking freemium">
+                                <div id="remnote" class="notetaking limitado">
                                         <h3>
-                                                <img src="/img/remnote.png" height="30" width="30">
+                                                <img src="/img/remnote.png" height="30" width="30"></img>
                                                 <span> RemNote </span>
                                         </h3>
                                         <p>
@@ -1168,9 +1198,9 @@
                                 </div>
 
 
-                                <div id="ninite" class="softwares gratis">
+                                <div id="ninite" class="softwares gratuito">
                                         <h3>
-                                                <img src="/img/ninite.png" height="30" width="30">
+                                                <img src="/img/ninite.png" height="30" width="30"></img>
                                                 <span> Ninite </span>
                                         </h3>
                                         <p>
@@ -1182,9 +1212,9 @@
                                 </div>
                                 
 
-                                <div id="lindy" class="automacao freemium">
+                                <div id="lindy" class="automacao limitado">
                                         <h3>
-                                                <img src="/img/Lindy.png" height="30" width="30">
+                                                <img src="/img/Lindy.png" height="30" width="30"></img>
                                                 <span> Lindy AI </span>
                                         </h3>
                                         <p>
@@ -1198,11 +1228,10 @@
 
                         </div>
 
-                        
 
-                                <div id="photomath" class="educacao freemium">
+                                <div id="photomath" class="educacao limitado">
                                         <h3>
-                                                <img src="/img/photomath.png" height="30" width="30">
+                                                <img src="/img/photomath.png" height="30" width="30"></img>
                                                 <span> Photomath </span>
                                         </h3>
                                         <p>
@@ -1211,19 +1240,19 @@
                                         </p>
                                         <a href="https://photomath.com/" target="_blank" rel="noopener noreferrer"> Acesse o site </a>
                                         <a href="https://play.google.com/store/apps/details?id=com.microblink.photomath" target="_blank" rel="noopener noreferrer">
-                                                        <img src="/img/android-icon.png" height="30" width="30"></img>
+                                                        <img src="/img/android-icon.png" height="30" width="30"></img></img>
                                         </a>
                                         
                                         <a href="https://apps.apple.com/us/app/photomath/id919087726" target="_blank" rel="noopener noreferrer">
-                                                        <img src="/img/ios-icon.png" height="30" width="30"></img>
+                                                        <img src="/img/ios-icon.png" height="30" width="30"></img></img>
 
                                         </a>
                                 </div>
 
 
-                                <div id="obsidian" class="educacao gratis">
+                                <div id="obsidian" class="educacao gratuito">
                                         <h3>
-                                                <img src="/img/obsidian.png" height="30" width="30">
+                                                <img src="/img/obsidian.png" height="30" width="30"></img>
                                                 <span> Obsidian </span>
                                         </h3>
                                         <p>
@@ -1232,15 +1261,15 @@
                                         </p>
                                         <a href="https://obsidian.md/" target="_blank" rel="noopener noreferrer"> Acesse o site </a>
                                         <a href="https://play.google.com/store/apps/details?id=md.obsidian" target="_blank" rel="noopener noreferrer">
-                                                        <img src="/img/android-icon.png" height="30" width="30"></img>
+                                                        <img src="/img/android-icon.png" height="30" width="30"></img></img>
                                         </a>                
                                         
                                         <a href="https://apps.apple.com/us/app/obsidian-connected-notes/id1557175442" target="_blank" rel="noopener noreferrer">
-                                                        <img src="/img/ios-icon.png" height="30" width="30"></img>
+                                                        <img src="/img/ios-icon.png" height="30" width="30"></img></img>
                                         </a>
 
                                         <a href="https://obsidian.md/download" target="_blank" rel="noopener noreferrer">
-                                                        <img src="/img/windows-icon.png" height="30" width="30"></img>
+                                                        <img src="/img/windows-icon.png" height="30" width="30"></img></img>
                                         </a>
 
                                 
@@ -1258,6 +1287,7 @@
                         <input type="email" id="email" aria-label="Email">
                         <input type="submit" id="faq-btn" aria-label="Enviar"></input>
                 </div>
+
 
 
 
