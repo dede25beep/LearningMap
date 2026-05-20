@@ -77,6 +77,18 @@ body#dashboard .user-profile img {
     object-fit: cover;
     border-radius: 50%;
 }
+body#dashboard .user-profile button{
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #9333ea, #c026d3);
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 16px 34px rgba(168, 85, 247, 0.34);
+    transition: 0.25s ease;
+}
 
 body#dashboard header .search-box {
     justify-self: center;
@@ -275,6 +287,35 @@ body#dashboard .filter-bar label {
     font-size: 0.9rem;
     font-weight: 600;
     box-shadow: 0 6px 18px rgba(49, 46, 129, 0.06);
+}
+
+body#dashboard .filtro-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border: 1px solid rgba(109, 40, 217, 0.15);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--roxo-escuro, #4c1d95);
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 22px rgba(109, 40, 217, 0.10);
+    transition: 0.25s ease;
+    font-size: 0.9rem;
+}
+
+body#dashboard .filtro-btn:hover {
+    transform: translateY(-2px);
+    background: #f3e8ff;
+    box-shadow: 0 14px 30px rgba(109, 40, 217, 0.18);
+}
+
+body#dashboard .filtro-btn.is-active {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 12px 28px rgba(109, 40, 217, 0.26);
 }
 
 /* Cards */

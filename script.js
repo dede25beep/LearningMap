@@ -199,42 +199,57 @@ window.logout = logout
 function configurarFiltros() {
   const filtros = document.querySelectorAll('.filtro-btn')
   const cards = document.querySelectorAll('.cards > div')
+  const searchForm = document.querySelector('.search-box')
+  const searchInput = document.querySelector('.search-box input[type="search"]')
 
   if (!filtros.length || !cards.length) return
 
   filtros.forEach(filtro => {
-    filtro.addEventListener('change', () => {
-      const categoria = filtro.getAttribute('data-categoria')
-
-      if (categoria === 'todas' && filtro.checked) {
-        filtros.forEach(f => {
-          if (f !== filtro) f.checked = false
-        })
-      } else if (categoria !== 'todas' && filtro.checked) {
-        const todas = document.querySelector('.filtro-btn[data-categoria="todas"]')
-        if (todas) todas.checked = false
-      }
+    filtro.addEventListener('click', () => {
+      // Apenas um filtro ativo por vez
+      filtros.forEach(f => f.classList.remove('is-active'))
+      filtro.classList.add('is-active')
 
       aplicarFiltros()
     })
   })
 
-  function aplicarFiltros() {
-    const selecionados = Array.from(filtros)
-      .filter(f => f.checked && f.getAttribute('data-categoria') !== 'todas')
-      .map(f => f.getAttribute('data-categoria'))
+  // Previne o recarregamento da página ao dar Enter no formulário
+  if (searchForm) {
+    searchForm.addEventListener('submit', (e) => {
+      e.preventDefault()
+      aplicarFiltros()
+    })
+  }
 
-    const isTodasSelected = document.querySelector('.filtro-btn[data-categoria="todas"]')?.checked
+  // Aciona a filtragem sempre que o usuário digitar no input
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      aplicarFiltros()
+    })
+  }
+
+  function aplicarFiltros() {
+    const selecionado = Array.from(filtros).find(f => f.classList.contains('is-active'))
+    const categoria = selecionado ? selecionado.getAttribute('data-categoria') : 'todas'
+
+    // Removemos todos os espaços e transformamos em minúsculo para busca super flexível
+    const termoBusca = searchInput ? searchInput.value.toLowerCase().replace(/\s+/g, '') : ''
 
     cards.forEach(card => {
-      // Se não há nenhum filtro selecionado ou a opção "todas" está marcada, exibe todos
-      if (selecionados.length === 0 || isTodasSelected) {
+      const nomeFerramentaSpan = card.querySelector('h3 span')
+      const nomeFerramenta = nomeFerramentaSpan ? nomeFerramentaSpan.textContent.toLowerCase().replace(/\s+/g, '') : ''
+
+      // O card atende ao filtro de categoria?
+      const matchCategoria = categoria === 'todas' || Array.from(card.classList).includes(categoria)
+      
+      // O card atende ao filtro de busca? (se vazio, sempre atende)
+      const matchBusca = termoBusca === '' || nomeFerramenta.includes(termoBusca)
+
+      if (matchCategoria && matchBusca) {
         card.style.display = ''
       } else {
-        // Exibe o card se ele tiver ao menos uma das categorias selecionadas
-        const cardClasses = Array.from(card.classList)
-        const match = selecionados.some(sel => cardClasses.includes(sel))
-        card.style.display = match ? '' : 'none'
+        card.style.display = 'none'
       }
     })
   }
