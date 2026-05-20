@@ -124,7 +124,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .search-box input[type="search"] {
     padding-right: 30px;
     flex: 1;
-   
 }
 
 /* Posiciona o botão de pesquisa dentro da caixa de pesquisa */
@@ -145,7 +144,6 @@ input[type="search"]::-webkit-search-results-decoration {
     display: flex;
     text-align: center;
     opacity: 80%;
-   
 }
 
 /* Lista de navegacao */
@@ -204,8 +202,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
 #container-title h1 {
     margin: 0px 0px 10px;
-}
+    font-size: 45px;
+    
 
+}
 /* Paragrafo dentro do titulo*/
 #container-title p {
     max-width: 800px;
@@ -275,7 +275,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 }
 
-.cards a:hover {
+.link-cards:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 28px rgba(109, 40, 217, 0.28);
 }
@@ -309,21 +309,11 @@ input[type="search"]::-webkit-search-results-decoration {
     color: var(--principal);
 }
 
-
 /*Paragrafos*/
 .cards p {
     color: var(--secundaria);
     line-height: 1.6;
 }
-
-/*Imagens*/
-.cards img {
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 6px;
-    box-shadow: 4px 1px 8px rgba(0, 0, 0, 0.568);
-}
-
 
 /* Conteúdo oculto inicialmente */
 .cards details p,
@@ -343,7 +333,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 /*Botoes/Links dentro dos cards*/
-.cards a {
+.link-cards {
     display: inline-block;
     margin-top: 15px;
     padding: 12px 20px;
@@ -351,16 +341,23 @@ input[type="search"]::-webkit-search-results-decoration {
 
     text-decoration: none;
     color: var(--luz);
-    font-weight: 600;
+    font-weight: 600;                                                       
 
     background: linear-gradient(135deg, #0116ff, #41057d);
     transition: all 0.3s ease;
 }
 
 /*Hover do botao*/
-.cards a:hover {
+.link-cards:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 18px var(--sombra);
+}
+
+/* Estilo específico para o ícone de link */
+#icon-link {
+    border: 1px solid var(--luz);
+    border-radius: 5px;
+    
 }
 
 /*Tablets*/
@@ -392,3 +389,4 @@ input[type="search"]::-webkit-search-results-decoration {
         padding: 20px;
     }
 }
+
