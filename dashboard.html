@@ -3,8 +3,12 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <title>Dashboard</title>
-        <link rel="stylesheet" href="style.css">
+
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/dashboard.css">
+
 </head>
 
 <body id="dashboard">
@@ -17,18 +21,29 @@
                                 <li><a href="#contato"> Contato </a></li>
                         </ul>
                 </nav>
-                <img src="/img/logo.jpg" alt="Logo do Site" height="100" width="200"></img>
-        
+                <img src="/img/logotipo.jpg" alt="Lotipo do Site" height="100" width="200"></img>
+                
+
+                
+                <form action="/search" method="get" class="search-box">
+                        <input type="search" placeholder="buscar ferramenta" aria-label="Buscar ferramenta">      
+
+                        <svg class="search-icon" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>           
+                </form>        
+                
+               
+
                 <div class="user-profile">
-                        <img src="img/avatars/" class="profile-icon">
-                        <div class="profile-menu">
-                               
-                        
-                        
+                        <img src="/img/avatar/" alt="Ícone de usuário" height="30" width="30">
+                        <button type="button" class="btn-profile">Mudar avatar</button>
+                        <button onclick="logout()" class="btn-logout">Sair</button>
+                                
                 </div>
         </header>                                                                                                                                                                                                                                                                                                       
 
-        <section id="inicio" class="section">
+        <section id="inicio" class="page-section is-active flex-section">
 
                 <div id="container-title">
 
@@ -80,10 +95,19 @@
         </section>
 
 
-        <section id="ferramentas" class="section">
+        <section id="ferramentas" class="page-section dashboard-section">
+                <div class="dashboard-container">
 
-                <h1> Acesso rápido para Ferramentas IAs </h1>
-                <p> recursos educacionais e softwares que podem transformar sua rotina de estudos e programação. </p>
+                        <form action="/search" method="get" class="search-box">
+                                <input type="search" placeholder="buscar ferramenta" aria-label="buscar ferramenta">
+                                <button type="submit" aria-label="Pesquisar">
+                                        <img src="/img/lupa-icon.png" alt="" width="20" height="20">
+                                </button>
+                        </form>
+
+
+                        <h1> Acesso rápido para Ferramentas IAs </h1>
+                        <p> recursos educacionais e softwares que podem transformar sua rotina de estudos e programação. </p>
 
                 <div id="filtro">       
                         <input type="checkbox" class="filtro-btn" data-categoria="todas"> Todas </button>
@@ -102,10 +126,11 @@
                         <input type="checkbox" class="filtro-btn" data-categoria="softwares"> Softwares </button>
                         <input type="checkbox" class="filtro-btn" data-categoria="gratuito"> Gratuito </button>
                         <input type="checkbox" class="filtro-btn" data-categoria="limitado"> Limitado </button>
-                
+                      
+
                 </div>
                 
-                        <div class="cards">
+                        <div id="tools-grid" class="cards">
                         
 
                                 <div class="raciocinio limitado">
@@ -159,11 +184,12 @@
                                                 <span> Grok </span>
                                         </h3>
                                         <p>
-                                                Grok é uma IA generativa conversacional da xAI, com senso de humor inspirado no Guia do Mochileiro das Galáxias. 
-                                                Principais pontos: respostas rápidas e acesso em tempo real ao X (Twitter). 
-                                                Função: gera textos, imagens, código e analisa dados de forma divertida.
+                                                Grok é uma IA generativa conversacional com senso de humor inspirado no Guia do
+                                                Mochileiro das Galáxias.
+                                                Seus principais pontos incluem respostas rápidas, acesso em tempo real ao X
+                                                (Twitter), geração de textos, imagens, código e análise de dados.
                                         </p>
-                                        <a href="https://grok.com/" class="link-cards" target="_blank" rel="noopener noreferrer"> Acesse o site
+                                        <a href="https://grok.com/" target="_blank" rel="noopener noreferrer"> Acesse o site 
                                         </a>
                                 </div>
 
@@ -1293,24 +1319,15 @@
                                         </a>                
                                         
 
-                                       
+                                
                 
 
                                 </div>
 
+                        </section>
 
 
-
-
-
-
-
-
-
-        </section>
-
-
-        <section id="contato" class="section">
+        <section id="contato" class="page-section flex-section">
 
                 <div>
                         <input type="text" id="nome_login" aria-label="Nome de usuário">
@@ -1329,9 +1346,22 @@
 
 
 
-        <script src="script.js"></script>
+        <script type="module" src="script.js"></script>
 
-      
+  <script>
+    const details = document.querySelectorAll(".cards details");
+
+    details.forEach((target) => {
+      target.addEventListener("click", () => {
+        details.forEach((item) => {
+          if (item !== target) {
+            item.removeAttribute("open");
+          }
+        });
+      });
+    });
+  </script>
+
 </body>
 
 </html>
