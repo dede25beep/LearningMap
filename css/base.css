@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Plus+Jakarta+Sans:wght@700;800&display=swap');
+
 :root {
-    --bg: #ffffff;
-    --principal: #312e81;
-    --secundaria: #5b21b6;
+    --bg: #0f0f1a;
+    --principal: #f0eeff;
+    --secundaria: rgba(240, 238, 255, 0.55);
     --roxo: #7c3aed;
-    --roxo-escuro: #4c1d95;
+    --roxo-escuro: #1e1b2e;
+    --roxo-claro: #a78bfa;
     --azul: #2563eb;
-    --texto-claro: #f8f7ff;
-    --borda: rgba(109, 40, 217, 0.14);
-    --sombra: 0 18px 45px rgba(49, 46, 129, 0.10);
+    --texto-claro: #f0eeff;
+    --texto-secundario: rgba(240, 238, 255, 0.55);
+    --card-bg: rgba(30, 27, 46, 0.78);
+    --borda: rgba(124, 58, 237, 0.2);
+    --sombra: 0 18px 45px rgba(0, 0, 0, 0.28);
 }
 
 * {
@@ -21,7 +26,24 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Outfit', Arial, sans-serif;
+    font-weight: 400;
+    color: var(--principal);
+    background: var(--bg);
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    font-weight: 800;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
 }
 
 /* ===== Sistema geral de seções ===== */

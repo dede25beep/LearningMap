@@ -6,7 +6,7 @@ body#pagina-login {
         radial-gradient(circle at left, rgba(124, 58, 237, 0.28), transparent 32%),
         radial-gradient(circle at right, rgba(168, 85, 247, 0.22), transparent 34%),
         linear-gradient(135deg, #0f0f1a, #181825);
-    color: white;
+    color: #f0eeff;
 }
 
 body#pagina-login #login,
@@ -25,11 +25,11 @@ body#pagina-login .page-section.is-active {
     width: min(420px, 100%);
     padding: 48px 40px;
     border-radius: 24px;
-    background: rgba(255, 255, 255, 0.055);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(30, 27, 46, 0.78);
+    border: 1px solid rgba(124, 58, 237, 0.2);
     box-shadow:
         0 26px 80px rgba(0, 0, 0, 0.36),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        inset 0 1px 0 rgba(240, 238, 255, 0.08);
     backdrop-filter: blur(18px);
 }
 
@@ -45,7 +45,7 @@ body#pagina-login .page-section.is-active {
 .register-container h1 {
     margin-bottom: 12px;
     font-size: 2rem;
-    color: white;
+    color: #f0eeff;
 }
 
 .login-container input,
@@ -56,8 +56,8 @@ body#pagina-login .page-section.is-active {
     border: none;
     outline: none;
     border-radius: 14px;
-    background: #f4eeff;
-    color: #111827;
+    background: rgba(15, 15, 26, 0.82);
+    color: #f0eeff;
     text-align: center;
     font-size: 0.95rem;
 }
@@ -84,7 +84,7 @@ body#pagina-login #show-login:hover {
     border: none;
     border-radius: 14px;
     background: linear-gradient(135deg, #9333ea, #c026d3);
-    color: white;
+    color: #f0eeff;
     font-weight: 800;
     cursor: pointer;
     box-shadow: 0 16px 34px rgba(168, 85, 247, 0.34);
@@ -99,7 +99,7 @@ body#pagina-login #show-login:hover {
 
 .login-container p,
 .register-container p {
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(240, 238, 255, 0.55);
 }
 
 .login-container a,
@@ -114,4 +114,9 @@ body#pagina-login #show-login:hover {
     min-height: 22px;
     text-align: center;
     color: #fef3c7;
+}
+
+.login-container input::placeholder,
+.register-container input::placeholder {
+    color: rgba(240, 238, 255, 0.45);
 }

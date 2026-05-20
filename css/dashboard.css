@@ -9,11 +9,11 @@ body#dashboard {
     flex-direction: column;
     min-height: 100vh;
     background:
-        radial-gradient(circle at top left, rgba(124, 58, 237, 0.10), transparent 30%),
-        linear-gradient(135deg, #f8f7ff, #ffffff);
+        radial-gradient(circle at left,  rgba(124, 58, 237, 0.28), transparent 32%),
+        radial-gradient(circle at right, rgba(168, 85, 247, 0.22), transparent 34%),
+        linear-gradient(135deg, #0f0f1a, #181825);
     background-attachment: fixed;
-    color: var(--principal);
-    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #f0eeff;
 }
 
 body#dashboard header {
@@ -22,10 +22,10 @@ body#dashboard header {
     align-items: center;
     gap: 24px;
     padding: 18px 32px;
-    background: rgba(255, 255, 255, 0.86);
+    background: rgba(30, 27, 46, 0.78);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(109, 40, 217, 0.10);
-    box-shadow: 0 10px 35px rgba(49, 46, 129, 0.08);
+    border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.28);
     position: sticky;
     top: 0;
     z-index: 10;
@@ -52,14 +52,14 @@ body#dashboard .sidebar-btn {
     align-items: center;
     justify-content: center;
     padding: 10px 18px;
-    border: 1px solid rgba(109, 40, 217, 0.15);
+    border: 1px solid rgba(124, 58, 237, 0.2);
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.92);
-    color: var(--roxo-escuro);
+    background: rgba(30, 27, 46, 0.78);
+    color: #f0eeff;
     font-weight: 700;
     text-decoration: none;
     cursor: pointer;
-    box-shadow: 0 8px 22px rgba(109, 40, 217, 0.10);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
     transition: 0.25s ease;
 }
 
@@ -67,8 +67,8 @@ body#dashboard .sidebar a:hover,
 body#dashboard .logout-button:hover,
 body#dashboard .sidebar-btn:hover {
     transform: translateY(-2px);
-    background: #f3e8ff;
-    box-shadow: 0 14px 30px rgba(109, 40, 217, 0.18);
+    background: rgba(124, 58, 237, 0.24);
+    box-shadow: 0 14px 30px rgba(124, 58, 237, 0.24);
 }
 
 body#dashboard .user-profile {
@@ -90,7 +90,7 @@ body#dashboard .user-profile button{
     border: none;
     border-radius: 14px;
     background: linear-gradient(135deg, #9333ea, #c026d3);
-    color: white;
+    color: #f0eeff;
     font-weight: 800;
     cursor: pointer;
     box-shadow: 0 16px 34px rgba(168, 85, 247, 0.34);
@@ -105,8 +105,8 @@ body#dashboard header .search-box {
     max-width: 420px;
     padding: 0;
     border-radius: 999px;
-    background: white;
-    border: 1px solid rgba(109, 40, 217, 0.14);
+    background: rgba(15, 15, 26, 0.82);
+    border: 1px solid rgba(124, 58, 237, 0.2);
     box-shadow: 0 6px 18px rgba(49, 46, 129, 0.06);
 }
 
@@ -118,7 +118,7 @@ body#dashboard header .search-box input {
     border-radius: 999px;
     background: transparent;
     text-align: left;
-    color: #312e81;
+    color: #f0eeff;
 }
 
 body#dashboard header .search-icon {
@@ -163,14 +163,14 @@ body#dashboard #inicio {
 #container-title h1 {
     font-size: clamp(2.4rem, 6vw, 5rem);
     line-height: 0.95;
-    letter-spacing: -0.055em;
-    color: #312e81;
+    letter-spacing: 0;
+    color: #f0eeff;
 }
 
 #container-title p {
     margin-top: 18px;
     max-width: 680px;
-    color: #5b21b6;
+    color: rgba(240, 238, 255, 0.55);
     line-height: 1.7;
     font-size: 1.05rem;
 }
@@ -178,18 +178,18 @@ body#dashboard #inicio {
 #introducao {
     padding: 34px;
     border-radius: 28px;
-    background: rgba(255, 255, 255, 0.72);
-    border: 1px solid rgba(109, 40, 217, 0.12);
+    background: rgba(30, 27, 46, 0.78);
+    border: 1px solid rgba(124, 58, 237, 0.2);
     box-shadow: var(--sombra);
 }
 
 #introducao h2 {
-    color: #312e81;
+    color: #f0eeff;
     margin-bottom: 14px;
 }
 
 #introducao p {
-    color: #5b21b6;
+    color: rgba(240, 238, 255, 0.55);
     line-height: 1.7;
     margin-top: 12px;
 }
@@ -204,9 +204,9 @@ body#dashboard #inicio {
 .flash-cards {
     padding: 20px;
     border-radius: 20px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(238, 235, 255, 0.88));
-    border: 1px solid rgba(109, 40, 217, 0.10);
-    box-shadow: 0 12px 30px rgba(49, 46, 129, 0.08);
+    background: linear-gradient(180deg, rgba(30, 27, 46, 0.9), rgba(15, 15, 26, 0.86));
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
     font-weight: 700;
 }
 
@@ -224,17 +224,17 @@ body#dashboard #ferramentas {
 
 body#dashboard #ferramentas > .dashboard-container > h1 {
     max-width: 720px;
-    color: #312e81;
+    color: #f0eeff;
     font-size: clamp(2.1rem, 4vw, 4rem);
     line-height: 0.95;
-    letter-spacing: -0.04em;
+    letter-spacing: 0;
     margin-top: 24px;
 }
 
 body#dashboard #ferramentas > .dashboard-container > p {
     max-width: 680px;
     margin-top: 14px;
-    color: #5b21b6;
+    color: rgba(240, 238, 255, 0.55);
     line-height: 1.6;
     font-size: 1rem;
 }
@@ -246,8 +246,8 @@ body#dashboard #ferramentas .search-box {
     width: min(420px, 100%);
     padding: 6px;
     border-radius: 999px;
-    background: white;
-    border: 1px solid rgba(109, 40, 217, 0.14);
+    background: rgba(15, 15, 26, 0.82);
+    border: 1px solid rgba(124, 58, 237, 0.2);
     box-shadow: 0 8px 22px rgba(49, 46, 129, 0.08);
 }
 
@@ -258,7 +258,7 @@ body#dashboard #ferramentas .search-box input {
     outline: none;
     border-radius: 999px;
     background: transparent;
-    color: #312e81;
+    color: #f0eeff;
     text-align: left;
 }
 
@@ -288,9 +288,9 @@ body#dashboard .filter-bar label {
     gap: 6px;
     padding: 8px 12px;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.86);
-    border: 1px solid rgba(109, 40, 217, 0.12);
-    color: #4c1d95;
+    background: rgba(30, 27, 46, 0.78);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    color: #f0eeff;
     font-size: 0.9rem;
     font-weight: 600;
     box-shadow: 0 6px 18px rgba(49, 46, 129, 0.06);
@@ -301,26 +301,26 @@ body#dashboard .filtro-btn {
     align-items: center;
     justify-content: center;
     padding: 10px 18px;
-    border: 1px solid rgba(109, 40, 217, 0.15);
+    border: 1px solid rgba(124, 58, 237, 0.2);
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.92);
-    color: var(--roxo-escuro, #4c1d95);
+    background: rgba(30, 27, 46, 0.78);
+    color: #f0eeff;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 8px 22px rgba(109, 40, 217, 0.10);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
     transition: 0.25s ease;
     font-size: 0.9rem;
 }
 
 body#dashboard .filtro-btn:hover {
     transform: translateY(-2px);
-    background: #f3e8ff;
-    box-shadow: 0 14px 30px rgba(109, 40, 217, 0.18);
+    background: rgba(124, 58, 237, 0.24);
+    box-shadow: 0 14px 30px rgba(124, 58, 237, 0.24);
 }
 
 body#dashboard .filtro-btn.is-active {
     background: linear-gradient(135deg, #2563eb, #7c3aed);
-    color: white;
+    color: #f0eeff;
     border-color: transparent;
     box-shadow: 0 12px 28px rgba(109, 40, 217, 0.26);
 }
@@ -357,11 +357,11 @@ body#dashboard .cards > * {
     gap: 18px;
     padding: 26px;
     border-radius: 24px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(238, 235, 255, 0.92));
-    border: 1px solid rgba(109, 40, 217, 0.10);
+    background: linear-gradient(180deg, rgba(30, 27, 46, 0.94), rgba(15, 15, 26, 0.9));
+    border: 1px solid rgba(124, 58, 237, 0.2);
     box-shadow:
-        0 18px 45px rgba(49, 46, 129, 0.10),
-        inset 0 1px 0 rgba(255, 255, 255, 0.75);
+        0 18px 45px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(240, 238, 255, 0.08);
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     overflow: visible;
     animation: fadeInScale 0.4s ease-out forwards;
@@ -371,7 +371,7 @@ body#dashboard .cards > *:hover {
     transform: translateY(-8px);
     border-color: rgba(124, 58, 237, 0.35);
     box-shadow:
-        0 28px 70px rgba(49, 46, 129, 0.18),
+        0 28px 70px rgba(0, 0, 0, 0.34),
         0 0 30px rgba(124, 58, 237, 0.12);
 }
 
@@ -380,13 +380,13 @@ body#dashboard .cards h3 {
     align-items: center;
     gap: 12px;
     margin: 0;
-    color: #312e81;
+    color: #f0eeff;
     font-size: 1.1rem;
 }
 
 body#dashboard .cards p {
     margin: 0;
-    color: #5b21b6;
+    color: rgba(240, 238, 255, 0.55);
     line-height: 1.65;
     font-size: 0.95rem;
 }
@@ -395,7 +395,7 @@ body#dashboard .cards img {
     border: 1px solid rgba(124, 58, 237, 0.55);
     border-radius: 12px;
     padding: 6px;
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(15, 15, 26, 0.78);
 }
 
 body#dashboard .cards a {
@@ -409,7 +409,7 @@ body#dashboard .cards a {
     padding: 12px 18px;
     border-radius: 14px;
     background: linear-gradient(135deg, #2563eb, #7c3aed, #4c1d95);
-    color: white;
+    color: #f0eeff;
     text-decoration: none;
     font-weight: 800;
     box-shadow: 0 12px 28px rgba(109, 40, 217, 0.26);
@@ -435,17 +435,19 @@ body#dashboard #contato div {
     width: min(420px, 100%);
     padding: 32px;
     border-radius: 24px;
-    background: rgba(255, 255, 255, 0.78);
-    border: 1px solid rgba(109, 40, 217, 0.12);
+    background: rgba(30, 27, 46, 0.86);
+    border: 1px solid rgba(124, 58, 237, 0.2);
     box-shadow: var(--sombra);
 }
 
 body#dashboard #contato input {
     height: 48px;
     padding: 0 14px;
-    border: 1px solid rgba(109, 40, 217, 0.14);
+    border: 1px solid rgba(124, 58, 237, 0.2);
     border-radius: 12px;
     outline: none;
+    background: rgba(15, 15, 26, 0.82);
+    color: #f0eeff;
 }
 
 /* Footer */
@@ -482,4 +484,21 @@ body#dashboard footer {
     #container-title h1 {
         font-size: clamp(2.2rem, 12vw, 4rem);
     }
+}
+body#dashboard input::placeholder {
+    color: rgba(240, 238, 255, 0.45);
+}
+
+body#dashboard .sidebar a:hover,
+body#dashboard .logout-button:hover,
+body#dashboard .sidebar-btn:hover,
+body#dashboard .filtro-btn:hover {
+    color: #f0eeff;
+}
+
+body#dashboard .filtro-btn.is-active,
+body#dashboard #ferramentas .search-box button,
+body#dashboard .user-profile button,
+body#dashboard .cards a {
+    color: #f0eeff;
 }
