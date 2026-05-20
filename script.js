@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 })
 
 function configurarNavegacaoSidebar() {
-  const navLinks = document.querySelectorAll('.sidebar a')
+  const navLinks = document.querySelectorAll('.sidebar a, header > a[href^="#"]')
 
   navLinks.forEach(link => {
     link.addEventListener('click', function (e) {
