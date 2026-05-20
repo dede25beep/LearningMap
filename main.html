@@ -1,53 +1,443 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>main</title>
-
+    <title>LearningMap — 88 ferramentas de IA para estudar melhor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
-    
 </head>
-
 <body id="main">
-    <header>
-        <img src="/img/logotipo.jpg" alt="Lotipo do Site" height="100" width="200"></img>
-        <nav class="topics-nav" aria-label="Categoria de Ferramentas">
-            <ul>
-                <li><a href="/dashboard.html/inicio"> Início </a></li>
-                <li><a href="/dashboard.html/ferramentas"> Ferramentas </a></li>
-                <li><a href="/dashboard.html/contato"> Contato </a></li>
 
-            </ul>
+    <!-- ───── HEADER ───── -->
+    <header class="lm-header">
+        <div class="lm-logo">
+            <img src="/img/logotipo.jpg" alt="LearningMap" height="36">
+        </div>
+        <nav class="lm-nav">
+            <a href="#categorias" class="lm-nav-link">Categorias</a>
+            <a href="#como-funciona" class="lm-nav-link">Como funciona</a>
+            <button onclick="window.location.href='login.html'" class="lm-btn-entrar">
+                Entrar
+            </button>
         </nav>
-        <button onclick="window.location.href='login.html'" class="sidebar-btn">
-            Entrar
+        <button class="lm-hamburger" aria-label="Menu" onclick="toggleMobileMenu()">
+            <span></span><span></span><span></span>
         </button>
     </header>
 
+    <!-- ───── HERO ───── -->
+    <section class="lm-hero">
+        <div class="lm-hero-bg" aria-hidden="true">
+            <div class="lm-orb lm-orb-1"></div>
+            <div class="lm-orb lm-orb-2"></div>
+            <div class="lm-orb lm-orb-3"></div>
+            <div class="lm-grid-lines"></div>
+        </div>
 
-    <h1> LearningMap oferece agilidade </h1>
+        <div class="lm-hero-inner">
+            <div class="lm-badge animate-fade-up" style="animation-delay:0s">
+                <span class="lm-badge-dot"></span>
+                88 ferramentas catalogadas e prontas para usar
+            </div>
 
-    <p> LearningMap oferece agilidade
-        🔬 +30 ferramentas de pesquisa acadêmica
-        (ResearchRabbit, Scite.ai, Litmaps)
+            <h1 class="lm-h1 animate-fade-up" style="animation-delay:.08s">
+                A IA certa<br>
+                <em>para cada tarefa.</em>
+            </h1>
 
+            <p class="lm-sub animate-fade-up" style="animation-delay:.16s">
+                Pare de gastar horas procurando. O LearningMap reúne e organiza as melhores
+                ferramentas de inteligência artificial para pesquisa, estudo e produtividade —
+                tudo em um único lugar.
+            </p>
 
+            <div class="lm-hero-actions animate-fade-up" style="animation-delay:.24s">
+                <button onclick="window.location.href='login.html'" class="lm-btn-primary">
+                    Acessar ferramentas
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="lm-btn-ghost" onclick="scrollToVideo()">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                        <circle cx="7" cy="7" r="6.25" stroke="currentColor" stroke-width="1.3"/>
+                        <path d="M5.5 4.8l4 2.2-4 2.2V4.8z" fill="currentColor"/>
+                    </svg>
+                    Ver demonstração
+                </button>
+            </div>
 
-        📚 Plataformas de estudo inteligente
-        (Knowt, StudyFetch, Photomath)
+            <!-- PILLS FLUTUANTES NO HERO -->
+            <div class="lm-floating-pills animate-fade-up" style="animation-delay:.32s" aria-label="Exemplos de ferramentas disponíveis">
+                <span class="lm-pill lm-pill-purple">ResearchRabbit</span>
+                <span class="lm-pill lm-pill-blue">NotebookLM</span>
+                <span class="lm-pill lm-pill-indigo">Perplexity</span>
+                <span class="lm-pill lm-pill-purple">Elicit</span>
+                <span class="lm-pill lm-pill-blue">StudyFetch</span>
+                <span class="lm-pill lm-pill-indigo">Scite.ai</span>
+                <span class="lm-pill lm-pill-purple">ClickUp Brain</span>
+                <span class="lm-pill lm-pill-blue">Photomath</span>
+            </div>
+        </div>
+    </section>
 
+    <!-- ───── STATS ───── -->
+    <section class="lm-stats-section">
+        <div class="lm-container">
+            <div class="lm-stats-grid">
+                <div class="lm-stat-card animate-fade-up" style="animation-delay:.0s">
+                    <span class="lm-stat-num" data-target="88">0</span>
+                    <span class="lm-stat-lbl">ferramentas catalogadas</span>
+                </div>
+                <div class="lm-stat-sep" aria-hidden="true"></div>
+                <div class="lm-stat-card animate-fade-up" style="animation-delay:.08s">
+                    <span class="lm-stat-num" data-target="8">0</span>
+                    <span class="lm-stat-lbl">categorias organizadas</span>
+                </div>
+                <div class="lm-stat-sep" aria-hidden="true"></div>
+                <div class="lm-stat-card animate-fade-up" style="animation-delay:.16s">
+                    <span class="lm-stat-num">100%</span>
+                    <span class="lm-stat-lbl">curado à mão</span>
+                </div>
+                <div class="lm-stat-sep" aria-hidden="true"></div>
+                <div class="lm-stat-card animate-fade-up" style="animation-delay:.24s">
+                    <span class="lm-stat-num">grátis</span>
+                    <span class="lm-stat-lbl">para criar sua conta</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- ───── VÍDEO ───── -->
+    <section class="lm-video-section" id="video">
+        <div class="lm-container lm-container-narrow">
+            <div class="lm-section-header">
+                <p class="lm-eyebrow">Veja em ação</p>
+                <h2 class="lm-h2">Tudo que você precisa,<br>explicado em 2 minutos</h2>
+            </div>
 
-        ⚡ Ferramentas de automação para produtividade
-        (ClickUp Brain, Zapier Agents, n8n)
-    </p>
+            <div class="lm-video-wrap" id="video-wrap">
+                <!-- ══ SUBSTITUA O src ABAIXO PELO EMBED DO SEU VÍDEO ══
+                     Exemplo YouTube: https://www.youtube.com/embed/SEU_ID?autoplay=1
+                     O iframe fica oculto até o usuário clicar no play. -->
+                <iframe
+                    id="lm-iframe"
+                    class="lm-iframe"
+                    src=""
+                    data-src="SEU_VIDEO_EMBED_AQUI"
+                    allow="autoplay; fullscreen"
+                    allowfullscreen
+                    title="Demonstração do LearningMap"
+                    style="display:none">
+                </iframe>
 
-    <script type="module" src="script.js"></script>
+                <button class="lm-video-thumb" id="lm-play-btn" aria-label="Reproduzir vídeo de demonstração" onclick="playVideo()">
+                    <div class="lm-video-overlay">
+                        <div class="lm-play-circle">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                                <path d="M10 7.5l13 6.5-13 6.5V7.5z" fill="white"/>
+                            </svg>
+                        </div>
+                        <p class="lm-video-hint">Clique para assistir a demonstração</p>
+                    </div>
+                    <!-- Caso queira uma imagem de capa, adicione abaixo: -->
+                    <!-- <img src="/img/video-thumb.jpg" alt=""> -->
+                </button>
+            </div>
+        </div>
+    </section>
 
+    <!-- ───── CATEGORIAS ───── -->
+    <section class="lm-cats-section" id="categorias">
+        <div class="lm-container">
+            <div class="lm-section-header">
+                <p class="lm-eyebrow">O que você vai encontrar</p>
+                <h2 class="lm-h2">8 categorias.<br>88 possibilidades.</h2>
+            </div>
+
+            <div class="lm-cats-grid">
+                <div class="lm-cat-card animate-fade-up" style="animation-delay:.0s">
+                    <div class="lm-cat-icon lm-icon-purple">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="lm-cat-title">Pesquisa acadêmica</h3>
+                        <p class="lm-cat-desc">ResearchRabbit, Scite.ai, Litmaps, Elicit e mais</p>
+                        <span class="lm-cat-count">30+ ferramentas</span>
+                    </div>
+                </div>
+
+                <div class="lm-cat-card animate-fade-up" style="animation-delay:.06s">
+                    <div class="lm-cat-icon lm-icon-blue">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="lm-cat-title">Estudo inteligente</h3>
+                        <p class="lm-cat-desc">Knowt, StudyFetch, Photomath, Quizlet AI</p>
+                        <span class="lm-cat-count">12 ferramentas</span>
+                    </div>
+                </div>
+
+                <div class="lm-cat-card animate-fade-up" style="animation-delay:.12s">
+                    <div class="lm-cat-icon lm-icon-violet">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="lm-cat-title">Automação e produtividade</h3>
+                        <p class="lm-cat-desc">ClickUp Brain, Zapier Agents, n8n, Make</p>
+                        <span class="lm-cat-count">10 ferramentas</span>
+                    </div>
+                </div>
+
+                <div class="lm-cat-card animate-fade-up" style="animation-delay:.18s">
+                    <div class="lm-cat-icon lm-icon-indigo">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="lm-cat-title">Escrita e revisão</h3>
+                        <p class="lm-cat-desc">Grammarly, Hemingway, Wordtune, Jenni AI</p>
+                        <span class="lm-cat-count">14 ferramentas</span>
+                    </div>
+                </div>
+
+                <div class="lm-cat-card animate-fade-up" style="animation-delay:.24s">
+                    <div class="lm-cat-icon lm-icon-purple">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="lm-cat-title">Assistentes de IA</h3>
+                        <p class="lm-cat-desc">ChatGPT, Claude, Gemini, Perplexity, Copilot</p>
+                        <span class="lm-cat-count">8 ferramentas</span>
+                    </div>
+                </div>
+
+                <div class="lm-cat-card animate-fade-up" style="animation-delay:.30s">
+                    <div class="lm-cat-icon lm-icon-blue">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="lm-cat-title">Apresentações e design</h3>
+                        <p class="lm-cat-desc">Gamma, Beautiful.ai, Canva AI, Tome</p>
+                        <span class="lm-cat-count">9 ferramentas</span>
+                    </div>
+                </div>
+
+                <div class="lm-cat-card animate-fade-up" style="animation-delay:.36s">
+                    <div class="lm-cat-icon lm-icon-violet">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="lm-cat-title">Análise de dados</h3>
+                        <p class="lm-cat-desc">Julius AI, Rows, Obviously AI, MonkeyLearn</p>
+                        <span class="lm-cat-count">7 ferramentas</span>
+                    </div>
+                </div>
+
+                <div class="lm-cat-card lm-cat-card-cta animate-fade-up" style="animation-delay:.42s" onclick="window.location.href='login.html'">
+                    <div class="lm-cat-more-inner">
+                        <span class="lm-cat-more-num">+88</span>
+                        <p class="lm-cat-more-txt">Acesse todas as ferramentas fazendo login</p>
+                        <span class="lm-cat-more-link">
+                            Entrar agora
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───── COMO FUNCIONA ───── -->
+    <section class="lm-how-section" id="como-funciona">
+        <div class="lm-container lm-container-narrow">
+            <div class="lm-section-header">
+                <p class="lm-eyebrow">Simples assim</p>
+                <h2 class="lm-h2">Três passos para encontrar<br>a ferramenta certa</h2>
+            </div>
+
+            <div class="lm-steps">
+                <div class="lm-step animate-fade-up" style="animation-delay:.0s">
+                    <div class="lm-step-num">01</div>
+                    <div class="lm-step-content">
+                        <h3 class="lm-step-title">Crie sua conta grátis</h3>
+                        <p class="lm-step-desc">Cadastro simples, sem cartão de crédito. Em menos de um minuto você já está dentro.</p>
+                    </div>
+                    <div class="lm-step-line" aria-hidden="true"></div>
+                </div>
+
+                <div class="lm-step animate-fade-up" style="animation-delay:.1s">
+                    <div class="lm-step-num">02</div>
+                    <div class="lm-step-content">
+                        <h3 class="lm-step-title">Encontre a categoria</h3>
+                        <p class="lm-step-desc">Navegue pelas 8 categorias ou use a busca para filtrar exatamente o que precisa.</p>
+                    </div>
+                    <div class="lm-step-line" aria-hidden="true"></div>
+                </div>
+
+                <div class="lm-step animate-fade-up" style="animation-delay:.2s">
+                    <div class="lm-step-num">03</div>
+                    <div class="lm-step-content">
+                        <h3 class="lm-step-title">Use a ferramenta certa</h3>
+                        <p class="lm-step-desc">Acesse diretamente a ferramenta com descrição, link e dicas de uso incluídas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───── FERRAMENTAS DESTAQUE ───── -->
+    <section class="lm-tools-section">
+        <div class="lm-container">
+            <div class="lm-section-header">
+                <p class="lm-eyebrow">Algumas ferramentas disponíveis</p>
+                <h2 class="lm-h2">Você provavelmente<br>já conhece algumas.</h2>
+            </div>
+
+            <div class="lm-tools-marquee-wrap" aria-label="Ferramentas disponíveis no LearningMap">
+                <div class="lm-tools-marquee">
+                    <div class="lm-tools-track">
+                        <span class="lm-tool-tag">ResearchRabbit</span>
+                        <span class="lm-tool-tag">Scite.ai</span>
+                        <span class="lm-tool-tag">Litmaps</span>
+                        <span class="lm-tool-tag">Knowt</span>
+                        <span class="lm-tool-tag">StudyFetch</span>
+                        <span class="lm-tool-tag">Photomath</span>
+                        <span class="lm-tool-tag">ClickUp Brain</span>
+                        <span class="lm-tool-tag">Zapier Agents</span>
+                        <span class="lm-tool-tag">n8n</span>
+                        <span class="lm-tool-tag">Perplexity</span>
+                        <span class="lm-tool-tag">NotebookLM</span>
+                        <span class="lm-tool-tag">Elicit</span>
+                        <span class="lm-tool-tag">Gamma</span>
+                        <span class="lm-tool-tag">Grammarly</span>
+                        <span class="lm-tool-tag">Julius AI</span>
+                        <span class="lm-tool-tag">Jenni AI</span>
+                        <span class="lm-tool-tag">Tome</span>
+                        <span class="lm-tool-tag">Beautiful.ai</span>
+                        <!-- duplicado para loop contínuo -->
+                        <span class="lm-tool-tag">ResearchRabbit</span>
+                        <span class="lm-tool-tag">Scite.ai</span>
+                        <span class="lm-tool-tag">Litmaps</span>
+                        <span class="lm-tool-tag">Knowt</span>
+                        <span class="lm-tool-tag">StudyFetch</span>
+                        <span class="lm-tool-tag">Photomath</span>
+                        <span class="lm-tool-tag">ClickUp Brain</span>
+                        <span class="lm-tool-tag">Zapier Agents</span>
+                        <span class="lm-tool-tag">n8n</span>
+                        <span class="lm-tool-tag">Perplexity</span>
+                        <span class="lm-tool-tag">NotebookLM</span>
+                        <span class="lm-tool-tag">Elicit</span>
+                        <span class="lm-tool-tag">Gamma</span>
+                        <span class="lm-tool-tag">Grammarly</span>
+                        <span class="lm-tool-tag">Julius AI</span>
+                        <span class="lm-tool-tag">Jenni AI</span>
+                        <span class="lm-tool-tag">Tome</span>
+                        <span class="lm-tool-tag">Beautiful.ai</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───── CTA FINAL ───── -->
+    <section class="lm-final-section">
+        <div class="lm-container lm-container-narrow">
+            <div class="lm-final-card">
+                <div class="lm-final-glow" aria-hidden="true"></div>
+                <p class="lm-eyebrow lm-eyebrow-light">Pronto para começar?</p>
+                <h2 class="lm-final-h2">88 ferramentas de IA.<br>A um clique de distância.</h2>
+                <p class="lm-final-sub">Crie sua conta grátis e acesse o mapa completo de ferramentas de inteligência artificial.</p>
+                <button onclick="window.location.href='login.html'" class="lm-btn-final">
+                    Criar conta grátis
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───── FOOTER ───── -->
+    <footer class="lm-footer">
+        <div class="lm-container">
+            <span class="lm-footer-logo">LearningMap</span>
+            <span class="lm-footer-copy">© 2025 — Ferramentas de IA para estudar melhor</span>
+        </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+    <script>
+        /* ── Reproduzir vídeo ── */
+        function playVideo() {
+            const btn = document.getElementById('lm-play-btn');
+            const iframe = document.getElementById('lm-iframe');
+            const src = iframe.dataset.src;
+            if (!src || src === 'SEU_VIDEO_EMBED_AQUI') {
+                alert('Configure o link do vídeo no atributo data-src do iframe.');
+                return;
+            }
+            iframe.src = src;
+            iframe.style.display = 'block';
+            btn.style.display = 'none';
+        }
+
+        function scrollToVideo() {
+            document.getElementById('video').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            document.querySelector('.lm-nav').classList.toggle('lm-nav-open');
+        }
+
+        /* ── Contador animado para os stats ── */
+        function animateCount(el) {
+            const target = parseInt(el.dataset.target, 10);
+            if (!target) return;
+            const duration = 1400;
+            const start = performance.now();
+            function step(now) {
+                const elapsed = now - start;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.round(eased * target);
+                if (progress < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
+        /* ── IntersectionObserver para animar ao entrar na tela ── */
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    const counter = entry.target.querySelector('[data-target]');
+                    if (counter) animateCount(counter);
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.animate-fade-up, .lm-stats-section, .lm-step, .lm-cat-card').forEach(el => io.observe(el));
+    </script>
 </body>
-
 </html>
