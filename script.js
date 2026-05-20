@@ -239,10 +239,19 @@ function configurarFiltros() {
     })
   })
 
-  // Previne o recarregamento da página ao dar Enter no formulário
+  // Previne o recarregamento da página ao dar Enter no formulário (ou clicar no ícone)
   if (searchForm) {
     searchForm.addEventListener('submit', (e) => {
       e.preventDefault()
+
+      // Vai para a página de ferramentas se não estiver nela
+      const ferramentasSection = document.getElementById('ferramentas')
+      if (ferramentasSection && !ferramentasSection.classList.contains('is-active')) {
+        document.querySelectorAll('.page-section').forEach(section => section.classList.remove('is-active'))
+        ferramentasSection.classList.add('is-active')
+        ferramentasSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+
       aplicarFiltros()
     })
   }

@@ -5,10 +5,13 @@ html {
 }
 
 body#dashboard {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     background:
         radial-gradient(circle at top left, rgba(124, 58, 237, 0.10), transparent 30%),
         linear-gradient(135deg, #f8f7ff, #ffffff);
+    background-attachment: fixed;
     color: var(--principal);
     font-family: 'Segoe UI', Arial, sans-serif;
 }
@@ -443,6 +446,14 @@ body#dashboard #contato input {
     border: 1px solid rgba(109, 40, 217, 0.14);
     border-radius: 12px;
     outline: none;
+}
+
+/* Footer */
+body#dashboard footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 24px;
+    width: 100%;
 }
 
 /* Responsivo */
