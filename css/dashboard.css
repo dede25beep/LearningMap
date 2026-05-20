@@ -1,5 +1,9 @@
 /* ===== Dashboard ===== */
 
+html {
+    scroll-padding-top: 130px;
+}
+
 body#dashboard {
     min-height: 100vh;
     background:
@@ -329,6 +333,17 @@ body#dashboard .cards {
     padding: 0;
 }
 
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 body#dashboard .cards > * {
     width: auto !important;
     height: auto !important;
@@ -346,6 +361,7 @@ body#dashboard .cards > * {
         inset 0 1px 0 rgba(255, 255, 255, 0.75);
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     overflow: visible;
+    animation: fadeInScale 0.4s ease-out forwards;
 }
 
 body#dashboard .cards > *:hover {

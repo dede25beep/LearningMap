@@ -206,9 +206,34 @@ function configurarFiltros() {
 
   filtros.forEach(filtro => {
     filtro.addEventListener('click', () => {
-      // Apenas um filtro ativo por vez
-      filtros.forEach(f => f.classList.remove('is-active'))
-      filtro.classList.add('is-active')
+      // Limpa a search box ao selecionar um filtro
+      if (searchInput && searchInput.value !== '') {
+        searchInput.value = ''
+      }
+
+      const categoria = filtro.getAttribute('data-categoria')
+      const isEspecial = categoria === 'gratuito' || categoria === 'limitado'
+
+      if (isEspecial) {
+        // Se for um filtro especial, ele alterna (toggle)
+        if (filtro.classList.contains('is-active')) {
+          filtro.classList.remove('is-active')
+        } else {
+          // Desmarca o outro filtro especial
+          filtros.forEach(f => {
+            const cat = f.getAttribute('data-categoria')
+            if (cat === 'gratuito' || cat === 'limitado') f.classList.remove('is-active')
+          })
+          filtro.classList.add('is-active')
+        }
+      } else {
+        // Apenas um filtro normal ativo por vez
+        filtros.forEach(f => {
+          const cat = f.getAttribute('data-categoria')
+          if (cat !== 'gratuito' && cat !== 'limitado') f.classList.remove('is-active')
+        })
+        filtro.classList.add('is-active')
+      }
 
       aplicarFiltros()
     })
@@ -225,13 +250,40 @@ function configurarFiltros() {
   // Aciona a filtragem sempre que o usuário digitar no input
   if (searchInput) {
     searchInput.addEventListener('input', () => {
+      // Ao digitar na search box, vai para a página de ferramentas se não estiver nela
+      const ferramentasSection = document.getElementById('ferramentas')
+      if (ferramentasSection && !ferramentasSection.classList.contains('is-active')) {
+        document.querySelectorAll('.page-section').forEach(section => section.classList.remove('is-active'))
+        ferramentasSection.classList.add('is-active')
+        ferramentasSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+
+      if (searchInput.value.trim() !== '') {
+        // Ao digitar na search box, desmarca filtros normais e volta para "Todas"
+        // Deixamos os filtros especiais intocados caso o usuário queira buscar "livre"
+        const filtroTodas = Array.from(filtros).find(f => f.getAttribute('data-categoria') === 'todas')
+        filtros.forEach(f => {
+          const cat = f.getAttribute('data-categoria')
+          if (cat !== 'gratuito' && cat !== 'limitado') f.classList.remove('is-active')
+        })
+        if (filtroTodas) filtroTodas.classList.add('is-active')
+      }
       aplicarFiltros()
     })
   }
 
   function aplicarFiltros() {
-    const selecionado = Array.from(filtros).find(f => f.classList.contains('is-active'))
-    const categoria = selecionado ? selecionado.getAttribute('data-categoria') : 'todas'
+    const normais = Array.from(filtros).filter(f => {
+      const cat = f.getAttribute('data-categoria')
+      return cat !== 'gratuito' && cat !== 'limitado' && f.classList.contains('is-active')
+    })
+    const especiais = Array.from(filtros).filter(f => {
+      const cat = f.getAttribute('data-categoria')
+      return (cat === 'gratuito' || cat === 'limitado') && f.classList.contains('is-active')
+    })
+
+    const categoriaNormal = normais.length > 0 ? normais[0].getAttribute('data-categoria') : 'todas'
+    const categoriaEspecial = especiais.length > 0 ? especiais[0].getAttribute('data-categoria') : null
 
     // Removemos todos os espaços e transformamos em minúsculo para busca super flexível
     const termoBusca = searchInput ? searchInput.value.toLowerCase().replace(/\s+/g, '') : ''
@@ -240,13 +292,18 @@ function configurarFiltros() {
       const nomeFerramentaSpan = card.querySelector('h3 span')
       const nomeFerramenta = nomeFerramentaSpan ? nomeFerramentaSpan.textContent.toLowerCase().replace(/\s+/g, '') : ''
 
-      // O card atende ao filtro de categoria?
-      const matchCategoria = categoria === 'todas' || Array.from(card.classList).includes(categoria)
+      const cardClasses = Array.from(card.classList)
+
+      // O card atende ao filtro de categoria normal?
+      const matchNormal = categoriaNormal === 'todas' || cardClasses.includes(categoriaNormal)
       
+      // O card atende ao filtro de categoria especial?
+      const matchEspecial = !categoriaEspecial || cardClasses.includes(categoriaEspecial)
+
       // O card atende ao filtro de busca? (se vazio, sempre atende)
       const matchBusca = termoBusca === '' || nomeFerramenta.includes(termoBusca)
 
-      if (matchCategoria && matchBusca) {
+      if (matchNormal && matchEspecial && matchBusca) {
         card.style.display = ''
       } else {
         card.style.display = 'none'
