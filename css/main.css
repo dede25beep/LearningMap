@@ -377,6 +377,31 @@ body#main .sidebar-btn:hover {
 .lm-pill-blue   { background: rgba(37,99,235,.12);  border-color: rgba(37,99,235,.30);  color: #93c5fd; }
 .lm-pill-indigo { background: rgba(67,56,202,.14);  border-color: rgba(99,102,241,.30); color: #a5b4fc; }
 
+/* indicador de scroll */
+.lm-scroll-indicator {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(240, 238, 255, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border-radius: 50%;
+    transition: color .3s, background .3s, transform .3s;
+    animation: lm-bounce-scroll 2.5s infinite cubic-bezier(0.45, 0, 0.55, 1);
+}
+.lm-scroll-indicator:hover {
+    color: #c4a8ff;
+    background: rgba(124, 58, 237, 0.18);
+}
+@keyframes lm-bounce-scroll {
+    0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+    40% { transform: translate(-50%, -8px); }
+    60% { transform: translate(-50%, -4px); }
+}
+
 
 /* ════════════════════════════════
    STATS
