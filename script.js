@@ -8,6 +8,7 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 document.addEventListener('DOMContentLoaded', async function () {
   configurarNavegacaoSidebar()
   configurarTelaLogin()
+  configurarFiltros()
   await redirecionarSeJaEstiverLogado()
   await protegerPaginasPrivadas()
 })
@@ -195,3 +196,46 @@ async function redirecionarSeJaEstiverLogado() {
 
 window.logout = logout
 
+function configurarFiltros() {
+  const filtros = document.querySelectorAll('.filtro-btn')
+  const cards = document.querySelectorAll('.cards > div')
+
+  if (!filtros.length || !cards.length) return
+
+  filtros.forEach(filtro => {
+    filtro.addEventListener('change', () => {
+      const categoria = filtro.getAttribute('data-categoria')
+
+      if (categoria === 'todas' && filtro.checked) {
+        filtros.forEach(f => {
+          if (f !== filtro) f.checked = false
+        })
+      } else if (categoria !== 'todas' && filtro.checked) {
+        const todas = document.querySelector('.filtro-btn[data-categoria="todas"]')
+        if (todas) todas.checked = false
+      }
+
+      aplicarFiltros()
+    })
+  })
+
+  function aplicarFiltros() {
+    const selecionados = Array.from(filtros)
+      .filter(f => f.checked && f.getAttribute('data-categoria') !== 'todas')
+      .map(f => f.getAttribute('data-categoria'))
+
+    const isTodasSelected = document.querySelector('.filtro-btn[data-categoria="todas"]')?.checked
+
+    cards.forEach(card => {
+      // Se não há nenhum filtro selecionado ou a opção "todas" está marcada, exibe todos
+      if (selecionados.length === 0 || isTodasSelected) {
+        card.style.display = ''
+      } else {
+        // Exibe o card se ele tiver ao menos uma das categorias selecionadas
+        const cardClasses = Array.from(card.classList)
+        const match = selecionados.some(sel => cardClasses.includes(sel))
+        card.style.display = match ? '' : 'none'
+      }
+    })
+  }
+}
