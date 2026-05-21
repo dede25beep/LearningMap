@@ -16,7 +16,7 @@ body#dashboard {
     color: #f0eeff;
 }
 
-body#dashboard header {
+header {
     display: grid;
     grid-template-columns: auto auto minmax(260px, 420px) auto;
     align-items: center;
@@ -31,23 +31,23 @@ body#dashboard header {
     z-index: 10;
 }
 
-body#dashboard header > img {
+header > img {
     width: 170px;
     height: 80px;
     object-fit: contain;
     border-radius: 12px;
 }
 
-body#dashboard .sidebar ul {
+.sidebar ul {
     display: flex;
     align-items: center;
     gap: 12px;
     list-style: none;
 }
 
-body#dashboard .sidebar a,
-body#dashboard .logout-button,
-body#dashboard .sidebar-btn {
+.sidebar a,
+.logout-button,
+.sidebar-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -63,22 +63,22 @@ body#dashboard .sidebar-btn {
     transition: 0.25s ease;
 }
 
-body#dashboard .sidebar a:hover,
-body#dashboard .logout-button:hover,
-body#dashboard .sidebar-btn:hover {
+.sidebar a:hover,
+.logout-button:hover,
+.sidebar-btn:hover {
     transform: translateY(-2px);
     background: rgba(124, 58, 237, 0.24);
     box-shadow: 0 14px 30px rgba(124, 58, 237, 0.24);
 }
 
-body#dashboard .user-profile {
+.user-profile {
     display: flex;
     align-items: center;
     gap: 12px;
     justify-self: end;
 }
 
-body#dashboard .user-profile img {
+.user-profile img {
     width: 34px;
     height: 34px;
     object-fit: cover;
@@ -110,7 +110,7 @@ body#dashboard header .search-box {
     box-shadow: 0 6px 18px rgba(49, 46, 129, 0.06);
 }
 
-body#dashboard header .search-box input {
+header .search-box input {
     width: 100%;
     padding: 12px 18px;
     border: none;
@@ -121,7 +121,7 @@ body#dashboard header .search-box input {
     color: #f0eeff;
 }
 
-body#dashboard header .search-icon {
+header .search-icon {
     width: 18px;
     height: 18px;
     margin-right: 14px;
@@ -130,26 +130,26 @@ body#dashboard header .search-icon {
 
 /* Seções do dashboard */
 
-body#dashboard .page-section {
+.page-section {
     display: none;
 }
 
-body#dashboard .page-section.is-active {
+.page-section.is-active {
     display: block;
 }
 
-body#dashboard #inicio.page-section.is-active {
+#inicio.page-section.is-active {
     display: flex;
     flex-direction: column;
 }
 
-body#dashboard #ferramentas.page-section.is-active {
+#ferramentas.page-section.is-active {
     display: block !important;
 }
 
 /* Início */
 
-body#dashboard #inicio {
+#inicio {
     width: min(1180px, calc(100% - 48px));
     margin: 0 auto;
     padding: 70px 0 90px;
@@ -212,7 +212,7 @@ body#dashboard #inicio {
 
 /* Ferramentas */
 
-body#dashboard #ferramentas {
+#ferramentas {
     width: min(1180px, calc(100% - 48px));
     margin: 0 auto;
     padding: 48px 0 80px;
@@ -222,7 +222,7 @@ body#dashboard #ferramentas {
     width: 100%;
 }
 
-body#dashboard #ferramentas > .dashboard-container > h1 {
+#ferramentas > .dashboard-container > h1 {
     max-width: 720px;
     color: #f0eeff;
     font-size: clamp(2.1rem, 4vw, 4rem);
@@ -231,7 +231,7 @@ body#dashboard #ferramentas > .dashboard-container > h1 {
     margin-top: 24px;
 }
 
-body#dashboard #ferramentas > .dashboard-container > p {
+#ferramentas > .dashboard-container > p {
     max-width: 680px;
     margin-top: 14px;
     color: rgba(240, 238, 255, 0.55);
@@ -239,7 +239,7 @@ body#dashboard #ferramentas > .dashboard-container > p {
     font-size: 1rem;
 }
 
-body#dashboard #ferramentas .search-box {
+#ferramentas .search-box {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -251,7 +251,7 @@ body#dashboard #ferramentas .search-box {
     box-shadow: 0 8px 22px rgba(49, 46, 129, 0.08);
 }
 
-body#dashboard #ferramentas .search-box input {
+#ferramentas .search-box input {
     width: 100%;
     padding: 12px 16px;
     border: none;
@@ -262,7 +262,7 @@ body#dashboard #ferramentas .search-box input {
     text-align: left;
 }
 
-body#dashboard #ferramentas .search-box button {
+#ferramentas .search-box button {
     width: 44px;
     height: 44px;
     border: none;
@@ -274,15 +274,15 @@ body#dashboard #ferramentas .search-box button {
     justify-content: center;
 }
 
-body#dashboard #filtro,
-body#dashboard .filter-bar {
+#filtro,
+.filter-bar {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin: 22px 0 34px;
 }
 
-body#dashboard .filter-bar label {
+.filter-bar label {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -327,13 +327,24 @@ body#dashboard .filtro-btn.is-active {
 
 /* Cards */
 
-body#dashboard .cards {
+.cards {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 28px;
     width: 100%;
     margin-top: 34px;
     padding: 0;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 @keyframes fadeInScale {
@@ -367,7 +378,7 @@ body#dashboard .cards > * {
     animation: fadeInScale 0.4s ease-out forwards;
 }
 
-body#dashboard .cards > *:hover {
+.cards > *:hover {
     transform: translateY(-8px);
     border-color: rgba(124, 58, 237, 0.35);
     box-shadow:
@@ -375,7 +386,7 @@ body#dashboard .cards > *:hover {
         0 0 30px rgba(124, 58, 237, 0.12);
 }
 
-body#dashboard .cards h3 {
+.cards h3 {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -384,21 +395,21 @@ body#dashboard .cards h3 {
     font-size: 1.1rem;
 }
 
-body#dashboard .cards p {
+.cards p {
     margin: 0;
     color: rgba(240, 238, 255, 0.55);
     line-height: 1.65;
     font-size: 0.95rem;
 }
 
-body#dashboard .cards img {
+.cards img {
     border: 1px solid rgba(124, 58, 237, 0.55);
     border-radius: 12px;
     padding: 6px;
     background: rgba(15, 15, 26, 0.78);
 }
 
-body#dashboard .cards a {
+.cards a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -415,21 +426,21 @@ body#dashboard .cards a {
     box-shadow: 0 12px 28px rgba(109, 40, 217, 0.26);
 }
 
-body#dashboard .cards a:hover {
+.cards a:hover {
     transform: translateY(-2px);
     box-shadow: 0 16px 36px rgba(109, 40, 217, 0.35);
 }
 
 /* Contato */
 
-body#dashboard #contato.page-section.is-active {
+#contato.page-section.is-active {
     display: grid;
     place-items: center;
     min-height: calc(100vh - 120px);
     padding: 48px;
 }
 
-body#dashboard #contato div {
+#contato div {
     display: grid;
     gap: 16px;
     width: min(420px, 100%);
@@ -440,7 +451,7 @@ body#dashboard #contato div {
     box-shadow: var(--sombra);
 }
 
-body#dashboard #contato input {
+#contato input {
     height: 48px;
     padding: 0 14px;
     border: 1px solid rgba(124, 58, 237, 0.2);
@@ -461,23 +472,23 @@ body#dashboard footer {
 /* Responsivo */
 
 @media (max-width: 900px) {
-    body#dashboard header {
+    header {
         grid-template-columns: 1fr;
         justify-items: center;
         gap: 16px;
     }
 
-    body#dashboard .sidebar ul {
+    .sidebar ul {
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    body#dashboard #inicio,
-    body#dashboard #ferramentas {
+    #inicio,
+    #ferramentas {
         width: min(100% - 28px, 1180px);
     }
 
-    body#dashboard .cards {
+    .cards {
         grid-template-columns: 1fr;
     }
 
