@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 })
 
 function configurarNavegacaoSidebar() {
-  const navLinks = document.querySelectorAll('.sidebar a, .profile-menu a[href^="#"], header > a[href^="#"]')
+  const navLinks = document.querySelectorAll('.profile-menu a[href^="#"], header > a[href^="#"]')
 
   navLinks.forEach(link => {
     link.addEventListener('click', function (e) {
@@ -223,6 +223,7 @@ async function configurarPerfilAvatar() {
   }
 
   function openMenu() {
+    closeModal()
     profileMenu.classList.add('show')
     profileButton.setAttribute('aria-expanded', 'true')
   }
@@ -320,9 +321,19 @@ async function configurarPerfilAvatar() {
   })
 
   document.addEventListener('click', event => {
-    if (!profileButton.contains(event.target) && !profileMenu.contains(event.target)) {
+    const clickedInsideProfile = profileButton.contains(event.target) || profileMenu.contains(event.target) || modalOverlay.contains(event.target)
+
+    if (!clickedInsideProfile) {
       closeMenu()
+      closeModal()
     }
+  })
+
+  profileMenu.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu()
+      closeModal()
+    })
   })
 
   avatarTrigger.addEventListener('click', openModal)

@@ -19,20 +19,10 @@
                         <img src="/img/logotipo.jpg" alt="Logotipo do Site" height="100" width="200" style="object-fit: contain; max-height: 80px; width: auto;">
                 </a>
 
-                <nav class="sidebar" aria-label="Menu de navegação">
-                        <ul>
-                                <li><a href="#inicio"> Início </a></li>
-                                <li><a href="#ferramentas"> Ferramentas </a></li>
-                                <li><a href="#contato"> Contato </a></li>
-                        </ul>
-                </nav>
-                
-
-
                 <form action="/search" method="get" class="search-box">
                         <input type="search" placeholder="buscar ferramenta" aria-label="Buscar ferramenta">
 
-                        <button type="submit" aria-label="Pesquisar" style="background: none; border: none; padding: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                        <button type="submit" aria-label="Pesquisar">
                                 <svg class="search-icon" viewBox="0 0 16 16" fill="currentColor">
                                         <path
                                                 d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
@@ -48,7 +38,8 @@
                         </div>
 
                         <nav class="profile-menu" id="profile-menu" aria-label="Menu do usuário">
-                                <a class="menu-item" href="#contato">Meu perfil</a>
+                                <a class="menu-item" href="#inicio">Início</a>
+                                <a class="menu-item" href="#ferramentas">Ferramentas</a>
                                 <button class="menu-item avatar-trigger" type="button">Mudar avatar</button>
                                 <button class="menu-item" type="button" onclick="logout()">Sair</button>
                         </nav>
@@ -1828,15 +1819,6 @@
         </section>
 
 
-        <section id="contato" class="page-section flex-section">
-
-                <div>
-                        <input type="text" id="nome_login" aria-label="Nome de usuário">
-                        <input type="email" id="email" aria-label="Email">
-                        <input type="submit" id="faq-btn" aria-label="Enviar"></input>
-                </div>
-
-        </section>
 
         <footer>
                 <p>
