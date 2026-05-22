@@ -26,7 +26,6 @@
                                 <li><a href="#contato"> Contato </a></li>
                         </ul>
                 </nav>
-                <img src="/img/" alt="Lotipo do Site" height="100" width="200"></img>
                 
 
 
@@ -44,68 +43,62 @@
 
 
                 <div class="user-profile">
-                        <img src="/img/avatar/" alt="Ícone de usuário" height="30" width="30">
-                        <div class="menu-profile">
-                                <button type="button" class="btn-profile">Mudar avatar</button>
-                                <button onclick="logout()" class="btn-logout">Sair</button>
+                        <div class="card-avatar" id="profile-avatar-button" role="button" tabindex="0" aria-label="Abrir menu de perfil" aria-expanded="false">
+                                <img id="profile-icon" class="profile-icon" src="/img/avatars/default.png" alt="Avatar do usuário">
                         </div>
-                        <div class="background-blur" id="background-blur"></div>
-                        <div class="card-center" id="card-center"></div>
-                                <div class="gender-selector">
-                                        <button type="button" class="btn-gender" data-gender="male">Masculino</button>
-                                        <button type="button" class="btn-gender" data-gender="female">Feminino</button>
-                                </div>
-                                <div class="card-avatar">
+
+                        <nav class="profile-menu" id="profile-menu" aria-label="Menu do usuário">
+                                <a class="menu-item" href="#contato">Meu perfil</a>
+                                <button class="menu-item avatar-trigger" type="button">Mudar avatar</button>
+                                <button class="menu-item" type="button" onclick="logout()">Sair</button>
+                        </nav>
+
+                        <div class="avatar-modal-overlay" id="avatar-modal-overlay" aria-hidden="true">
+                                <div class="avatar-modal" role="dialog" aria-modal="true" aria-labelledby="avatar-modal-title">
+                                        <h2 id="avatar-modal-title">Escolha um avatar</h2>
+
                                         <div class="avatar-grid">
-                                        <div class="avatar-item" data-avatar="1">
-                                        <img src="/img/avatars/avatar1.png" alt="Avatar 1">
+                                                <button class="avatar-option" type="button" data-avatar="1" data-src="/img/avatars/avatar1.png" aria-label="Avatar 1">
+                                                        <img src="/img/avatars/avatar1.png" alt="Avatar 1">
+                                                </button>
+                                                <button class="avatar-option" type="button" data-avatar="2" data-src="/img/avatars/avatar2.png" aria-label="Avatar 2">
+                                                        <img src="/img/avatars/avatar2.png" alt="Avatar 2">
+                                                </button>
+                                                <button class="avatar-option" type="button" data-avatar="3" data-src="/img/avatars/avatar3.png" aria-label="Avatar 3">
+                                                        <img src="/img/avatars/avatar3.png" alt="Avatar 3">
+                                                </button>
+                                                <button class="avatar-option" type="button" data-avatar="4" data-src="/img/avatars/avatar4.png" aria-label="Avatar 4">
+                                                        <img src="/img/avatars/avatar4.png" alt="Avatar 4">
+                                                </button>
+                                                <button class="avatar-option" type="button" data-avatar="5" data-src="/img/avatars/avatar5.png" aria-label="Avatar 5">
+                                                        <img src="/img/avatars/avatar5.png" alt="Avatar 5">
+                                                </button>
+                                                <button class="avatar-option" type="button" data-avatar="6" data-src="/img/avatars/avatar6.png" aria-label="Avatar 6">
+                                                        <img src="/img/avatars/avatar6.png" alt="Avatar 6">
+                                                </button>
+                                                <button class="avatar-option" type="button" data-avatar="7" data-src="/img/avatars/avatar7.png" aria-label="Avatar 7">
+                                                        <img src="/img/avatars/avatar7.png" alt="Avatar 7">
+                                                </button>
+                                                <button class="avatar-option" type="button" data-avatar="8" data-src="/img/avatars/avatar8.png" aria-label="Avatar 8">
+                                                        <img src="/img/avatars/avatar8.png" alt="Avatar 8">
+                                                </button>
+                                                <button class="avatar-option" type="button" data-avatar="9" data-src="/img/avatars/avatar9.png" aria-label="Avatar 9">
+                                                        <img src="/img/avatars/avatar9.png" alt="Avatar 9">
+                                                </button>
+                                                <button class="avatar-option" type="button" data-avatar="10" data-src="/img/avatars/avatar10.png" aria-label="Avatar 10">
+                                                        <img src="/img/avatars/avatar10.png" alt="Avatar 10">
+                                                </button>
+                                                <button class="avatar-option" type="button" data-avatar="11" data-src="/img/avatars/avatar11.png" aria-label="Avatar 11">
+                                                        <img src="/img/avatars/avatar11.png" alt="Avatar 11">
+                                                </button>
+                                                <button class="avatar-option" type="button" data-avatar="12" data-src="/img/avatars/avatar12.png" aria-label="Avatar 12">
+                                                        <img src="/img/avatars/avatar12.png" alt="Avatar 12">
+                                                </button>
                                         </div>
 
-                                        <div class="avatar-item" data-avatar="2">
-                                        <img src="/img/avatars/avatar2.png" alt="Avatar 2">
-                                        </div>
-
-                                        <div class="avatar-item" data-avatar="3">
-                                        <img src="/img/avatars/avatar3.png" alt="Avatar 3">
-                                        </div>
-                                       
-
-                                        <div class="avatar-item" data-avatar="4">
-                                        <img src="/img/avatars/avatar4.png" alt="Avatar 4">
-                                        </div>
-
-                                        <div class="avatar-item" data-avatar="5">
-                                        <img src="/img/avatars/avatar5.png" alt="Avatar 5">
-                                        </div>
-
-                                        <div class="avatar-item" data-avatar="6">
-                                        <img src="/img/avatars/avatar6.png" alt="Avatar 6">
-                                        </div>
-
-                                        <div class="avatar-item" data-avatar="7">
-                                        <img src="/img/avatars/avatar7.png" alt="Avatar 7">
-                                        </div>
-
-                                        <div class="avatar-item" data-avatar="8">
-                                        <img src="/img/avatars/avatar8.png" alt="Avatar 8">
-                                        </div>
-
-                                        <div class="avatar-item" data-avatar="9">
-                                        <img src="/img/avatars/avatar9.png" alt="Avatar 9">
-                                        </div>
-
-                                        <div class="avatar-item" data-avatar="10">
-                                        <img src="/img/avatars/avatar10.png" alt="Avatar 10">
-                                        </div>
-
-                                        <div class="avatar-item" data-avatar="11">
-                                        <img src="/img/avatars/avatar11.png" alt="Avatar 11">
-                                        </div>
-
-                                        <div class="avatar-item" data-avatar="12">
-                                        <img src="/img/avatars/avatar12.png" alt="Avatar 12">
-                                        </div>
+                                        <button class="modal-close" id="avatar-modal-close" type="button">Fechar</button>
                                 </div>
+                        </div>
                 </div>
                 
         </header>                                                                                                                                                                                                                                                                                                       

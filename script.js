@@ -9,12 +9,13 @@ document.addEventListener('DOMContentLoaded', async function () {
   configurarNavegacaoSidebar()
   configurarTelaLogin()
   configurarFiltros()
+  await configurarPerfilAvatar()
   await redirecionarSeJaEstiverLogado()
   await protegerPaginasPrivadas()
 })
 
 function configurarNavegacaoSidebar() {
-  const navLinks = document.querySelectorAll('.sidebar a, header > a[href^="#"]')
+  const navLinks = document.querySelectorAll('.sidebar a, .profile-menu a[href^="#"], header > a[href^="#"]')
 
   navLinks.forEach(link => {
     link.addEventListener('click', function (e) {
@@ -192,6 +193,166 @@ async function redirecionarSeJaEstiverLogado() {
   if (data.session) {
     window.location.href = 'dashboard.html'
   }
+}
+
+
+async function configurarPerfilAvatar() {
+  const profileButton = document.querySelector('#profile-avatar-button')
+  const profileIcon = document.querySelector('#profile-icon')
+  const profileMenu = document.querySelector('#profile-menu')
+  const avatarTrigger = document.querySelector('.avatar-trigger')
+  const modalOverlay = document.querySelector('#avatar-modal-overlay')
+  const modalClose = document.querySelector('#avatar-modal-close')
+  const avatarOptions = document.querySelectorAll('.avatar-option')
+
+  if (!profileButton || !profileIcon || !profileMenu || !avatarTrigger || !modalOverlay || !modalClose || !avatarOptions.length) {
+    return
+  }
+
+  const storageAvatarSrcKey = 'learningMapAvatarSrc'
+  const storageAvatarIdKey = 'learningMapAvatarId'
+
+  function setSelectedAvatar(avatarSrc, avatarId) {
+    if (!avatarSrc) return
+
+    profileIcon.src = avatarSrc
+
+    avatarOptions.forEach(option => {
+      option.classList.toggle('selected', option.dataset.src === avatarSrc || option.dataset.avatar === String(avatarId))
+    })
+  }
+
+  function openMenu() {
+    profileMenu.classList.add('show')
+    profileButton.setAttribute('aria-expanded', 'true')
+  }
+
+  function closeMenu() {
+    profileMenu.classList.remove('show')
+    profileButton.setAttribute('aria-expanded', 'false')
+  }
+
+  function toggleMenu() {
+    if (profileMenu.classList.contains('show')) {
+      closeMenu()
+    } else {
+      openMenu()
+    }
+  }
+
+  function openModal() {
+    closeMenu()
+    modalOverlay.classList.add('show')
+    modalOverlay.setAttribute('aria-hidden', 'false')
+  }
+
+  function closeModal() {
+    modalOverlay.classList.remove('show')
+    modalOverlay.setAttribute('aria-hidden', 'true')
+  }
+
+  async function loadSavedAvatar() {
+    const { data } = await supabase.auth.getSession()
+    const userId = data.session?.user?.id
+
+    if (userId) {
+      const { data: profile, error } = await supabase
+        .from('profiles')
+        .select('avatar_url, avatar_id')
+        .eq('id', userId)
+        .single()
+
+      if (!error && profile?.avatar_url) {
+        setSelectedAvatar(profile.avatar_url, profile.avatar_id)
+        localStorage.setItem(storageAvatarSrcKey, profile.avatar_url)
+        if (profile.avatar_id) localStorage.setItem(storageAvatarIdKey, profile.avatar_id)
+        return
+      }
+
+      if (error) {
+        console.warn('Avatar não carregado do Supabase. Usando fallback local:', error.message)
+      }
+    }
+
+    // TODO: migrar para Supabase quando a tabela profiles estiver configurada com avatar_url e avatar_id.
+    const savedAvatarSrc = localStorage.getItem(storageAvatarSrcKey)
+    const savedAvatarId = localStorage.getItem(storageAvatarIdKey)
+    setSelectedAvatar(savedAvatarSrc, savedAvatarId)
+  }
+
+  async function saveAvatar(avatarSrc, avatarId) {
+    localStorage.setItem(storageAvatarSrcKey, avatarSrc)
+    localStorage.setItem(storageAvatarIdKey, avatarId)
+
+    const { data } = await supabase.auth.getSession()
+    const userId = data.session?.user?.id
+
+    if (!userId) {
+      // TODO: migrar para Supabase quando houver sessão autenticada disponível.
+      return
+    }
+
+    const { error } = await supabase
+      .from('profiles')
+      .upsert({ id: userId, avatar_url: avatarSrc, avatar_id: Number(avatarId) })
+
+    if (error) {
+      // TODO: migrar para Supabase quando a tabela profiles estiver configurada com avatar_url e avatar_id.
+      console.warn('Avatar salvo apenas no localStorage:', error.message)
+    }
+  }
+
+  profileButton.addEventListener('click', event => {
+    event.stopPropagation()
+    toggleMenu()
+  })
+
+  profileButton.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault()
+      event.stopPropagation()
+      toggleMenu()
+    }
+  })
+
+  profileMenu.addEventListener('click', event => {
+    event.stopPropagation()
+  })
+
+  document.addEventListener('click', event => {
+    if (!profileButton.contains(event.target) && !profileMenu.contains(event.target)) {
+      closeMenu()
+    }
+  })
+
+  avatarTrigger.addEventListener('click', openModal)
+  modalClose.addEventListener('click', closeModal)
+
+  modalOverlay.addEventListener('click', event => {
+    if (event.target === modalOverlay) {
+      closeModal()
+    }
+  })
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      closeMenu()
+      closeModal()
+    }
+  })
+
+  avatarOptions.forEach(option => {
+    option.addEventListener('click', async () => {
+      const avatarSrc = option.dataset.src
+      const avatarId = option.dataset.avatar
+
+      setSelectedAvatar(avatarSrc, avatarId)
+      await saveAvatar(avatarSrc, avatarId)
+      closeModal()
+    })
+  })
+
+  await loadSavedAvatar()
 }
 
 window.logout = logout
