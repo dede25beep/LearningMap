@@ -81,8 +81,8 @@
 
 .logo img                                    {
     display: block;
-    width: 170px;
-    height: 56px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
     border-radius: 10px;
 }
@@ -278,9 +278,6 @@ body#main .sidebar-btn:hover {
 /* headline */
 .h1 {
     font-family: 'Plus Jakarta Sans', Arial, sans-serif;
-    font-size: clamp(40px, 7vw, 72px);
-    font-weight: 800;
-    line-height: 1.08;
     letter-spacing: 0;
     color: #f0eeff;
     margin-bottom: 22px;
