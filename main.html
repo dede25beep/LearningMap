@@ -47,6 +47,7 @@
                 ferramentas de inteligência artificial para pesquisa, estudo e produtividade —
                 tudo em um único lugar.
             </p>
+            <br></br>
 
             <div class="hero-actions animate-fade-up" style="animation-delay:.24s">
                 <button onclick="window.location.href='login.html'" class="btn-primary">
@@ -323,58 +324,59 @@
     </footer>
 
     <script src="script.js" type="module"></script>
-    <script>
-        /* ── Reproduzir vídeo ── */
-        function playVideo() {
-            const btn = document.getElementById('play-btn');
-            const iframe = document.getElementById('iframe');
-            const src = iframe.dataset.src;
-            if (!src || src === 'SEU_VIDEO_EMBED_AQUI') {
-                alert('Configure o link do vídeo no atributo data-src do iframe.');
-                return;
-            }
-            iframe.src = src;
-            iframe.style.display = 'block';
-            btn.style.display = 'none';
-        }
-
-        function scrollToVideo() {
-            document.getElementById('video').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function toggleMobileMenu() {
-            document.querySelector('.nav').classList.toggle('nav-open');
-        }
-
-        /* ── Contador animado para os stats ── */
-        function animateCount(el) {
-            const target = parseInt(el.dataset.target, 10);
-            if (!target) return;
-            const duration = 1400;
-            const start = performance.now();
-            function step(now) {
-                const elapsed = now - start;
-                const progress = Math.min(elapsed / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                el.textContent = Math.round(eased * target);
-                if (progress < 1) requestAnimationFrame(step);
-            }
-            requestAnimationFrame(step);
-        }
-
-        /* ── IntersectionObserver para animar ao entrar na tela ── */
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    const counter = entry.target.querySelector('[data-target]');
-                    if (counter) animateCount(counter);
-                    io.unobserve(entry.target);
+        <script>
+            /* ── Reproduzir vídeo ── */
+            function playVideo() {
+                const btn = document.getElementById('play-btn');
+                const iframe = document.getElementById('iframe');
+                const src = iframe.dataset.src;
+                if (!src || src === 'SEU_VIDEO_EMBED_AQUI') {
+                    alert('Configure o link do vídeo no atributo data-src do iframe.');
+                    return;
                 }
-            });
-        }, { threshold: 0.15 });
+                iframe.src = src;
+                iframe.style.display = 'block';
+                btn.style.display = 'none';
+            }
 
-        document.querySelectorAll('.animate-fade-up, .stats-section, .step, .cat-card').forEach(el => io.observe(el));
+            function scrollToVideo() {
+                document.getElementById('video').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            function toggleMobileMenu() {
+                document.querySelector('.nav').classList.toggle('nav-open');
+            }
+
+            /* ── Contador animado para os stats ── */
+            function animateCount(el) {
+                const target = parseInt(el.dataset.target, 10);
+                if (!target) return;
+                const duration = 1400;
+                const start = performance.now();
+                function step(now) {
+                    const elapsed = now - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    el.textContent = Math.round(eased * target);
+                    if (progress < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+            }
+
+            /* ── IntersectionObserver para animar ao entrar na tela ── */
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        const counter = entry.target.querySelector('[data-target]');
+                        if (counter) animateCount(counter);
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll('.animate-fade-up, .stats-section, .step, .cat-card').forEach(el => io.observe(el));
+        </script>
     </script>
 </body>
 </html>
