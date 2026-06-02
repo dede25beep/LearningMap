@@ -276,21 +276,15 @@
 }
 
 /* headline */
-.h1 {
+.hero-inner, h1 {
     font-family: 'Plus Jakarta Sans', Arial, sans-serif;
     letter-spacing: 0;
     color: #f0eeff;
     margin-bottom: 22px;
-    
+    font-size: 80px;   
     
 }
-.h1 em {
-    font-style: normal;
-    background: linear-gradient(110deg, #a78bfa, #818cf8, #60a5fa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}    
+ 
 
 .sub {
     font-size: clamp(15px, 2.2vw, 18px);
