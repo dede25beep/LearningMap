@@ -1,6 +1,6 @@
 /* ===== Login / Cadastro ===== */
 
-body#pagina-login {
+#pagina-login {
     min-height: 100vh;
     background:
         radial-gradient(circle at left, rgba(124, 58, 237, 0.28), transparent 32%),
@@ -9,14 +9,14 @@ body#pagina-login {
     color: #f0eeff;
 }
 
-body#pagina-login #login,
-body#pagina-login #register {
+#pagina-login #login,
+#pagina-login #register {
     min-height: 100vh;
     place-items: center;
     padding: 24px;
 }
 
-body#pagina-login .page-section.is-active {
+#pagina-login .page-section.is-active {
     display: grid;
 }
 
@@ -62,8 +62,8 @@ body#pagina-login .page-section.is-active {
     font-size: 0.95rem;
 }
 
-body#pagina-login #show-register,
-body#pagina-login #show-login {
+#pagina-login #show-register,
+#pagina-login #show-login {
     color: #d8b4fe;
     font-weight: 700;
     text-decoration: none;
@@ -71,8 +71,8 @@ body#pagina-login #show-login {
     transition: color 0.25s ease, transform 0.25s ease;
 }
 
-body#pagina-login #show-register:hover,
-body#pagina-login #show-login:hover {
+#pagina-login #show-register:hover,
+#pagina-login #show-login:hover {
     color: #9826df;
     transform: translateY(-2px);
 }

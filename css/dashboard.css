@@ -57,7 +57,8 @@ header > a img {
     object-fit: cover;
     border-radius: 50%;
 }
-body#dashboard .user-profile button {
+
+#dashboard .user-profile button {
     width: 100%;
     height: 52px;
     border: none;
@@ -118,7 +119,7 @@ body#dashboard .user-profile button {
     gap: 4px;
 }
 
-body#dashboard .profile-menu .menu-item {
+#dashboard .profile-menu .menu-item {
     display: block;
     width: 100%;
     min-height: 0;
@@ -136,8 +137,8 @@ body#dashboard .profile-menu .menu-item {
     transition: background 0.18s ease, color 0.18s ease;
 }
 
-body#dashboard .profile-menu .menu-item:hover,
-body#dashboard .profile-menu .menu-item:focus-visible {
+#dashboard .profile-menu .menu-item:hover,
+#dashboard .profile-menu .menu-item:focus-visible {
     background: rgba(124, 58, 237, 0.24);
     color: #ffffff;
     outline: none;
@@ -181,7 +182,7 @@ body#dashboard .profile-menu .menu-item:focus-visible {
     margin-bottom: 18px;
 }
 
-body#dashboard .user-profile .avatar-option {
+#dashboard .user-profile .avatar-option {
     width: 64px;
     height: 64px;
     justify-self: center;
@@ -202,16 +203,16 @@ body#dashboard .user-profile .avatar-option {
     object-fit: cover;
 }
 
-body#dashboard .user-profile .avatar-option:hover,
-body#dashboard .user-profile .avatar-option:focus-visible,
-body#dashboard .user-profile .avatar-option.selected {
+#dashboard .user-profile .avatar-option:hover,
+#dashboard .user-profile .avatar-option:focus-visible,
+#dashboard .user-profile .avatar-option.selected {
     border-color: #a78bfa;
     box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
     outline: none;
     transform: scale(1.05);
 }
 
-body#dashboard .user-profile .modal-close {
+#dashboard .user-profile .modal-close {
     width: auto;
     height: auto;
     padding: 10px 22px;
@@ -224,13 +225,13 @@ body#dashboard .user-profile .modal-close {
     font-weight: 800;
 }
 
-body#dashboard .user-profile .modal-close:hover,
-body#dashboard .user-profile .modal-close:focus-visible {
+#dashboard .user-profile .modal-close:hover,
+#dashboard .user-profile .modal-close:focus-visible {
     background: rgba(124, 58, 237, 0.24);
     outline: none;
 }
 
-body#dashboard header .search-box {
+#dashboard header .search-box {
     justify-self: center;
     display: flex;
     align-items: center;
@@ -249,7 +250,7 @@ body#dashboard header .search-box {
     transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-body#dashboard header .search-box:focus-within {
+#dashboard header .search-box:focus-within {
     border-color: rgba(167, 139, 250, 0.72);
     box-shadow:
         0 20px 46px rgba(0, 0, 0, 0.28),
@@ -270,7 +271,7 @@ header .search-box input {
     color: #f0eeff;
 }
 
-body#dashboard header .search-box button {
+#dashboard header .search-box button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -287,8 +288,8 @@ body#dashboard header .search-box button {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-body#dashboard header .search-box button:hover,
-body#dashboard header .search-box button:focus-visible {
+#dashboard header .search-box button:hover,
+#dashboard header .search-box button:focus-visible {
     transform: translateY(-1px);
     box-shadow: 0 14px 30px rgba(109, 40, 217, 0.36);
     outline: none;
@@ -469,7 +470,7 @@ header .search-icon {
     box-shadow: 0 6px 18px rgba(49, 46, 129, 0.06);
 }
 
-body#dashboard .filtro-btn {
+#dashboard .filtro-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -485,13 +486,13 @@ body#dashboard .filtro-btn {
     font-size: 0.9rem;
 }
 
-body#dashboard .filtro-btn:hover {
+#dashboard .filtro-btn:hover {
     transform: translateY(-2px);
     background: rgba(124, 58, 237, 0.24);
     box-shadow: 0 14px 30px rgba(124, 58, 237, 0.24);
 }
 
-body#dashboard .filtro-btn.is-active {
+#dashboard .filtro-btn.is-active {
     background: linear-gradient(135deg, #2563eb, #7c3aed);
     color: #f0eeff;
     border-color: transparent;
@@ -531,7 +532,7 @@ body#dashboard .filtro-btn.is-active {
     }
 }
 
-body#dashboard .cards > * {
+#dashboard .cards > * {
     width: auto !important;
     height: auto !important;
     min-height: 330px;
@@ -605,7 +606,7 @@ body#dashboard .cards > * {
 }
 
 /* Footer */
-body#dashboard footer {
+#dashboard footer {
     margin-top: auto;
     text-align: center;
     padding: 24px;
@@ -649,17 +650,17 @@ body#dashboard footer {
         font-size: clamp(2.2rem, 12vw, 4rem);
     }
 }
-body#dashboard input::placeholder {
+#dashboard input::placeholder {
     color: rgba(240, 238, 255, 0.45);
 }
 
-body#dashboard .filtro-btn:hover {
+#dashboard .filtro-btn:hover {
     color: #f0eeff;
 }
 
-body#dashboard .filtro-btn.is-active,
-body#dashboard #ferramentas .search-box button,
-body#dashboard .user-profile button,
-body#dashboard .cards a {
+#dashboard .filtro-btn.is-active,
+#dashboard #ferramentas .search-box button,
+#dashboard .user-profile button,
+#dashboard .cards a {
     color: #f0eeff;
 }

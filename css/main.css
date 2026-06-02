@@ -108,7 +108,7 @@
 
 /* botão Entrar no header — mantém classe do projeto original tbm */
 .btn-entrar,
-body#main .sidebar-btn {
+.sidebar-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -127,7 +127,7 @@ body#main .sidebar-btn {
     box-shadow: 0 8px 22px rgba(124, 58, 237, 0.12);
 }
 .btn-entrar:hover,
-body#main .sidebar-btn:hover {
+.sidebar-btn:hover {
     background: rgba(124, 58, 237, 0.35);
     border-color: rgba(124, 58, 237, 0.65);
     color: #f0eeff;
@@ -281,7 +281,7 @@ body#main .sidebar-btn:hover {
     letter-spacing: 0;
     color: #f0eeff;
     margin-bottom: 22px;
-    font-size: 90px;
+    
     
 }
 .h1 em {
