@@ -281,6 +281,8 @@ body#main .sidebar-btn:hover {
     letter-spacing: 0;
     color: #f0eeff;
     margin-bottom: 22px;
+    font-size: 90px;
+    
 }
 .h1 em {
     font-style: normal;
@@ -288,7 +290,7 @@ body#main .sidebar-btn:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-}
+}    
 
 .sub {
     font-size: clamp(15px, 2.2vw, 18px);
