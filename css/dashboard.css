@@ -3,6 +3,7 @@
 html {
     scroll-padding-top: 130px;
 }
+
 #dashboard {
     display: flex;
     flex-direction: column;
