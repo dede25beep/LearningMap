@@ -292,13 +292,12 @@
     background-clip: text;
 }    
 
-#main .sub {
+.sub {
     font-size: clamp(15px, 2.2vw, 18px);
     line-height: 1.65;
     color: rgba(240, 238, 255, 0.58);
     max-width: 560px;
     margin: 0 auto 36px;
-    text-align: center;
 }
 
 /* botões hero */
