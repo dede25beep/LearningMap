@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body id="main">
 
-   
+
     <header class="header-main">
         <div class="logo">
             <img src="/img/logotipo.jpg" alt="LearningMap">
@@ -26,7 +28,7 @@
         </button>
     </header>
 
-    
+
     <section class="hero">
         <div class="hero-bg" aria-hidden="true">
             <div class="orb orb-1"></div>
@@ -36,37 +38,34 @@
         </div>
 
         <div class="hero-inner">
-    
+
             <h1 class="h1 animate-fade-up" style="animation-delay:.08s">
                 A IA certa<br>
                 <em>para cada tarefa.</em>
             </h1>
 
-            <p class="sub animate-fade-up" style="animation-delay:.16s">
-                Pare de gastar horas procurando. O LearningMap reúne e organiza as melhores
-                ferramentas de inteligência artificial para pesquisa, estudo e produtividade —
-                tudo em um único lugar.
-            </p>
             <br></br>
 
             <div class="hero-actions animate-fade-up" style="animation-delay:.24s">
                 <button onclick="window.location.href='login.html'" class="btn-primary">
                     Acessar ferramentas
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
                 </button>
                 <button class="btn-ghost" onclick="scrollToVideo()">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                        <circle cx="7" cy="7" r="6.25" stroke="currentColor" stroke-width="1.3"/>
-                        <path d="M5.5 4.8l4 2.2-4 2.2V4.8z" fill="currentColor"/>
+                        <circle cx="7" cy="7" r="6.25" stroke="currentColor" stroke-width="1.3" />
+                        <path d="M5.5 4.8l4 2.2-4 2.2V4.8z" fill="currentColor" />
                     </svg>
                     Ver demonstração
                 </button>
             </div>
 
             <!-- PILLS FLUTUANTES NO HERO -->
-            <div class="floating-pills animate-fade-up" style="animation-delay:.32s" aria-label="Exemplos de ferramentas disponíveis">
+            <div class="floating-pills animate-fade-up" style="animation-delay:.32s"
+                aria-label="Exemplos de ferramentas disponíveis">
                 <span class="pill pill-purple">ResearchRabbit</span>
                 <span class="pill pill-blue">NotebookLM</span>
                 <span class="pill pill-indigo">Perplexity</span>
@@ -79,9 +78,11 @@
         </div>
 
         <!-- INDICADOR DE SCROLL -->
-        <a href="#estatisticas" class="scroll-indicator animate-fade-up" style="animation-delay:.40s" aria-label="Rolar para baixo">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 5v14M19 12l-7 7-7-7"/>
+        <a href="#estatisticas" class="scroll-indicator animate-fade-up" style="animation-delay:.40s"
+            aria-label="Rolar para baixo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 5v14M19 12l-7 7-7-7" />
             </svg>
         </a>
     </section>
@@ -120,22 +121,16 @@
                 <!-- ══ SUBSTITUA O src ABAIXO PELO EMBED DO SEU VÍDEO ══
                      Exemplo YouTube: https://www.youtube.com/embed/SEU_ID?autoplay=1
                      O iframe fica oculto até o usuário clicar no play. -->
-                <iframe
-                    id="iframe"
-                    class="iframe"
-                    src=""
-                    data-src="SEU_VIDEO_EMBED_AQUI"
-                    allow="autoplay; fullscreen"
-                    allowfullscreen
-                    title="Demonstração do LearningMap"
-                    style="display:none">
+                <iframe id="iframe" class="iframe" src="" data-src="SEU_VIDEO_EMBED_AQUI" allow="autoplay; fullscreen"
+                    allowfullscreen title="Demonstração do LearningMap" style="display:none">
                 </iframe>
 
-                <button class="video-thumb" id="play-btn" aria-label="Reproduzir vídeo de demonstração" onclick="playVideo()">
+                <button class="video-thumb" id="play-btn" aria-label="Reproduzir vídeo de demonstração"
+                    onclick="playVideo()">
                     <div class="video-overlay">
                         <div class="play-circle">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                                <path d="M10 7.5l13 6.5-13 6.5V7.5z" fill="currentColor"/>
+                                <path d="M10 7.5l13 6.5-13 6.5V7.5z" fill="currentColor" />
                             </svg>
                         </div>
                         <p class="video-hint">Clique para assistir a demonstração</p>
@@ -205,14 +200,16 @@
         <div class="container">
             <div class="section-header">
                 <p class="eyebrow">O que você vai encontrar</p>
-                <h2 class="h2">8 categorias.<br>88 possibilidades.</h2>
+                <h2 class="h2">16 categorias.<br>78 possibilidades.</h2>
             </div>
 
             <div class="cats-grid">
                 <div class="cat-card animate-fade-up" style="animation-delay:.0s">
                     <div class="cat-icon icon-purple">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path
+                                d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
                         </svg>
                     </div>
                     <div>
@@ -224,8 +221,10 @@
 
                 <div class="cat-card animate-fade-up" style="animation-delay:.06s">
                     <div class="cat-icon icon-blue">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
                         </svg>
                     </div>
                     <div>
@@ -237,8 +236,9 @@
 
                 <div class="cat-card animate-fade-up" style="animation-delay:.12s">
                     <div class="cat-icon icon-violet">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                         </svg>
                     </div>
                     <div>
@@ -250,8 +250,10 @@
 
                 <div class="cat-card animate-fade-up" style="animation-delay:.18s">
                     <div class="cat-icon icon-indigo">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 20h9" />
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
                         </svg>
                     </div>
                     <div>
@@ -263,8 +265,11 @@
 
                 <div class="cat-card animate-fade-up" style="animation-delay:.24s">
                     <div class="cat-icon icon-purple">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
                         </svg>
                     </div>
                     <div>
@@ -276,8 +281,11 @@
 
                 <div class="cat-card animate-fade-up" style="animation-delay:.30s">
                     <div class="cat-icon icon-blue">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
                         </svg>
                     </div>
                     <div>
@@ -289,8 +297,9 @@
 
                 <div class="cat-card animate-fade-up" style="animation-delay:.36s">
                     <div class="cat-icon icon-violet">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
                         </svg>
                     </div>
                     <div>
@@ -300,14 +309,16 @@
                     </div>
                 </div>
 
-                <div class="cat-card cat-card-cta animate-fade-up" style="animation-delay:.42s" onclick="window.location.href='login.html'">
+                <div class="cat-card cat-card-cta animate-fade-up" style="animation-delay:.42s"
+                    onclick="window.location.href='login.html'">
                     <div class="cat-more-inner">
                         <span class="cat-more-num">+70</span>
                         <p class="cat-more-txt">Acesse todas as ferramentas fazendo login</p>
                         <span class="cat-more-link">
                             Entrar agora
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </span>
                     </div>
@@ -315,68 +326,69 @@
             </div>
         </div>
     </section>
-    
+
     <footer class="footer">
         <div class="container">
             <span class="footer-logo">LearningMap</span>
-            <span class="footer-copy">© 2025 — Ferramentas de IA para estudar melhor</span>
+            <span class="footer-copy">© 2026 — Ferramentas de IA para otimização de seu fluxo de estudo e trabalho</span>
         </div>
     </footer>
 
     <script src="script.js" type="module"></script>
-        <script>
-            /* ── Reproduzir vídeo ── */
-            function playVideo() {
-                const btn = document.getElementById('play-btn');
-                const iframe = document.getElementById('iframe');
-                const src = iframe.dataset.src;
-                if (!src || src === 'SEU_VIDEO_EMBED_AQUI') {
-                    alert('Configure o link do vídeo no atributo data-src do iframe.');
-                    return;
+    <script>
+        /* ── Reproduzir vídeo ── */
+        function playVideo() {
+            const btn = document.getElementById('play-btn');
+            const iframe = document.getElementById('iframe');
+            const src = iframe.dataset.src;
+            if (!src || src === 'SEU_VIDEO_EMBED_AQUI') {
+                alert('Configure o link do vídeo no atributo data-src do iframe.');
+                return;
+            }
+            iframe.src = src;
+            iframe.style.display = 'block';
+            btn.style.display = 'none';
+        }
+
+        function scrollToVideo() {
+            document.getElementById('video').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            document.querySelector('.nav').classList.toggle('nav-open');
+        }
+
+        /* ── Contador animado para os stats ── */
+        function animateCount(el) {
+            const target = parseInt(el.dataset.target, 10);
+            if (!target) return;
+            const duration = 1400;
+            const start = performance.now();
+            function step(now) {
+                const elapsed = now - start;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.round(eased * target);
+                if (progress < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
+        /* ── IntersectionObserver para animar ao entrar na tela ── */
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    const counter = entry.target.querySelector('[data-target]');
+                    if (counter) animateCount(counter);
+                    io.unobserve(entry.target);
                 }
-                iframe.src = src;
-                iframe.style.display = 'block';
-                btn.style.display = 'none';
-            }
+            });
+        }, { threshold: 0.15 });
 
-            function scrollToVideo() {
-                document.getElementById('video').scrollIntoView({ behavior: 'smooth' });
-            }
-
-            function toggleMobileMenu() {
-                document.querySelector('.nav').classList.toggle('nav-open');
-            }
-
-            /* ── Contador animado para os stats ── */
-            function animateCount(el) {
-                const target = parseInt(el.dataset.target, 10);
-                if (!target) return;
-                const duration = 1400;
-                const start = performance.now();
-                function step(now) {
-                    const elapsed = now - start;
-                    const progress = Math.min(elapsed / duration, 1);
-                    const eased = 1 - Math.pow(1 - progress, 3);
-                    el.textContent = Math.round(eased * target);
-                    if (progress < 1) requestAnimationFrame(step);
-                }
-                requestAnimationFrame(step);
-            }
-
-            /* ── IntersectionObserver para animar ao entrar na tela ── */
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        const counter = entry.target.querySelector('[data-target]');
-                        if (counter) animateCount(counter);
-                        io.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.15 });
-
-            document.querySelectorAll('.animate-fade-up, .stats-section, .step, .cat-card').forEach(el => io.observe(el));
-        </script>
+        document.querySelectorAll('.animate-fade-up, .stats-section, .step, .cat-card').forEach(el => io.observe(el));
+    </script>
     </script>
 </body>
+
 </html>
