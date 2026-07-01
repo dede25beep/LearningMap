@@ -212,15 +212,40 @@ async function configurarPerfilAvatar() {
   const storageAvatarSrcKey = 'learningMapAvatarSrc'
   const storageAvatarIdKey = 'learningMapAvatarId'
 
+
+  // Corrige caminhos antigos salvos no localStorage
+  function corrigirCaminhoAvatar(path) {
+    if (!path) return null
+
+    // Corrige valores antigos como:
+    // /img/avatars/avatar1.png
+    // para:
+    // ./img/avatars/avatar1.png
+
+    if (path.startsWith('/img/')) {
+      return '.' + path
+    }
+
+    return path
+  }
+
+
   function setSelectedAvatar(avatarSrc, avatarId) {
     if (!avatarSrc) return
+
+    avatarSrc = corrigirCaminhoAvatar(avatarSrc)
 
     profileIcon.src = avatarSrc
 
     avatarOptions.forEach(option => {
-      option.classList.toggle('selected', option.dataset.src === avatarSrc || option.dataset.avatar === String(avatarId))
+      option.classList.toggle(
+        'selected',
+        option.dataset.src === avatarSrc ||
+        option.dataset.avatar === String(avatarId)
+      )
     })
   }
+
 
   function openMenu() {
     closeModal()
@@ -228,10 +253,12 @@ async function configurarPerfilAvatar() {
     profileButton.setAttribute('aria-expanded', 'true')
   }
 
+
   function closeMenu() {
     profileMenu.classList.remove('show')
     profileButton.setAttribute('aria-expanded', 'false')
   }
+
 
   function toggleMenu() {
     if (profileMenu.classList.contains('show')) {
@@ -241,20 +268,24 @@ async function configurarPerfilAvatar() {
     }
   }
 
+
   function openModal() {
     closeMenu()
     modalOverlay.classList.add('show')
     modalOverlay.setAttribute('aria-hidden', 'false')
   }
 
+
   function closeModal() {
     modalOverlay.classList.remove('show')
     modalOverlay.setAttribute('aria-hidden', 'true')
   }
 
+
   async function loadSavedAvatar() {
     const { data } = await supabase.auth.getSession()
     const userId = data.session?.user?.id
+
 
     if (userId) {
       const { data: profile, error } = await supabase
@@ -263,50 +294,101 @@ async function configurarPerfilAvatar() {
         .eq('id', userId)
         .single()
 
+
       if (!error && profile?.avatar_url) {
-        setSelectedAvatar(profile.avatar_url, profile.avatar_id)
-        localStorage.setItem(storageAvatarSrcKey, profile.avatar_url)
-        if (profile.avatar_id) localStorage.setItem(storageAvatarIdKey, profile.avatar_id)
+
+        const avatarCorrigido = corrigirCaminhoAvatar(profile.avatar_url)
+
+        setSelectedAvatar(
+          avatarCorrigido,
+          profile.avatar_id
+        )
+
+        localStorage.setItem(
+          storageAvatarSrcKey,
+          avatarCorrigido
+        )
+
+        if (profile.avatar_id) {
+          localStorage.setItem(
+            storageAvatarIdKey,
+            profile.avatar_id
+          )
+        }
+
         return
       }
 
+
       if (error) {
-        console.warn('Avatar não carregado do Supabase. Usando fallback local:', error.message)
+        console.warn(
+          'Avatar não carregado do Supabase. Usando fallback local:',
+          error.message
+        )
       }
     }
 
-    // TODO: migrar para Supabase quando a tabela profiles estiver configurada com avatar_url e avatar_id.
+
     const savedAvatarSrc = localStorage.getItem(storageAvatarSrcKey)
     const savedAvatarId = localStorage.getItem(storageAvatarIdKey)
-    setSelectedAvatar(savedAvatarSrc, savedAvatarId)
+
+
+    setSelectedAvatar(
+      corrigirCaminhoAvatar(savedAvatarSrc),
+      savedAvatarId
+    )
   }
 
+
   async function saveAvatar(avatarSrc, avatarId) {
-    localStorage.setItem(storageAvatarSrcKey, avatarSrc)
-    localStorage.setItem(storageAvatarIdKey, avatarId)
+
+    avatarSrc = corrigirCaminhoAvatar(avatarSrc)
+
+
+    localStorage.setItem(
+      storageAvatarSrcKey,
+      avatarSrc
+    )
+
+    localStorage.setItem(
+      storageAvatarIdKey,
+      avatarId
+    )
+
 
     const { data } = await supabase.auth.getSession()
     const userId = data.session?.user?.id
 
+
     if (!userId) {
-      // TODO: migrar para Supabase quando houver sessão autenticada disponível.
       return
     }
 
+
     const { error } = await supabase
       .from('profiles')
-      .upsert({ id: userId, avatar_url: avatarSrc, avatar_id: Number(avatarId) })
+      .upsert({
+        id: userId,
+        avatar_url: avatarSrc,
+        avatar_id: Number(avatarId)
+      })
+
 
     if (error) {
-      // TODO: migrar para Supabase quando a tabela profiles estiver configurada com avatar_url e avatar_id.
-      console.warn('Avatar salvo apenas no localStorage:', error.message)
+      console.warn(
+        'Avatar salvo apenas no localStorage:',
+        error.message
+      )
     }
   }
+
+
 
   profileButton.addEventListener('click', event => {
     event.stopPropagation()
     toggleMenu()
   })
+
 
   profileButton.addEventListener('keydown', event => {
     if (event.key === 'Enter' || event.key === ' ') {
@@ -316,56 +398,109 @@ async function configurarPerfilAvatar() {
     }
   })
 
+
   profileMenu.addEventListener('click', event => {
     event.stopPropagation()
   })
 
+
   document.addEventListener('click', event => {
-    const clickedInsideProfile = profileButton.contains(event.target) || profileMenu.contains(event.target) || modalOverlay.contains(event.target)
+
+    const clickedInsideProfile =
+      profileButton.contains(event.target) ||
+      profileMenu.contains(event.target) ||
+      modalOverlay.contains(event.target)
+
 
     if (!clickedInsideProfile) {
       closeMenu()
       closeModal()
     }
+
   })
 
+
   profileMenu.querySelectorAll('a[href^="#"]').forEach(link => {
+
     link.addEventListener('click', () => {
       closeMenu()
       closeModal()
     })
+
   })
 
-  avatarTrigger.addEventListener('click', openModal)
-  modalClose.addEventListener('click', closeModal)
 
-  modalOverlay.addEventListener('click', event => {
-    if (event.target === modalOverlay) {
-      closeModal()
+  avatarTrigger.addEventListener(
+    'click',
+    openModal
+  )
+
+
+  modalClose.addEventListener(
+    'click',
+    closeModal
+  )
+
+
+  modalOverlay.addEventListener(
+    'click',
+    event => {
+
+      if (event.target === modalOverlay) {
+        closeModal()
+      }
+
     }
-  })
+  )
 
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') {
-      closeMenu()
-      closeModal()
+
+  document.addEventListener(
+    'keydown',
+    event => {
+
+      if (event.key === 'Escape') {
+        closeMenu()
+        closeModal()
+      }
+
     }
-  })
+  )
+
+
 
   avatarOptions.forEach(option => {
-    option.addEventListener('click', async () => {
-      const avatarSrc = option.dataset.src
-      const avatarId = option.dataset.avatar
 
-      setSelectedAvatar(avatarSrc, avatarId)
-      await saveAvatar(avatarSrc, avatarId)
-      closeModal()
-    })
+    option.addEventListener(
+      'click',
+      async () => {
+
+        const avatarSrc = option.dataset.src
+        const avatarId = option.dataset.avatar
+
+
+        setSelectedAvatar(
+          avatarSrc,
+          avatarId
+        )
+
+
+        await saveAvatar(
+          avatarSrc,
+          avatarId
+        )
+
+
+        closeModal()
+
+      }
+    )
+
   })
+
+
 
   await loadSavedAvatar()
 }
-
 window.logout = logout
 
 function configurarFiltros() {
